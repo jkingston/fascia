@@ -1,0 +1,17 @@
+[Unit]
+Description=Expand shared Fascia storage to the boot SD card capacity
+Wants=fascia-provision.service
+After=local-fs.target fascia-provision.service
+Before=fascia-state-init.service pf-kiosk.service
+ConditionPathIsMountPoint=/system
+ConditionPathIsMountPoint=/data
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 -I /usr/lib/fascia/fascia-grow-storage.py
+RemainAfterExit=yes
+TimeoutStartSec=300
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

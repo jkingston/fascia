@@ -1,0 +1,31 @@
+// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
+#include "sun8i-a33-pf1007l-kiosk-audio.dts"
+
+/ {
+	aliases {
+		mmc2 = &mmc2;
+	};
+};
+
+&mmc2 {
+	pinctrl-names = "default";
+	pinctrl-0 = <&pf_mmc2_4bit_pins>;
+	vmmc-supply = <&reg_vcc3v3>;
+	vqmmc-supply = <&reg_vcc3v3>;
+	bus-width = <4>;
+	max-frequency = <26000000>;
+	non-removable;
+	no-1-8-v;
+	no-sd;
+	no-sdio;
+	status = "okay";
+};
+
+&pio {
+	pf_mmc2_4bit_pins: pf-mmc2-4bit-pins {
+		pins = "PC5", "PC6", "PC8", "PC9", "PC10", "PC11";
+		function = "mmc2";
+		drive-strength = <30>;
+		bias-pull-up;
+	};
+};

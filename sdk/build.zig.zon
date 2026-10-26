@@ -1,0 +1,26 @@
+.{
+    .name = .fascia_native_ui,
+    .version = "0.1.0",
+    .fingerprint = 0xf0b7acb2e81908b2,
+    .minimum_zig_version = "0.16.0",
+    .dependencies = .{
+        .test_fonts = .{
+            .url = "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/ttf-dejavu-2.37%2B18%2Bg9b5d1b2f-8-any.pkg.tar.xz",
+            .hash = "N-V-__8AANfRnABAMqxluThQF6k5Wu9mnhG8Z3P8BHZTHND5",
+        },
+        .wayland_linux = .{
+            .url = "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/wayland-1.26.0-1-armv7h.pkg.tar.xz",
+            .hash = "N-V-__8AAExQDQBNIs0TdSKWjnIsfRqtsNYv_hJ5Q3uPLUdI",
+        },
+        .freetype = .{
+            .url = "https://codeload.github.com/allyourcodebase/freetype/tar.gz/884fd2235e6ae1ec4306eda30b3259f20930ed2e",
+            .hash = "freetype-2.14.3-C3-WdXSKAAB-kHs4qgRoeoFnRkNQn6M_SSlUGZ6ywgBQ",
+        },
+        .minifb = .{
+            .lazy = true,
+            .url = "https://codeload.github.com/emoon/minifb/tar.gz/f92be8e966f194004853c10196e704f4510f58d4",
+            .hash = "N-V-__8AAKInHABh0BBsC-cqYZQF62d_n_wx9CC84DbwzPrp",
+        },
+    },
+    .paths = .{ "build.zig", "build.zig.zon", "LICENSE", "sdk.zig", "desktop.zig", "dev.zig", "desktop-build.zig", "desktop-geometry.zig", "screenshot.zig", "runtime.zig", "runtime-schedule.zig", "runtime-wake.zig", "runtime-tests.zig", "persist.zig", "protocol", "display-colour.zig", "layout.zig", "platform.zig", "renderer.zig", "renderer_validation.zig", "types.zig", "widgets.zig", "keyboard.zig", "keyboard-tests.zig" },
+}

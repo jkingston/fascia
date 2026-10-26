@@ -1,0 +1,16 @@
+// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
+#include "sun8i-a33-pf1007l-kiosk.dts"
+
+&dai {
+	status = "okay";
+};
+
+&codec {
+	status = "okay";
+};
+
+&sound {
+	simple-audio-card,widgets = "Speaker", "Speaker";
+	simple-audio-card,routing = "Left DAC", "DACL", "Right DAC", "DACR", "Speaker", "HP";
+	status = "okay";
+};

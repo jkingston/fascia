@@ -1,0 +1,92 @@
+name: Build and offline checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: checks-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  linux:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 35
+    env:
+      MISE_ZIG_USE_COMMUNITY_MIRRORS: "false"
+    steps:
+      # Official actions/checkout v4.2.2 and jdx/mise-action v2, pinned by commit.
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+        with:
+          persist-credentials: false
+      - uses: jdx/mise-action@c37c93293d6b742fc901e1406b8f764f6fb19dac
+        with:
+          install: true
+      - name: Verify pinned compiler
+        run: test "$(mise exec -- zig version)" = 0.16.0
+      - name: Check source formatting
+        run: python3 scripts/format.py --check
+      - name: Cross-build OS release
+        run: sh scripts/package-release.sh
+      - name: Cross-build separate first-image examples
+        run: sh scripts/package-examples.sh
+      - name: Cross-build non-Zig compatibility fixture
+        working-directory: tests/non-zig
+        run: mise exec -- zig build --fetch && mise exec -- zig build
+      - name: Build desktop previews and render Counter offscreen
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends libx11-dev
+          for app in hello clock; do
+            (cd "examples/$app" && mise exec -- zig build preview)
+          done
+          (cd examples/hello && FASCIA_PREVIEW_CAPTURE="$RUNNER_TEMP/counter.png" mise exec -- zig build run)
+          test -s "$RUNNER_TEMP/counter.png"
+      - name: Native UI and SDK tests
+        working-directory: sdk
+        run: |
+          mise exec -- zig build test --release=fast --summary all
+          python3 test-dev.py
+      - name: Compositor and physical Home helper tests
+        working-directory: host
+        run: mise exec -- zig build test test-home --release=small --summary all
+      - name: Clock parser, cache, worker and time tests
+        working-directory: examples/clock
+        run: mise exec -- zig build test --release=fast --summary all
+      - name: Offline Python tools and image tests
+        shell: bash
+        run: |
+          set -euo pipefail
+          for test in \
+            tools/test-fascia.py \
+            tools/test-fascia-app.py \
+            tools/test-fascia-setup.py \
+            tools/test-fascia-system.py \
+            tools/test-fascia-serial-session.py \
+            image/test-install-root.py \
+            image/tests/test-image-tools.py \
+            image/tests/test-initramfs-data.py \
+            image/tests/test-grow-storage.py \
+            image/arch/test-board-refresh.py \
+            image/tools/test-assemble-image.py \
+            image/system/test-fascia-system-update.py \
+            image/provision/test-provision.py \
+            image/boards/pf1007l/test-board.py; do
+            python3 "$test"
+          done
+          for test in image/host/test-*.py; do
+            python3 "$test"
+          done
+      - name: Native Linux brightness protocol and slow-storage tests
+        run: |
+          mkdir -p .local/ci
+          mise exec -- zig test tools/fascia-brightness.zig -lc -O ReleaseFast
+          mise exec -- zig build-exe tools/fascia-brightness.zig -lc -O ReleaseFast -femit-bin=.local/ci/fascia-brightness
+          python3 tools/test-fascia-brightness.py .local/ci/fascia-brightness
+      - name: Privileged ownership on disposable files
+        run: |
+          sudo python3 image/tests/test-initramfs-data.py

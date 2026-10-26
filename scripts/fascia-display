@@ -1,0 +1,14 @@
+#!/bin/sh
+# Narrow privileged action; no dependency on a gallery app or general sudo access.
+set -eu
+case "${1:-open}" in
+    open) exec /usr/local/bin/fascia-system display-open ;;
+    close) exec /usr/local/bin/fascia-system display-close ;;
+    -h | --help)
+        printf 'Usage: fascia-display [open|close]\n'
+        ;;
+    *)
+        printf 'Usage: fascia-display [open|close]\n' >&2
+        exit 64
+        ;;
+esac

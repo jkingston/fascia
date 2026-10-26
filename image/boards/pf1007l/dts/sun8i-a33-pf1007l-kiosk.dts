@@ -1,0 +1,65 @@
+// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
+
+#include "sun8i-a33-pf1007l-min-wifi.dts"
+#include <dt-bindings/interrupt-controller/irq.h>
+
+/ {
+	model = "PF1007L Arch, PL5 Wi-Fi and kiosk display";
+	backlight: backlight {
+		compatible = "pwm-backlight";
+		pwms = <&pwm 0 20000 0>;
+		enable-gpios = <&pio 7 6 GPIO_ACTIVE_HIGH>;
+		power-supply = <&reg_vcc3v3>;
+		brightness-levels = <0 8 16 32 64 96 128 192 255>;
+		default-brightness-level = <6>;
+	};
+};
+
+&de {
+	status = "okay";
+};
+
+&tcon0 {
+	status = "okay";
+};
+
+&dphy {
+	status = "okay";
+};
+
+&pwm {
+	pinctrl-names = "default";
+	pinctrl-0 = <&pwm0_pin>;
+	status = "okay";
+};
+
+&dsi {
+	vcc-dsi-supply = <&reg_vcc3v3>;
+	status = "okay";
+	panel@0 {
+		compatible = "yhk,zr789-sq9365-101", "jadard,jd9365da-h3";
+		reg = <0>;
+		vccio-supply = <&reg_vcc3v3>;
+		vdd-supply = <&reg_vcc3v3>;
+		reset-gpios = <&pio 7 7 GPIO_ACTIVE_LOW>;
+		backlight = <&backlight>;
+		rotation = <90>;
+	};
+};
+
+&i2c0 {
+	clock-frequency = <400000>;
+	status = "okay";
+	touchscreen@40 {
+		compatible = "silead,gsl1680";
+		reg = <0x40>;
+		interrupt-parent = <&pio>;
+		interrupts = <1 5 IRQ_TYPE_EDGE_FALLING>;
+		power-gpios = <&pio 7 1 GPIO_ACTIVE_HIGH>;
+		avdd-supply = <&reg_vcc3v3>;
+		vddio-supply = <&reg_vcc3v3>;
+		firmware-name = "gsl_m86_hd.fw";
+		touchscreen-size-x = <960>;
+		touchscreen-size-y = <640>;
+	};
+};

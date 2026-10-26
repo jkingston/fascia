@@ -1,0 +1,17 @@
+[Unit]
+Description=Initialize this Fascia's Arch package keyring
+After=local-fs.target systemd-random-seed.service
+Before=serial-getty@ttyGS0.service
+ConditionPathExists=!/etc/pacman.d/gnupg/.fascia-initialized
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/pacman-key --init
+ExecStart=/usr/bin/pacman-key --populate archlinuxarm
+ExecStart=/usr/bin/touch /etc/pacman.d/gnupg/.fascia-initialized
+RemainAfterExit=yes
+TimeoutStartSec=180
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target

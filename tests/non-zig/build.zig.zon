@@ -1,0 +1,8 @@
+.{
+    .name = .fascia_c_fixture,
+    .fingerprint = 0x4546100ca87fbb4e,
+    .version = "0.1.0",
+    .minimum_zig_version = "0.16.0",
+    .dependencies = .{ .protocol = .{ .path = "../../sdk" } },
+    .paths = .{ "build.zig", "build.zig.zon", "main.c", "compat-c.desktop", "compat-c.png", ".DirIcon" },
+}

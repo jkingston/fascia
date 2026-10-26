@@ -1,0 +1,23 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = linux-armv7
+Target = linux-armv7-headers
+Target = fascia-board-support-dkms
+
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Path
+Target = usr/bin/busybox
+Target = usr/bin/btrfs
+Target = usr/lib/*.so*
+Target = usr/share/fascia/initramfs/*
+Target = usr/share/fascia/fascia-boot-select.sh
+Target = usr/lib/fascia/build-initramfs
+
+[Action]
+Description = Validate PF1007L modules and prepare matching boot artifacts
+When = PostTransaction
+Exec = /usr/lib/fascia/fascia-board-refresh

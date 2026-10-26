@@ -1,0 +1,16 @@
+[Unit]
+Description=Initialize Fascia state and optional first-image apps once
+Requires=fascia-provision.service
+Wants=fascia-grow-storage.service
+After=local-fs.target fascia-provision.service fascia-grow-storage.service systemd-sysusers.service
+Before=pf-kiosk.service fascia-device-state.service
+ConditionPathIsMountPoint=/data
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 -I /usr/lib/fascia/fascia-state-init.py
+RemainAfterExit=yes
+UMask=0022
+
+[Install]
+WantedBy=multi-user.target

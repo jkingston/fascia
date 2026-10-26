@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "architecture": "armv7h",
+  "file": "ArchLinuxARM-armv7-latest.tar.gz",
+  "urls": [
+    "https://fl.us.mirror.archlinuxarm.org/os/ArchLinuxARM-armv7-latest.tar.gz",
+    "https://mirrors.dotsrc.org/archlinuxarm/os/ArchLinuxARM-armv7-latest.tar.gz",
+    "https://mirror.math.princeton.edu/pub/archlinuxarm/os/ArchLinuxARM-armv7-latest.tar.gz"
+  ],
+  "signing_fingerprint": "68B3537F39A313B3E574D06777193F152BDBE6A6",
+  "keyring_file": "archlinuxarm.asc",
+  "keyring_sha256": "6ce771e853f04a38a5b533cb33e61f877b9b06b58b6db051eb8a15d737a2332f",
+  "keyring_provenance": {
+    "package": "archlinuxarm-keyring-20240419-2-any.pkg.tar.xz",
+    "sha256": "ba5873af6ffe030bb338c90e49c98e89807ad510033222eda96064beee64cb66",
+    "member": "usr/share/pacman/keyrings/archlinuxarm.gpg"
+  }
+}

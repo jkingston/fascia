@@ -1,0 +1,16 @@
+[Unit]
+Description=Fascia persistent identity and read-only vendor firmware provisioning
+DefaultDependencies=no
+After=systemd-remount-fs.service
+Before=systemd-modules-load.service systemd-udev-trigger.service
+ConditionPathIsMountPoint=/data
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 -I /usr/lib/fascia/provision/fascia-provision.py
+RemainAfterExit=yes
+TimeoutStartSec=120
+UMask=0077
+
+[Install]
+WantedBy=sysinit.target

@@ -1,0 +1,46 @@
+.{
+    .name = .fascia_compositor,
+    .version = "0.1.0",
+    .minimum_zig_version = "0.16.0",
+    .paths = .{ "ui", "build.zig", "build.zig.zon", "main.zig", "server.zig", "fascia-lifecycle.zig", "spawn-child.zig", "fascia-host.zig", "fascia-home.zig", "home-interface.zig", "home-buffer.zig", "presentation.zig", "host-protocol.zig", "home-button.zig", "tests", "LICENSE" },
+    .dependencies = .{
+        .native_ui = .{ .path = "../sdk" },
+        .wlroots = .{
+            .url = "https://github.com/swaywm/zig-wlroots/archive/51349920ae0211bbc6e8be060a1a0a1a67f7a9dc.tar.gz",
+            .hash = "wlroots-0.20.2-dev-jmOlcndzBABCmifzPA09mwmg2NqJQFQZxn51Pg0jeJun",
+        },
+        .wayland = .{
+            .url = "https://codeberg.org/ifreund/zig-wayland/archive/v0.6.0.tar.gz",
+            .hash = "wayland-0.6.0-lQa1kqz8AQADQmdNJsNhLoNHcnEGEUjrOaPV-dtEnEmX",
+        },
+        .xkbcommon = .{
+            .url = "https://codeberg.org/ifreund/zig-xkbcommon/archive/v0.3.0.tar.gz",
+            .hash = "xkbcommon-0.3.0-VDqIe3K9AQB2fG5ZeRcMC9i7kfrp5m2rWgLrmdNn9azr",
+        },
+        .pixman = .{
+            .url = "https://codeberg.org/ifreund/zig-pixman/archive/v0.3.0.tar.gz",
+            .hash = "pixman-0.3.0-LClMnz2VAAAs7QSCGwLimV5VUYx0JFnX5xWU6HwtMuDX",
+        },
+        .arm_wlroots = .{
+            .url = "https://mirrors.dotsrc.org/archlinuxarm/armv7h/extra/wlroots0.20-0.20.2-1-armv7h.pkg.tar.xz",
+            .hash = "N-V-__8AAHQYGACqdoIwnS9cJBrvtVED1D56clJFJGd3K0Ru",
+        },
+        .arm_wayland = .{
+            .url = "https://mirrors.dotsrc.org/archlinuxarm/armv7h/extra/wayland-1.26.0-1-armv7h.pkg.tar.xz",
+            .hash = "N-V-__8AAExQDQBNIs0TdSKWjnIsfRqtsNYv_hJ5Q3uPLUdI",
+        },
+        .arm_protocols = .{
+            .url = "https://mirrors.dotsrc.org/archlinuxarm/armv7h/extra/wayland-protocols-1.49-1-any.pkg.tar.xz",
+            .hash = "N-V-__8AAM74DwBenkWaLgY0Bj2LiEt1X88i_bqzjc9frLK1",
+        },
+        .arm_xkbcommon = .{
+            .url = "https://mirrors.dotsrc.org/archlinuxarm/armv7h/extra/libxkbcommon-1.13.2-1-armv7h.pkg.tar.xz",
+            .hash = "N-V-__8AADzgEAB7ceuzP6_RjqLD27yhHref0SeCwsiPNjst",
+        },
+        .arm_pixman = .{
+            .url = "https://mirrors.dotsrc.org/archlinuxarm/armv7h/extra/pixman-0.46.4-1.1-armv7h.pkg.tar.xz",
+            .hash = "N-V-__8AACDJCgAq3v9J7XQzIPg_rlGspd9RMDPi3Cx0I0rG",
+        },
+    },
+    .fingerprint = 0xacb96213992054ac,
+}

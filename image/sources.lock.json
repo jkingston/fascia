@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "board_id": "pf1007l-pl5",
+  "architecture": "arm-linux-gnueabihf",
+  "kernel_release": "7.2.10-1-armv7-ARCH",
+  "kernel_package": {
+    "file": "linux-armv7-7.2.10-1-armv7h.pkg.tar.xz",
+    "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/linux-armv7-7.2.10-1-armv7h.pkg.tar.xz",
+    "sha256": "b49a4d4dd1a99c1f71eced0fa9fc28d8348d8749a5db6696c56dcd77ade6ebca"
+  },
+  "kernel_headers": {
+    "file": "linux-armv7-headers-7.2.10-1-armv7h.pkg.tar.xz",
+    "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/linux-armv7-headers-7.2.10-1-armv7h.pkg.tar.xz",
+    "sha256": "c8a042ff54f94acf44db1bfa1a61083e2403008b81a349b71705728c2f9f6b04"
+  },
+  "kernel_source": {
+    "tag": "v7.2.10",
+    "hash_manifest": "boards/pf1007l/kernel-sources.sha256",
+    "archive_url": "https://cdn.kernel.org/pub/linux/kernel/v7.x/linux-7.2.10.tar.xz",
+    "archive_sha256": "2feaa70453e91f541be6a5c9078d8168e081af45a3d9718054850538cff2ebf3"
+  },
+  "uboot": {
+    "git": "https://github.com/u-boot/u-boot.git",
+    "commit": "e50b1e8715011def8aff1588081a2649a2c6cd47",
+    "source_date_epoch": 1791763200
+  },
+  "wifi": {
+    "git": "https://github.com/radxa-pkg/aic8800.git",
+    "commit": "e9e43ed79c50483080e9bcdfb08caeeb869d7191",
+    "driver": "src/SDIO/driver_fw/driver"
+  }
+}

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Counter
+Comment=Touch counter built with the Fascia SDK.
+Exec=AppRun
+Icon=counter
+X-Fascia-Version=0.1.1

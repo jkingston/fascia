@@ -1,0 +1,106 @@
+#!/bin/sh
+# Snapshot-capable Arch root and shared data; USB recovery before root selection.
+export PATH=/bin:/sbin:/usr/bin:/usr/sbin
+mount -t proc proc /proc
+mount -t sysfs sysfs /sys
+mount -t devtmpfs devtmpfs /dev
+mkdir -p /run /system /data /new_root /dev/pts
+mount -t tmpfs -o mode=755,nosuid,nodev tmpfs /run
+mount -t devpts devpts /dev/pts
+recovery() {
+    echo "Fascia recovery: $*" > /dev/kmsg
+    while :; do
+        if [ -c /dev/ttyGS0 ]; then
+            setsid sh -c 'echo "Fascia recovery. SD system not started."; exec sh -l' < /dev/ttyGS0 > /dev/ttyGS0 2>&1
+        fi
+        sleep 2
+    done
+}
+while read -r module; do
+    [ -z "$module" ] || insmod "/lib/modules/$module" || echo "Module failed: $module" > /dev/kmsg
+done < /lib/modules/fascia-modules.list
+/usr/lib/fascia/fascia-gadget || echo 'USB console unavailable' > /dev/kmsg
+/usr/lib/fascia/fascia-emmc-readonly || recovery 'Cannot protect internal storage'
+signature=
+for arg in $(cat /proc/cmdline); do
+    case "$arg" in root=PARTUUID=*-02)
+        signature=${arg#root=PARTUUID=}
+        signature=${signature%-02}
+        ;;
+    esac
+done
+case "$signature" in ????????) ;; *) recovery 'Invalid SD image identifier' ;; esac
+case "$signature" in *[!0-9a-f]*) recovery 'Invalid SD signature' ;; esac
+find_sd() {
+    disk=
+    for card in /sys/block/mmcblk*; do
+        [ -f "$card/device/type" ] || continue
+        [ "$(cat "$card/device/type")" = SD ] || continue
+        name=${card##*/}
+        value=$(dd if="/dev/$name" bs=1 skip=440 count=4 2> /dev/null | od -An -tx1 | tr -d ' \n' | sed 's/\(..\)\(..\)\(..\)\(..\)/\4\3\2\1/')
+        if [ "$value" = "$signature" ]; then
+            [ -z "$disk" ] || {
+                disk=
+                return 2
+            }
+            disk=$name
+        fi
+    done
+    [ -n "$disk" ]
+}
+i=0
+while [ "$i" -lt 100 ]; do
+    if find_sd; then break; else result=$?; fi
+    [ "$result" -ne 2 ] || recovery 'More than one SD image matches; refusing ambiguous storage'
+    sleep 0.1
+    i=$((i + 1))
+done
+[ -n "$disk" ] || recovery 'SD image not found'
+mount -t btrfs -o rw,noatime,compress=zstd:3,subvolid=5 "/dev/${disk}p2" /system || recovery 'System store could not mount'
+mount -t btrfs -o rw,noatime,subvol=data "/dev/${disk}p2" /data || recovery 'Persistent data could not mount'
+generation=$(/usr/lib/fascia/fascia-boot-select /data/fascia-system /system/generations) || recovery 'No safe system generation'
+mount -t btrfs -o rw,noatime,subvol="generations/$generation" "/dev/${disk}p2" /new_root || recovery 'Selected root could not mount'
+mount --move /run /new_root/run || recovery 'Runtime mount failed'
+mkdir -p /new_root/run/fascia-system
+mount -t vfat -o rw,noatime,iocharset=ascii "/dev/${disk}p1" /new_root/boot || recovery 'SD boot files could not mount'
+printf '%s\n' "$generation" > /new_root/run/fascia-system/generation || recovery 'Cannot record selected generation'
+# PID1 caches machine-id immediately. Persist it before executing systemd.
+umask 077
+mkdir -p /data/identity
+identity=/data/identity/machine-id
+if [ ! -e "$identity" ]; then
+    temporary=$(mktemp /data/identity/.machine-id.XXXXXX) || recovery 'Identity creation failed'
+    od -An -N16 -tx1 /dev/urandom | tr -d ' \n' > "$temporary"
+    echo >> "$temporary"
+    sync -f "$temporary" && mv "$temporary" "$identity" && sync -f /data/identity || recovery 'Identity persistence failed'
+fi
+[ ! -L "$identity" ] && [ "$(wc -c < "$identity")" -eq 33 ] || recovery 'Invalid machine identity'
+grep -Eq '^[0-9a-f]{32}$' "$identity" || recovery 'Invalid machine identity'
+cp "$identity" /new_root/etc/machine-id || recovery 'Cannot populate runtime machine identity'
+chmod 644 /new_root/etc/machine-id || recovery 'Cannot protect runtime machine identity'
+# Directory access must work even if later firmware provisioning fails: the
+# serial owner still needs a writable home, registry and SSH authorized_keys.
+prepare_persistent_dirs() {
+    persistent=$1
+    for path in fascia/apps fascia/state iwd home/fascia systemd-timesync firmware; do
+        mkdir -p "$persistent/$path" || return 1
+    done
+    chown 1000:1000 "$persistent/fascia" "$persistent/fascia/apps" "$persistent/fascia/state" "$persistent/home/fascia" || return 1
+    chmod 755 "$persistent/fascia" "$persistent/fascia/apps" "$persistent/fascia/state" "$persistent/home/fascia" || return 1
+}
+prepare_persistent_dirs /data || recovery 'Owner data directories could not be prepared'
+for entry in 'var/log 755' 'var/lib/lastlog 755' 'var/tmp 1777' 'tmp 1777'; do
+    set -- $entry
+    mount -t tmpfs -o "nosuid,nodev,mode=$2,size=32M" tmpfs "/new_root/$1" || recovery 'Temporary storage mount failed'
+done
+for pair in 'fascia var/lib/fascia' 'iwd var/lib/iwd' 'home/fascia home/fascia' 'systemd-timesync var/lib/systemd/timesync' 'firmware run/fascia-firmware'; do
+    set -- $pair
+    mkdir -p "/new_root/$2"
+    mount --bind "/data/$1" "/new_root/$2" || recovery 'Persistent mount failed'
+done
+mount --move /data /new_root/data || recovery 'Cannot move data mount into root'
+mount --move /system /new_root/system || recovery 'Cannot move system mount into root'
+mount --move /proc /new_root/proc || recovery 'Cannot move proc mount into root'
+mount --move /sys /new_root/sys || recovery 'Cannot move sys mount into root'
+mount --move /dev /new_root/dev || recovery 'Cannot move dev mount into root'
+exec switch_root /new_root /sbin/init

@@ -1,0 +1,11 @@
+.DS_Store
+.local/
+secrets/
+*.img
+*.img.gz
+*.raw
+*.fw
+**/__pycache__/
+**/.zig-cache/
+**/zig-out/
+**/zig-pkg/

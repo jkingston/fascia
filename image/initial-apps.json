@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "apps": ["clock", "counter"],
+  "default_app": "clock",
+  "startup_delay_seconds": 10
+}

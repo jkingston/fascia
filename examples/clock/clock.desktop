@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Clock
+Comment=A quiet clock over photographs from a public RSS feed.
+Exec=AppRun
+Icon=clock
+X-Fascia-Version=0.1.0

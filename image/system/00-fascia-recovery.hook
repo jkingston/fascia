@@ -1,0 +1,12 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Operation = Remove
+Type = Package
+Target = *
+
+[Action]
+Description = Save system and matching boot recovery checkpoint
+When = PreTransaction
+Exec = /usr/local/libexec/fascia-system-update recovery snapshot
+AbortOnFail

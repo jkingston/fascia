@@ -1,0 +1,12 @@
+[Unit]
+Description=Restore saved Fascia display brightness
+After=local-fs.target
+Before=pf-kiosk.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/libexec/fascia-system-root restore
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

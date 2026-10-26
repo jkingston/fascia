@@ -1,0 +1,14 @@
+.{
+    .name = .fascia,
+    .version = "0.1.0",
+    .fingerprint = 0x76ace832e37d6662,
+    .minimum_zig_version = "0.16.0",
+    .dependencies = .{
+        .fonts = .{
+            .url = "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/ttf-dejavu-2.37%2B18%2Bg9b5d1b2f-8-any.pkg.tar.xz",
+            .hash = "N-V-__8AANfRnABAMqxluThQF6k5Wu9mnhG8Z3P8BHZTHND5",
+        },
+        .native_ui = .{ .path = "sdk" },
+    },
+    .paths = .{ "build.zig", "build.zig.zon", "sdk", "host", "tools/fascia-brightness.zig", "LICENSE", "README.md" },
+}

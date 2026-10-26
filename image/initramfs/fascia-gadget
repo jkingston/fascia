@@ -1,0 +1,34 @@
+#!/bin/sh
+# Fixed USB ACM console and NCM network, available even when root selection fails.
+set -eu
+c=/sys/kernel/config
+g=$c/usb_gadget/fascia
+mount -t configfs configfs "$c" 2> /dev/null || true
+[ -d "$c/usb_gadget" ] || exit 1
+mkdir -p "$g"
+echo 0x1d6b > "$g/idVendor"
+echo 0x0104 > "$g/idProduct"
+echo 0x0200 > "$g/bcdUSB"
+echo 0xEF > "$g/bDeviceClass"
+echo 0x02 > "$g/bDeviceSubClass"
+echo 0x01 > "$g/bDeviceProtocol"
+mkdir -p "$g/strings/0x409" "$g/configs/c.1/strings/0x409"
+echo Fascia > "$g/strings/0x409/manufacturer"
+echo 'Fascia USB console' > "$g/strings/0x409/product"
+echo PF1007L-Fascia > "$g/strings/0x409/serialnumber"
+echo 'Console and network' > "$g/configs/c.1/strings/0x409/configuration"
+echo 2 > "$g/configs/c.1/MaxPower"
+echo 0x80 > "$g/configs/c.1/bmAttributes"
+mkdir -p "$g/functions/acm.GS0" "$g/functions/ncm.usb0"
+echo 02:50:46:10:07:01 > "$g/functions/ncm.usb0/dev_addr"
+echo 02:50:46:10:07:02 > "$g/functions/ncm.usb0/host_addr"
+ln -s "$g/functions/acm.GS0" "$g/configs/c.1/acm.GS0"
+ln -s "$g/functions/ncm.usb0" "$g/configs/c.1/ncm.usb0"
+i=0
+while [ -z "$(ls /sys/class/udc)" ] && [ "$i" -lt 50 ]; do
+    sleep 0.1
+    i=$((i + 1))
+done
+udc=$(ls /sys/class/udc | head -n1)
+[ -n "$udc" ]
+echo "$udc" > "$g/UDC"

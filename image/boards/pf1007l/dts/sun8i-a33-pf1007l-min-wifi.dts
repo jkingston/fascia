@@ -1,0 +1,47 @@
+// SPDX-License-Identifier: (GPL-2.0+ OR MIT)
+
+#include "sun8i-a33-pf1007l-min.dts"
+#include <dt-bindings/gpio/gpio.h>
+
+/ {
+	model = "PF1007L Arch, minimal USB and experimental Wi-Fi";
+	aliases {
+		mmc1 = &mmc1;
+	};
+	wifi_chip_enable: regulator-wifi-chip-en {
+		compatible = "regulator-fixed";
+		regulator-name = "wifi-chip-en";
+		regulator-min-microvolt = <3300000>;
+		regulator-max-microvolt = <3300000>;
+		gpio = <&r_pio 0 5 GPIO_ACTIVE_HIGH>;
+		enable-active-high;
+		startup-delay-us = <150000>;
+		vin-supply = <&reg_vcc3v3>;
+	};
+	wifi_pwrseq: wifi-pwrseq {
+		compatible = "mmc-pwrseq-simple";
+		reset-gpios = <&r_pio 0 6 GPIO_ACTIVE_LOW>;
+		post-power-on-delay-ms = <200>;
+	};
+};
+
+&mmc1 {
+	pinctrl-names = "default";
+	pinctrl-0 = <&mmc1_pg_pins>;
+	vmmc-supply = <&wifi_chip_enable>;
+	vqmmc-supply = <&reg_vcc3v3>;
+	mmc-pwrseq = <&wifi_pwrseq>;
+	bus-width = <4>;
+	max-frequency = <25000000>;
+	non-removable;
+	keep-power-in-suspend;
+	status = "okay";
+};
+
+&mmc2 {
+	status = "disabled";
+};
+
+&r_uart {
+	status = "disabled";
+};

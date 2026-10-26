@@ -1,0 +1,13 @@
+[Unit]
+Description=Confirm the selected Fascia userspace generation after local health checks
+After=pf-kiosk.service fascia-brightness.service
+ConditionPathExists=/run/fascia-system/generation
+
+[Service]
+Type=oneshot
+Restart=on-failure
+RestartSec=30s
+ExecStart=/usr/local/libexec/fascia-system-health
+User=root
+NoNewPrivileges=yes
+PrivateTmp=yes

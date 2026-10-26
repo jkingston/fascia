@@ -1,0 +1,37 @@
+[Unit]
+Description=Fascia host and installed applications
+Requires=fascia-state-init.service user@1000.service
+Wants=seatd.service fascia-brightness.service
+After=user@1000.service seatd.service fascia-state-init.service fascia-brightness.service
+Conflicts=getty@tty1.service
+
+[Service]
+User=fascia
+TTYPath=/dev/tty1
+TTYReset=yes
+TTYVHangup=yes
+StandardInput=tty
+StandardOutput=journal
+StandardError=journal
+UtmpIdentifier=tty1
+RuntimeDirectory=pf-kiosk
+RuntimeDirectoryMode=0700
+Environment=XDG_RUNTIME_DIR=/run/pf-kiosk
+Environment=XDG_SESSION_TYPE=wayland
+Environment=LIBSEAT_BACKEND=seatd
+Environment=WLR_RENDERER=gles2
+Environment=NO_AT_BRIDGE=1
+Environment=FASCIA_FONT=/usr/local/share/fascia/DejaVuSans.ttf
+Environment=FASCIA_APPS_ROOT=/var/lib/fascia/apps
+Environment=FASCIA_STATE_ROOT=/var/lib/fascia/state
+Environment=FASCIA_HOME_ROOT=/var/lib/fascia
+Environment=DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+ExecStartPre=/usr/bin/env XDG_RUNTIME_DIR=/run/user/1000 /usr/bin/systemctl --user start fascia-session.target
+ExecStart=/usr/lib/fascia/run-home
+ExecStopPost=/usr/bin/env XDG_RUNTIME_DIR=/run/user/1000 /usr/bin/systemctl --user stop fascia-session.target
+Restart=on-failure
+RestartSec=2
+TimeoutStopSec=5
+
+[Install]
+WantedBy=multi-user.target

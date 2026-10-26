@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=C compatibility test
+Comment=Wayland client without the Zig UI SDK.
+Exec=AppRun
+Icon=compat-c
+X-Fascia-Version=1

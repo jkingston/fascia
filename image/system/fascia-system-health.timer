@@ -1,0 +1,10 @@
+[Unit]
+Description=Check Fascia userspace health after startup
+
+[Timer]
+OnBootSec=90s
+AccuracySec=1s
+Unit=fascia-system-health.service
+
+[Install]
+WantedBy=timers.target

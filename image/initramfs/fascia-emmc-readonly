@@ -1,0 +1,29 @@
+#!/bin/sh
+# Only locks MMC/eMMC block devices. Never changes an SD card's write access.
+lock_emmc() {
+    found=0
+    for card in /sys/block/mmcblk*; do
+        [ -f "$card/device/type" ] || continue
+        [ "$(cat "$card/device/type")" = MMC ] || continue
+        name=${card##*/}
+        for node in /dev/"$name" /dev/"$name"p* /dev/"$name"boot*; do
+            [ -b "$node" ] || continue
+            /bin/busybox blockdev --setro "$node" || return 1
+            [ "$(/bin/busybox blockdev --getro "$node")" = 1 ] || return 1
+        done
+        # Partition discovery can follow the whole-device event. Keep polling
+        # until the required Android system partition has also been locked.
+        [ -b "/dev/${name}p7" ] && found=1
+        echo "pf1007l-emmc: $name locked read-only in initramfs" > /dev/kmsg
+    done
+    return 0
+}
+i=0
+while [ "$i" -lt 50 ]; do
+    lock_emmc || exit 1
+    [ "$found" = 1 ] && exit 0
+    sleep 0.1
+    i=$((i + 1))
+done
+echo "pf1007l-emmc: no MMC storage appeared during early probe; udev guard remains active" > /dev/kmsg
+exit 0

@@ -1,0 +1,16 @@
+[Trigger]
+Operation = Remove
+Type = Package
+Target = linux-armv7
+Target = linux-armv7-headers
+Target = fascia-board-support-dkms
+Target = dkms
+Target = busybox
+Target = btrfs-progs
+Target = python
+
+[Action]
+Description = Keep essential PF1007L boot dependencies installed (upgrades are supported)
+When = PreTransaction
+Exec = /usr/lib/fascia/fascia-board-refresh --refuse-removal
+AbortOnFail

@@ -1,0 +1,78 @@
+#!/bin/sh
+export PATH=/usr/sbin:/usr/bin:/sbin:/bin
+mount -t proc proc /proc
+mount -t sysfs sysfs /sys
+mount -t devtmpfs devtmpfs /dev
+exec > /dev/console 2>&1
+fail() {
+    echo "FASCIA_HELPER_FAILED $*"
+    sync
+    poweroff -f
+}
+/usr/sbin/depmod -a || fail depmod
+/usr/sbin/modprobe virtio_blk || fail virtio-blk
+/usr/sbin/modprobe virtio_rng || fail entropy
+/usr/sbin/modprobe btrfs || fail btrfs
+/usr/sbin/modprobe loop || fail loop
+/usr/sbin/modprobe nls_cp437 || fail nls-cp437
+/usr/sbin/modprobe nls_ascii || fail nls-ascii
+/usr/sbin/modprobe nls_utf8 || fail nls-utf8
+/usr/sbin/modprobe binfmt_misc || fail binfmt
+mount -t binfmt_misc binfmt_misc /proc/sys/fs/binfmt_misc || fail binfmt-mount
+printf '%s\n' ':qemu-arm:M::\x7fELF\x01\x01\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x02\x00\x28\x00:\xff\xff\xff\xff\xff\xff\xff\x00\xff\xff\xff\xff\xff\xff\xff\xff\xfe\xff\xff\xff:/usr/bin/qemu-arm:F' > /proc/sys/fs/binfmt_misc/register || fail binfmt-register
+mkdir -p /input /output /tmp /run
+mount -t virtiofs -o ro fascia-input /input || fail input
+mount -t virtiofs fascia-output /output || fail output
+capacity= serial= host_dns=
+for arg in $(cat /proc/cmdline); do case "$arg" in fascia_capacity=*) capacity=${arg#*=} ;; fascia_serial=*) serial=${arg#*=} ;; fascia_dns=*) host_dns=${arg#*=} ;; esac done
+case "$capacity" in '' | *[!0-9]*) fail capacity ;; esac
+set -- --input /input --output /output --capacity "$capacity" --serial "$serial"
+if [ "$serial" = FASCIA-PREPARE ]; then
+    [ "$capacity" = 0 ] && [ ! -b /dev/vda ] || fail prepare-must-have-no-target
+    /usr/sbin/modprobe virtio_net || fail virtio-net
+    interface=
+    for nic in /sys/class/net/*; do
+        [ "${nic##*/}" = lo ] || interface=${nic##*/}
+    done
+    [ -n "$interface" ] || fail missing-prepare-network
+    cat > /run/fascia-dhcp << 'DHCP'
+#!/bin/sh
+case "$1" in
+    bound | renew)
+        ifconfig "$interface" "$ip" netmask "${subnet:-255.255.255.0}" up || exit 1
+        for gateway in $router; do route add default gw "$gateway" dev "$interface" || exit 1; break; done
+        : > /etc/resolv.conf
+        for server in $dns; do
+            case "$server" in '' | *[!0-9.]*) continue ;; esac
+            printf 'nameserver %s\n' "$server" >> /etc/resolv.conf
+        done
+        ;;
+esac
+DHCP
+    chmod 755 /run/fascia-dhcp
+    ifconfig "$interface" up || fail prepare-link
+    udhcpc -i "$interface" -q -n -t 6 -T 2 -s /run/fascia-dhcp || fail prepare-dhcp
+    if [ -n "$host_dns" ]; then
+        cp /etc/resolv.conf /run/fascia-dhcp-resolv
+        printf 'options timeout:2 attempts:2\n' > /etc/resolv.conf
+        saved_ifs=$IFS
+        IFS=,
+        for server in $host_dns; do
+            case "$server" in '' | *[!0-9.]*) continue ;; esac
+            printf 'nameserver %s\n' "$server" >> /etc/resolv.conf
+        done
+        IFS=$saved_ifs
+        cat /run/fascia-dhcp-resolv >> /etc/resolv.conf
+    fi
+    [ -s /etc/resolv.conf ] || fail prepare-dns
+else
+    [ -b /dev/vda ] || fail missing-target
+    [ "$(cat /sys/block/vda/serial)" = "$serial" ] || fail serial
+    [ "$(cat /sys/block/vda/size)" = "$((capacity / 512))" ] || fail size
+    set -- "$@" --target /dev/vda
+fi
+python3 /input/project/image/host/guest.py "$@"
+rc=$?
+sync
+if [ "$rc" = 0 ]; then echo FASCIA_HELPER_SUCCESS; else echo "FASCIA_HELPER_FAILED guest-$rc"; fi
+poweroff -f

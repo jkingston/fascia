@@ -1,0 +1,32 @@
+[Unit]
+Description=PF1007L verified PL2 Home button
+Wants=modprobe@uinput.service
+After=modprobe@uinput.service
+Before=pf-kiosk.service
+StartLimitIntervalSec=30
+StartLimitBurst=3
+
+[Service]
+Type=notify
+NotifyAccess=main
+ExecStart=/usr/local/libexec/fascia-home-button
+Restart=on-failure
+RestartSec=2
+TimeoutStartSec=8
+TimeoutStopSec=3
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+PrivateTmp=yes
+PrivateDevices=no
+DevicePolicy=closed
+DeviceAllow=/dev/gpiochip0 r
+DeviceAllow=/dev/uinput rw
+RestrictAddressFamilies=AF_UNIX
+CapabilityBoundingSet=
+UMask=0077
+
+[Install]
+WantedBy=multi-user.target
