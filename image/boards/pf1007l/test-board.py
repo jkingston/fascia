@@ -130,7 +130,7 @@ class Board(unittest.TestCase):
             int(sha, 16)
             self.assertNotIn("..", Path(path).parts)
 
-    def kernel_fixture(self, root, release="7.2.10-1-armv7-ARCH"):
+    def kernel_fixture(self, root, release="7.3.0-1-armv7-ARCH"):
         files = {
             f"usr/lib/modules/{release}/build/.config": b"CONFIG_ARM=y\n",
             f"usr/lib/modules/{release}/build/Module.symvers": b"symbols",
@@ -149,14 +149,14 @@ class Board(unittest.TestCase):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
             files = self.kernel_fixture(root)
-            packages = "linux-armv7 7.2.10-1\nlinux-armv7-headers 7.2.10-1\n"
+            packages = "linux-armv7 7.3.0-1\nlinux-armv7-headers 7.3.0-1\n"
             with (
                 mock.patch.object(build, "run", return_value=packages) as run,
                 mock.patch.object(build, "fetch") as fetch,
             ):
-                result = build.installed_kernel(root, "7.2.10-1-armv7-ARCH")
-            self.assertEqual(result["release"], "7.2.10-1-armv7-ARCH")
-            self.assertEqual(result["packages"]["linux-armv7"], "7.2.10-1")
+                result = build.installed_kernel(root, "7.3.0-1-armv7-ARCH")
+            self.assertEqual(result["release"], "7.3.0-1-armv7-ARCH")
+            self.assertEqual(result["packages"]["linux-armv7"], "7.3.0-1")
             self.assertEqual(
                 result["reference_hashes"],
                 {
@@ -180,39 +180,39 @@ class Board(unittest.TestCase):
     def test_newer_patch_kernel_uses_actual_installed_release(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
-            self.kernel_fixture(root, "7.2.11-1-armv7-ARCH")
+            self.kernel_fixture(root, "7.3.1-1-armv7-ARCH")
             with (
                 mock.patch.object(
                     build,
                     "run",
-                    return_value="linux-armv7 7.2.11-1\nlinux-armv7-headers 7.2.11-1\n",
+                    return_value="linux-armv7 7.3.1-1\nlinux-armv7-headers 7.3.1-1\n",
                 ),
                 mock.patch.object(build, "fetch") as fetch,
             ):
-                result = build.installed_kernel(root, "7.2.10-1-armv7-ARCH")
-            self.assertEqual(result["release"], "7.2.11-1-armv7-ARCH")
+                result = build.installed_kernel(root, "7.3.0-1-armv7-ARCH")
+            self.assertEqual(result["release"], "7.3.1-1-armv7-ARCH")
             self.assertEqual(
                 result["headers"],
-                root.resolve() / "usr/lib/modules/7.2.11-1-armv7-ARCH/build",
+                root.resolve() / "usr/lib/modules/7.3.1-1-armv7-ARCH/build",
             )
             fetch.assert_not_called()
 
     def test_future_kernel_refuses_before_any_archive_fallback(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
-            self.kernel_fixture(root, "7.3.0-1-armv7-ARCH")
+            self.kernel_fixture(root, "7.4.0-1-armv7-ARCH")
             with (
                 mock.patch.object(
                     build,
                     "run",
-                    return_value="linux-armv7 7.3.0-1\nlinux-armv7-headers 7.3.0-1\n",
+                    return_value="linux-armv7 7.4.0-1\nlinux-armv7-headers 7.4.0-1\n",
                 ),
                 mock.patch.object(build, "fetch") as fetch,
             ):
                 with self.assertRaisesRegex(
                     ValueError, "No older kernel will be downloaded"
                 ):
-                    build.installed_kernel(root, "7.2.10-1-armv7-ARCH")
+                    build.installed_kernel(root, "7.3.0-1-armv7-ARCH")
                 fetch.assert_not_called()
 
     def test_mismatched_installed_kernel_headers_fail(self):
@@ -220,28 +220,28 @@ class Board(unittest.TestCase):
             with mock.patch.object(
                 build,
                 "run",
-                return_value="linux-armv7 7.2.10-2\nlinux-armv7-headers 7.2.10-1\n",
+                return_value="linux-armv7 7.3.0-2\nlinux-armv7-headers 7.3.0-1\n",
             ):
                 with self.assertRaisesRegex(ValueError, "versions must match"):
-                    build.installed_kernel(Path(directory), "7.2.10-1-armv7-ARCH")
+                    build.installed_kernel(Path(directory), "7.3.0-1-armv7-ARCH")
 
     def test_installed_headers_cannot_escape_the_selected_root(self):
         with tempfile.TemporaryDirectory() as directory:
             base = Path(directory)
             root, outside = base / "root", base / "outside"
             self.kernel_fixture(outside)
-            modules = root / "usr/lib/modules/7.2.10-1-armv7-ARCH"
+            modules = root / "usr/lib/modules/7.3.0-1-armv7-ARCH"
             modules.mkdir(parents=True)
             (modules / "build").symlink_to(
-                outside / "usr/lib/modules/7.2.10-1-armv7-ARCH/build"
+                outside / "usr/lib/modules/7.3.0-1-armv7-ARCH/build"
             )
             with mock.patch.object(
                 build,
                 "run",
-                return_value="linux-armv7 7.2.10-1\nlinux-armv7-headers 7.2.10-1\n",
+                return_value="linux-armv7 7.3.0-1\nlinux-armv7-headers 7.3.0-1\n",
             ):
                 with self.assertRaisesRegex(ValueError, "escape"):
-                    build.installed_kernel(root, "7.2.10-1-armv7-ARCH")
+                    build.installed_kernel(root, "7.3.0-1-armv7-ARCH")
 
     def test_missing_reference_and_ambiguous_headers_fail(self):
         with tempfile.TemporaryDirectory() as directory:
@@ -250,20 +250,20 @@ class Board(unittest.TestCase):
             with mock.patch.object(
                 build,
                 "run",
-                return_value="linux-armv7 7.2.10-1\nlinux-armv7-headers 7.2.10-1\n",
+                return_value="linux-armv7 7.3.0-1\nlinux-armv7-headers 7.3.0-1\n",
             ):
                 symbols = (
-                    root / "usr/lib/modules/7.2.10-1-armv7-ARCH/build/Module.symvers"
+                    root / "usr/lib/modules/7.3.0-1-armv7-ARCH/build/Module.symvers"
                 )
                 symbols.unlink()
                 with self.assertRaisesRegex(
                     ValueError, "Missing installed kernel reference"
                 ):
-                    build.installed_kernel(root, "7.2.10-1-armv7-ARCH")
+                    build.installed_kernel(root, "7.3.0-1-armv7-ARCH")
                 symbols.write_bytes(b"symbols")
-                self.kernel_fixture(root, "7.2.10-2-armv7-ARCH")
+                self.kernel_fixture(root, "7.3.0-2-armv7-ARCH")
                 with self.assertRaisesRegex(ValueError, "exactly one"):
-                    build.installed_kernel(root, "7.2.10-1-armv7-ARCH")
+                    build.installed_kernel(root, "7.3.0-1-armv7-ARCH")
 
     def test_invalid_fdt_rejected(self):
         for raw in (b"", b"bad" * 20):

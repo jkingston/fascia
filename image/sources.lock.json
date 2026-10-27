@@ -2,22 +2,22 @@
   "schema_version": 1,
   "board_id": "pf1007l-pl5",
   "architecture": "arm-linux-gnueabihf",
-  "kernel_release": "7.2.10-1-armv7-ARCH",
+  "kernel_release": "7.3.0-1-armv7-ARCH",
   "kernel_package": {
-    "file": "linux-armv7-7.2.10-1-armv7h.pkg.tar.xz",
-    "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/linux-armv7-7.2.10-1-armv7h.pkg.tar.xz",
-    "sha256": "b49a4d4dd1a99c1f71eced0fa9fc28d8348d8749a5db6696c56dcd77ade6ebca"
+    "file": "linux-armv7-7.3-1-armv7h.pkg.tar.xz",
+    "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/linux-armv7-7.3-1-armv7h.pkg.tar.xz",
+    "sha256": "25cc88af49e61fce30a35d512d8240edd8a98cabd2026681c8cd4dba6fcbfe31"
   },
   "kernel_headers": {
-    "file": "linux-armv7-headers-7.2.10-1-armv7h.pkg.tar.xz",
-    "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/linux-armv7-headers-7.2.10-1-armv7h.pkg.tar.xz",
-    "sha256": "c8a042ff54f94acf44db1bfa1a61083e2403008b81a349b71705728c2f9f6b04"
+    "file": "linux-armv7-headers-7.3-1-armv7h.pkg.tar.xz",
+    "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/linux-armv7-headers-7.3-1-armv7h.pkg.tar.xz",
+    "sha256": "64f04762d8d89337e637a552a8ff972afda35c1c201d5e62531b2cced5d4c88a"
   },
   "kernel_source": {
-    "tag": "v7.2.10",
+    "tag": "v7.3",
     "hash_manifest": "boards/pf1007l/kernel-sources.sha256",
-    "archive_url": "https://cdn.kernel.org/pub/linux/kernel/v7.x/linux-7.2.10.tar.xz",
-    "archive_sha256": "2feaa70453e91f541be6a5c9078d8168e081af45a3d9718054850538cff2ebf3"
+    "archive_url": "https://cdn.kernel.org/pub/linux/kernel/v7.x/linux-7.3.tar.xz",
+    "archive_sha256": "87363c24f10e06321eb362765521094e94471f6bff8bce2d6b3e40f39f004953"
   },
   "uboot": {
     "git": "https://github.com/u-boot/u-boot.git",

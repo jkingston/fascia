@@ -241,7 +241,7 @@ def native_helpers(headers, host_tools):
             )
         except OSError as error:
             raise ValueError(
-                "Kernel helper cannot execute on builder; use ARMv7 buildroot or --host-tools prepared from matching 7.2.10 source"
+                "Kernel helper cannot execute on builder; use ARMv7 buildroot or --host-tools prepared from matching kernel source"
             ) from error
 
 
@@ -375,7 +375,7 @@ def main():
     lock = json.loads((IMAGE / "sources.lock.json").read_text())
     if (
         lock["board_id"] != "pf1007l-pl5"
-        or lock["kernel_release"] != "7.2.10-1-armv7-ARCH"
+        or lock["kernel_release"] != "7.3.0-1-armv7-ARCH"
     ):
         parser.error("Unsupported board/kernel source lock")
     if args.kernel_root is not None and args.locked_kernel_packages:
@@ -540,7 +540,7 @@ def main():
                 / krel
                 / "kernel/drivers/gpu/drm/panel/panel-lvds.ko"
             )
-            kernel = sources / "linux-v7.2.10"
+            kernel = sources / "linux-v7.3"
             kernel.mkdir(exist_ok=True)
             manifest = BOARD / "kernel-sources.sha256"
             listed = []
@@ -549,8 +549,8 @@ def main():
                 listed.append(name)
                 fetch(
                     [
-                        f"https://raw.githubusercontent.com/gregkh/linux/v7.2.10/{name}",
-                        f"https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/plain/{name}?h=v7.2.10",
+                        f"https://raw.githubusercontent.com/gregkh/linux/v7.3/{name}",
+                        f"https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git/plain/{name}?h=v7.3",
                     ],
                     kernel / name,
                     sha,
@@ -578,7 +578,7 @@ def main():
                 ):
                     raise ValueError("Pinned DT binding differs from installed headers")
             with tarfile.open(
-                source_output / "kernel-v7.2.10-selected.tar", "w"
+                source_output / "kernel-v7.3-selected.tar", "w"
             ) as archive:
                 for name in listed:
                     info = archive.gettarinfo(kernel / name, arcname=name)

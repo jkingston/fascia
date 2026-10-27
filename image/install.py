@@ -314,7 +314,10 @@ def run_preparation(job, guest, output_dir, downloads):
 def prepare(args, cache):
     release = release_directory(args)
     initial_apps = initial_apps_directory(args)
-    print("Preparing the official Arch Linux ARM base and board sources…", flush=True)
+    print(
+        "Preparing the pinned Arch Linux ARM base, packages and board sources…",
+        flush=True,
+    )
     resolved = inputs.prepare(
         cache / "downloads",
         offline=args.offline,
@@ -392,6 +395,43 @@ def create_image(path, size_mib):
     return path
 
 
+def select_card(args):
+    if not args.disk and args.erase:
+        raise ValueError("--erase requires an explicit --disk")
+    if not args.erase and not sys.stdin.isatty():
+        raise ValueError("Choose a card in a terminal, or use --disk DISK --erase")
+    prompts = load("ssh")
+    ui = prompts.setup.Terminal(plain=args.plain)
+    if args.disk:
+        identity = devices.inspect(args.disk, args.capacity)
+    else:
+        targets = devices.candidates()
+        if not targets:
+            raise ValueError(
+                "No writable external cards found. Insert the card into its reader."
+            )
+        ui.heading("Install Fascia", "Choose the card to erase")
+        options = [
+            (devices.description(name, identity), "All contents will be erased")
+            for name, identity in targets
+        ]
+        options.append(("Cancel", "Leave all disks unchanged"))
+        selected = prompts.choose(ui, options, plain=args.plain, default_label="Cancel")
+        if selected == len(targets):
+            raise ValueError("Installation cancelled; no disk was changed")
+        args.disk, identity = targets[selected]
+    args.capacity = devices.capacity(identity)
+    ui.tell(devices.description(args.disk, identity))
+    if not args.erase:
+        answer = input(
+            ui.prompt(f"Erase this card? Type {args.disk} to confirm:")
+        ).strip()
+        if answer != args.disk:
+            raise ValueError("Installation cancelled; no disk was changed")
+    devices.assert_identity(identity, devices.inspect(args.disk, args.capacity))
+    return identity
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     commands = parser.add_subparsers(dest="command", required=True)
@@ -421,7 +461,7 @@ def main():
         freshness.add_argument(
             "--refresh",
             action="store_true",
-            help="Run fresh rolling package preparation instead of reusing a completed snapshot",
+            help="Rebuild from pinned inputs instead of reusing a completed preparation",
         )
         if name != "prepare":
             load("ssh").arguments(sub)
@@ -431,20 +471,17 @@ def main():
         elif name == "install":
             sub.add_argument(
                 "--disk",
-                required=True,
                 help="Exact whole disk: disk9 on Mac, /dev/sdb on Linux",
             )
             sub.add_argument(
                 "--capacity",
                 type=int,
-                required=True,
-                help="Exact capacity reported by list, in bytes",
+                help=argparse.SUPPRESS,
             )
             sub.add_argument(
                 "--erase",
                 action="store_true",
-                required=True,
-                help="Authorize erasing this specific external card",
+                help="Skip confirmation when --disk is supplied",
             )
     args = parser.parse_args()
     if args.command == "list":
@@ -454,7 +491,7 @@ def main():
         parser.error("Run as your normal user; the installer requests sudo when needed")
     check_host()
     if args.command == "install":
-        identity = devices.inspect(args.disk, args.capacity)
+        identity = select_card(args)
         print(
             f"Selected {args.disk}: {args.capacity} bytes. Preparation finishes before it is opened.",
             flush=True,

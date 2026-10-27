@@ -7,6 +7,7 @@ import io
 import json
 from pathlib import Path
 import tempfile
+import tarfile
 import unittest
 from unittest.mock import patch
 
@@ -39,6 +40,61 @@ class TestInputs(unittest.TestCase):
 
     def tearDown(self):
         self.tmp.cleanup()
+
+    def package_fixture(self, member_name="core.db", kind=tarfile.REGTYPE):
+        bundle = self.root / "packages.tar"
+        with tarfile.open(bundle, "w") as output:
+            member = tarfile.TarInfo(member_name)
+            member.type = kind
+            member.size = len(self.data) if kind == tarfile.REGTYPE else 0
+            output.addfile(member, io.BytesIO(self.data) if member.size else None)
+        lock = {
+            "schema_version": 1,
+            "bundle": {
+                "file": bundle.name,
+                "sha256": inputs.digest(bundle),
+                "bytes": bundle.stat().st_size,
+                "url": "https://example.invalid/packages.tar",
+            },
+            "files": {
+                "core.db": {
+                    "sha256": hashlib.sha256(self.data).hexdigest(),
+                    "bytes": len(self.data),
+                }
+            },
+        }
+        (self.root / "packages.lock.json").write_text(json.dumps(lock))
+        return bundle
+
+    def test_package_snapshot_integrity_and_cache_reuse(self):
+        bundle = self.package_fixture()
+        with (
+            patch.object(inputs, "HERE", self.root),
+            patch.object(inputs, "fetch", return_value=bundle),
+        ):
+            directory, lock = inputs.prepare_packages(self.root, offline=True)
+            self.assertEqual((directory / "core.db").read_bytes(), self.data)
+            self.assertEqual(
+                inputs.prepare_packages(self.root, offline=True)[0], directory
+            )
+            (directory / "core.db").write_bytes(b"changed")
+            with self.assertRaisesRegex(ValueError, "retained package"):
+                inputs.prepare_packages(self.root, offline=True)
+
+    def test_package_snapshot_rejects_paths_links_and_missing_files(self):
+        for name, kind in (
+            ("../escape", tarfile.REGTYPE),
+            ("core.db", tarfile.SYMTYPE),
+            ("unknown", tarfile.REGTYPE),
+        ):
+            with self.subTest(name=name, kind=kind):
+                bundle = self.package_fixture(name, kind)
+                with (
+                    patch.object(inputs, "HERE", self.root),
+                    patch.object(inputs, "fetch", return_value=bundle),
+                    self.assertRaises(ValueError),
+                ):
+                    inputs.prepare_packages(self.root, offline=True)
 
     def test_cached_integrity(self):
         path = self.root / "item.tar"
@@ -133,7 +189,7 @@ class TestInputs(unittest.TestCase):
             )
             self.assertNotIn("Range", network.call_args.args[0].headers)
 
-    def test_rolling_profile_has_names_without_frozen_package_archive_lock(self):
+    def test_profiles_match_retained_package_inventory(self):
         profiles = json.loads((inputs.HERE / "profiles.json").read_text())
         self.assertEqual(profiles["architecture"], "armv7h")
         for group in ("build_packages", "runtime_packages"):
@@ -141,9 +197,11 @@ class TestInputs(unittest.TestCase):
         self.assertIn("linux-armv7", profiles["runtime_packages"])
         self.assertIn("linux-armv7-headers", profiles["runtime_packages"])
         self.assertIn("base-devel", profiles["build_packages"])
-        self.assertFalse((inputs.HERE / "packages.lock.json").exists())
+        lock = json.loads((inputs.HERE / "packages.lock.json").read_text())
+        for group in ("build_packages", "runtime_packages"):
+            self.assertTrue(set(profiles[group]) <= set(lock[group]))
 
-    def test_prepare_uses_signed_base_and_names_without_a_frozen_archive_set(self):
+    def test_prepare_uses_pinned_base_and_package_repository(self):
         locks = self.root / "profiles"
         locks.mkdir()
         (locks / "profiles.json").write_text(
@@ -166,6 +224,9 @@ class TestInputs(unittest.TestCase):
         }
         with (
             patch.object(inputs, "HERE", locks),
+            patch.object(
+                inputs, "prepare_packages", return_value=(self.root / "repository", {})
+            ),
             patch.object(inputs.rootfs, "prepare", return_value=base) as rootfs,
             patch.object(inputs.urllib.request, "urlopen") as net,
         ):

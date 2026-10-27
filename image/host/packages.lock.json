@@ -1,0 +1,4438 @@
+{
+  "schema_version": 1,
+  "release": "install-inputs-2026-10-27",
+  "bundle": {
+    "file": "packages.tar",
+    "url": "https://github.com/jkingston/fascia/releases/download/install-inputs-2026-10-27/packages.tar",
+    "bytes": 366530560,
+    "sha256": "d72d166843ce4064d887c5ef34b4fc6f95c578564f1158e7640e9fff5e965aaa"
+  },
+  "files": {
+    "acl-2.4.0-1-armv7h.pkg.tar.xz": {
+      "bytes": 139692,
+      "sha256": "fd9c07d4df3fcd50bc0ab5ca5ce85cd2fc6c0dba4a23cd9ff668815d78abc096"
+    },
+    "acl-2.4.0-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "20e32326115d1850e02be735848581a4b02098588f0e1e878b86c0460d7fa80b"
+    },
+    "alarm.db": {
+      "bytes": 54,
+      "sha256": "b7f5c3c3f0c08454080f9cdcbad6744da793a93a18cf3d391e14e389ff976711"
+    },
+    "alsa-lib-1.2.16.1-1-armv7h.pkg.tar.xz": {
+      "bytes": 432508,
+      "sha256": "ed176a4e706f8ca8e3825d8dfdf2be005d3786c3def42ddd44d12604a8861346"
+    },
+    "alsa-lib-1.2.16.1-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "2a04a934897a1bbe60159b392ac971f2a2dacfbfcdeec47aed892e2efdb21b47"
+    },
+    "alsa-topology-conf-1.2.5.1-4-any.pkg.tar.xz": {
+      "bytes": 13532,
+      "sha256": "104486f90aa891cb38c6a4ac9a16183bea7f533fd6b11a740877a75222eb2156"
+    },
+    "alsa-topology-conf-1.2.5.1-4-any.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "00c73d019a038072e49353ba706c4b21403c6afdce35cf0ae6b450919d061c98"
+    },
+    "alsa-ucm-conf-1.2.16.1-1-any.pkg.tar.xz": {
+      "bytes": 130864,
+      "sha256": "656d02914577f519a4121e775152148593d826cee997511baa321dfc94ec51e1"
+    },
+    "alsa-ucm-conf-1.2.16.1-1-any.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "8504c7095fc8ebd542c7c394e3b7d6a90285683b807365b8072e8a592a442e7c"
+    },
+    "alsa-utils-1.2.16-1-armv7h.pkg.tar.xz": {
+      "bytes": 1118048,
+      "sha256": "25ee7cc5969b03cbed8e3a809891425c47c1f90fb655363e79408016ec3d6f9a"
+    },
+    "alsa-utils-1.2.16-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "45bb943afb4a95eb436d5d8854c763a7073e540ce2a702da7edf793ab4a1d085"
+    },
+    "archlinux-keyring-20260909-1-any.pkg.tar.xz": {
+      "bytes": 1280072,
+      "sha256": "0928e7bae6a593d22ee637676b2b6ffeab164387af001f516b2a81a0cddc9d77"
+    },
+    "archlinux-keyring-20260909-1-any.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "1d68d24e0bfe83e5d52e14dede7e8ef805de799dd3e457fa6c353975f7ea32a7"
+    },
+    "archlinuxarm-keyring-20240419-2-any.pkg.tar.xz": {
+      "bytes": 5144,
+      "sha256": "ba5873af6ffe030bb338c90e49c98e89807ad510033222eda96064beee64cb66"
+    },
+    "archlinuxarm-keyring-20240419-2-any.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "a1052fcbc78243a23e3cfca0e549b66f61067e8d7d8ee2b3e192a9de4697257a"
+    },
+    "attr-2.6.0-1-armv7h.pkg.tar.xz": {
+      "bytes": 68228,
+      "sha256": "deb7db89667ca2336282a445aa0dba940ce0e197e1e1493996ae44542f9ac5aa"
+    },
+    "attr-2.6.0-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "01e1188a00e21a89d94577bb7a67a47a0af3b91e2e96cbcfa3a78b0183c9f6eb"
+    },
+    "audit-4.2.1-1-armv7h.pkg.tar.xz": {
+      "bytes": 360396,
+      "sha256": "9e5f187296d8f755ad6c688393224c9db170cf23559d3d7fb2d457641a839997"
+    },
+    "audit-4.2.1-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "e8ccf15f7604e96d74a775e9473b104b5ce9ae9343f1266afc156c038540673d"
+    },
+    "autoconf-2.73-1-any.pkg.tar.xz": {
+      "bytes": 662248,
+      "sha256": "3ee1f22f541431d758e08e84d70899a7486dfe7ce04fbe0ac44f80822237b6f1"
+    },
+    "autoconf-2.73-1-any.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "46f9f1d94b35258090affa52b1abce6912acdabf2bb06ece176607d97f9b6503"
+    },
+    "automake-1.19-1-any.pkg.tar.xz": {
+      "bytes": 653336,
+      "sha256": "3b47937265345e3db320bcad561344c317a36d0f6593b05672378f4bb60fd394"
+    },
+    "automake-1.19-1-any.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "92bb0d1bd164e783fed7edea58a84c50c0f57ca05e666cd8f30f02c243667d41"
+    },
+    "avahi-1:0.9rc5-2-armv7h.pkg.tar.xz": {
+      "bytes": 365680,
+      "sha256": "603ce1f3c447939316e0934ffbf4b0b969b36833857f2ed4e2db266164a9dc0f"
+    },
+    "avahi-1:0.9rc5-2-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "282e46337d4807ff2fa813ce8cb02faf7f66d8776c3cb87f121e1adcee3cd230"
+    },
+    "base-3-3-any.pkg.tar.xz": {
+      "bytes": 2380,
+      "sha256": "7304ff73753832c8b65acf97fa4e0c2415c5ce191aa59b9942711e0059835a9f"
+    },
+    "base-3-3-any.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "30563facc96517728b5d131f88ed6911ef8952f3781a3dfe9a39ec8d9fcc914e"
+    },
+    "base-devel-1-2-any.pkg.tar.xz": {
+      "bytes": 2160,
+      "sha256": "61bc0294e7be806d085c88c50392b367531349bf704f5f2a1fe24e6a35bfe03c"
+    },
+    "base-devel-1-2-any.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "4a98e48611b86da97edaa6dd2a515f694edcdc86d7fd714f7e8be4831f6cc466"
+    },
+    "bash-5.3.20-1-armv7h.pkg.tar.xz": {
+      "bytes": 1786784,
+      "sha256": "add30ae1489c78f5cfa5f34962f148a279e062702f5ce91d3b24f08e71b2f6cf"
+    },
+    "bash-5.3.20-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "3112fb36c32fb16378266dac4fd5f79d05c88a075b878c0af5f9433692f3d4ec"
+    },
+    "bc-1.08.2-1-armv7h.pkg.tar.xz": {
+      "bytes": 84216,
+      "sha256": "1b2efa4504e1c9929815afd733bedaa2bd94387338122eb8eb1e2a1530ac8798"
+    },
+    "bc-1.08.2-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "f288e0d2959683d5bd3228e819797cb5c6aba717ad81fbf699cf1ac5183b1cd8"
+    },
+    "binutils-2.46+r70+g155188ea10a7-1-armv7h.pkg.tar.xz": {
+      "bytes": 5896744,
+      "sha256": "612a09c2dc878160efcb08312ebdace53f579cd1118b5275706b6645480feaf4"
+    },
+    "binutils-2.46+r70+g155188ea10a7-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "3cfd0b73f783d65c4d9c8049575f62f877986492cd7f9e2406582cc56ef0565f"
+    },
+    "bison-3.8.2-8-armv7h.pkg.tar.xz": {
+      "bytes": 731792,
+      "sha256": "3b5fac6f28878c82871009bd2639581f383ad688c2b5af8c1bbe218c6a9b1420"
+    },
+    "bison-3.8.2-8-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "f12841394707494bf36b604d5e5db4795742b5a3839c6c4867188407b406fa80"
+    },
+    "boost-libs-1.92.0-1-armv7h.pkg.tar.xz": {
+      "bytes": 4859960,
+      "sha256": "37f85d8ffbb603936d5a1afe9eee845a957b0db180086dd9af330c5f8fa5c183"
+    },
+    "boost-libs-1.92.0-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "e9f4723075b2004d1630f4157f328915e2b3e21094fac7875a2dfc07b468fc23"
+    },
+    "brotli-1.2.1-1-armv7h.pkg.tar.xz": {
+      "bytes": 385184,
+      "sha256": "f5dd06c1bec6bc13f74d0e140d8da2db37f0d9819219cdd2f186572019007525"
+    },
+    "brotli-1.2.1-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "0bc659a323be36f6e5d099c005d2e6a7734973084396164aa3dd4757ca030dca"
+    },
+    "btrfs-progs-7.3-1-armv7h.pkg.tar.xz": {
+      "bytes": 966236,
+      "sha256": "6477a6d0c2fcef545623e5633882a08633100871e254597da6727109052b544c"
+    },
+    "btrfs-progs-7.3-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "df970687b776e7ad454f8a428e76e06ac75c37428de42b41a38c79d60279eb36"
+    },
+    "busybox-1.36.1-4-armv7h.pkg.tar.xz": {
+      "bytes": 804692,
+      "sha256": "5298ce9c9fa5a4b1c67112aa92fd3fc71e46ee3c61277643e602a3ac17161eec"
+    },
+    "busybox-1.36.1-4-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "304053870c8d9b94c25053b31bb03cf2bc2fb212359bdb875454a35deaf87182"
+    },
+    "bzip2-1.0.8-6-armv7h.pkg.tar.xz": {
+      "bytes": 52092,
+      "sha256": "76bebf6574f96bd4de468ede862c4ccf284b295cbdda01f7729b1bd7c15c8977"
+    },
+    "bzip2-1.0.8-6-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "979c91fda60e6487a13444b4ad2191fb5ff80e3dc413d2edbbb09f9309877c51"
+    },
+    "ca-certificates-20240618-1-any.pkg.tar.xz": {
+      "bytes": 2164,
+      "sha256": "ff0de577cd09264ad7505e627539ab06565c4f57d3e9d47cb3622f7f0c8335ae"
+    },
+    "ca-certificates-20240618-1-any.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "cf2bd88d35e09150e27ed7c76a2e25c7044bff492b16db95de0be864b70f922d"
+    },
+    "ca-certificates-mozilla-3.132-1-armv7h.pkg.tar.xz": {
+      "bytes": 377140,
+      "sha256": "3c339dd90840eae516d5347932bba6cf75451823fd2312615a2f2f42761294d1"
+    },
+    "ca-certificates-mozilla-3.132-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "d059b7e6a1f313d8fb9a2bbbc5b929aa0c03b60abe0aedef8a1bbecc1b07d1bb"
+    },
+    "ca-certificates-utils-20240618-1-any.pkg.tar.xz": {
+      "bytes": 10872,
+      "sha256": "7be85932099aa7703e300a40509a0704804c53c6d23940aef9ae044b6aa8e166"
+    },
+    "ca-certificates-utils-20240618-1-any.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "350a2d39bd92920a917f858ae9cb33684cca88bd108e130b89784f704742a75f"
+    },
+    "core.db": {
+      "bytes": 143572,
+      "sha256": "d91ad9edf04ecdc1365b2730a122753630f478f79b5d50ebae64da89a6a50a34"
+    },
+    "coreutils-9.12-2-armv7h.pkg.tar.xz": {
+      "bytes": 2753220,
+      "sha256": "579a136ee28a3f20c85b3e7370b81a38505a342729fb9f1be2086ce19a2eba8c"
+    },
+    "coreutils-9.12-2-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "6f7b63ebf5aa1fe8af2ad268e48fa163380956668988c2169fd48f052a8a947f"
+    },
+    "cpio-2.15-3-armv7h.pkg.tar.xz": {
+      "bytes": 213452,
+      "sha256": "1c287b186fff8fb471610e7bd8cf8341622cdd6cdd90d074414bd81aed87dfdb"
+    },
+    "cpio-2.15-3-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "e95c0f5b3ca2b69ba797ecfe691d834710d49bab41f0b7bde16412d9aae0b998"
+    },
+    "cryptsetup-2.8.8-1-armv7h.pkg.tar.xz": {
+      "bytes": 786684,
+      "sha256": "54d2bf447256c22648fab42a08114473ea94ad52444742987e5ec14efb5a9e48"
+    },
+    "cryptsetup-2.8.8-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "3a95598f78e806848f1b591b417b5463c31def27385be9142705c4e4563188a8"
+    },
+    "curl-8.23.0-1-armv7h.pkg.tar.xz": {
+      "bytes": 1244720,
+      "sha256": "ee6c57b8c163d5694f2c4cf0fef59e48db216827611b79ecb6c16d3d7051baff"
+    },
+    "curl-8.23.0-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "1e5aeaa4fa7bde2e88dfd8c19860d2b5d0a4a2edcc0594085dfecd74e6bff9cb"
+    },
+    "db5.3-5.3.28-7-armv7h.pkg.tar.xz": {
+      "bytes": 978120,
+      "sha256": "7e19a22317749aff590ec2641844b191214d86f1cd7daad7f6761c183258b5e5"
+    },
+    "db5.3-5.3.28-7-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "aa9a81f8d0d90ec131de072adbc8a26557386b645ae9f20dec6f6e1e9fc9ea25"
+    },
+    "dbus-1.16.2-2-armv7h.pkg.tar.xz": {
+      "bytes": 269968,
+      "sha256": "0312209d69d7a277cd25bcc1502e718ba98a4d4b37c0587e4c4786bf885aa782"
+    },
+    "dbus-1.16.2-2-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "c00cf7d824bb1392c1ff8204ea58010c2e4b336a959018527659397dda7988ab"
+    },
+    "dbus-broker-37-3-armv7h.pkg.tar.xz": {
+      "bytes": 129132,
+      "sha256": "c85731f58f9ca50ccf175a292c45d3440445007a11a77e69c080f7bc4e087b54"
+    },
+    "dbus-broker-37-3-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "63acb786709f9ee303e7579c8f18e6db2c4af187fe3d6bef1da979efcfe8592b"
+    },
+    "dbus-broker-units-37-3-armv7h.pkg.tar.xz": {
+      "bytes": 2532,
+      "sha256": "178e7133962ac269f9eb7f2c6ed1d885fc37be0416aa93c010f929a52d4fe675"
+    },
+    "dbus-broker-units-37-3-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "72958132ff0638b2c27ce0e8cf35d45e6c7320f76c860a0a4abe02b6d7596648"
+    },
+    "dbus-units-37-3-armv7h.pkg.tar.xz": {
+      "bytes": 2272,
+      "sha256": "692fe42df2bb75cd6f11ed4f5b4f7bb6660d3fb0865c9d0f07f358067ba2ec42"
+    },
+    "dbus-units-37-3-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "3883969081421f93b8e38234fa351fa75f15a812b549133279babc90c547e0c0"
+    },
+    "debugedit-5.3-2-armv7h.pkg.tar.xz": {
+      "bytes": 51364,
+      "sha256": "72e8266b07f471e54a79fca2ae9268733e374d05e28adc6049e6629c14e20f3d"
+    },
+    "debugedit-5.3-2-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "456bc82d2b9f8f5336416ee25c8530bb7899c2aaec6c06fcc58a631ef2f174aa"
+    },
+    "default-cursors-3-1-any.pkg.tar.xz": {
+      "bytes": 2420,
+      "sha256": "ba76fd971a5a4fe34193bf874214a342fb2535b899fc577b9042e4d2fab374a6"
+    },
+    "default-cursors-3-1-any.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "895e343efa21aa8f16cb460670d220afb058e84e49982b5b938c378b9955527d"
+    },
+    "device-mapper-2.03.43-2-armv7h.pkg.tar.xz": {
+      "bytes": 288128,
+      "sha256": "919273b4b39fcabf325dd3bd8594770289d062b4525d9e0516b1d1d636a6811e"
+    },
+    "device-mapper-2.03.43-2-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "84e17e8ff14408e5bf70b45a2dd62ee47b7372b5e3dc7c4e1eac340d4a59f087"
+    },
+    "dhcpcd-10.5.2-1-armv7h.pkg.tar.xz": {
+      "bytes": 175824,
+      "sha256": "4490c5c7024590d53ab2caf984ba4293d7de2376e40052196a3e4c6f177abd2c"
+    },
+    "dhcpcd-10.5.2-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "ff348c60e5d82031327effffe6fb74ba6f968b46e52c93d33b0146da9bd3a354"
+    },
+    "diffutils-3.12-2-armv7h.pkg.tar.xz": {
+      "bytes": 319280,
+      "sha256": "ed780e90daa33566ad40f7aa3ad4618770f782245012ba5f24fe9e348eb0e0e4"
+    },
+    "diffutils-3.12-2-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "076b52f47f0beff785e383060ac2aaa95830e6ec3cc6932adc63a871e0af3dd7"
+    },
+    "dkms-3.4.4-1-any.pkg.tar.xz": {
+      "bytes": 50980,
+      "sha256": "5cf359c13cab0eeaeb54994504d999697bf6d8075974a0a8e966a00766697e5f"
+    },
+    "dkms-3.4.4-1-any.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "868301048c13f4c915b122a34178e3cf12e1259b301765e92d2ad1546fd86cde"
+    },
+    "dosfstools-4.2-5-armv7h.pkg.tar.xz": {
+      "bytes": 129976,
+      "sha256": "352888c1daa4f8e1ba2dd2d8428cfa0a7d8f7b0cdf65b29ae0baf4dfb1987782"
+    },
+    "dosfstools-4.2-5-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "a594ee6c73abbd5b0afe184b204af89ea50c177205c21b79db466bacf1f9acf8"
+    },
+    "dtc-1:1.8.1-1-armv7h.pkg.tar.xz": {
+      "bytes": 138856,
+      "sha256": "1033649a8f4095f5c483f478937693b52692b18f4d513c3173591623014a5a56"
+    },
+    "dtc-1:1.8.1-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "967859c535287058583ba28672f406cdcd6bf2b9d1ce679c2748fedbd3e00446"
+    },
+    "e2fsprogs-1.47.4-1-armv7h.pkg.tar.xz": {
+      "bytes": 1168180,
+      "sha256": "e48cb784726c5771c3caa21cc95bbdf134f5ac93b833d3574f295086c085cc0d"
+    },
+    "e2fsprogs-1.47.4-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "19ad936086f132a9c98f5bb96c1a250055b0d1b9cb26bee65badb43713da9afc"
+    },
+    "elfutils-0.197-1-armv7h.pkg.tar.xz": {
+      "bytes": 651228,
+      "sha256": "9d46b5e4dfbfab34394a9933c99c296ff097dc250537d9c5149d53fc951dc49b"
+    },
+    "elfutils-0.197-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "0d1c759ea2367e079bb03402639c8260c9ab8ff7c57514c023ef514ccfcb0f11"
+    },
+    "ell-0.83-1-armv7h.pkg.tar.xz": {
+      "bytes": 208456,
+      "sha256": "f9c32db9127812f9514dd6d354eb44e4fdd5fbcf7d0e9d62f1ca0d568b9464e4"
+    },
+    "ell-0.83-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "9482818ecad4ce2c3d61e2d4943a95fc3043ac3059a6870c497f5fed34125082"
+    },
+    "ex-vi-compat-3-1-any.pkg.tar.xz": {
+      "bytes": 3476,
+      "sha256": "f556f500985ede0d8591c37b96aff54a266458fe23d81845f80887741762ced7"
+    },
+    "ex-vi-compat-3-1-any.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "17ffa5dbfb9624087f70862100f08268c3803f963dce5668ae4559b9b6d64450"
+    },
+    "expat-2.9.0-1-armv7h.pkg.tar.xz": {
+      "bytes": 114400,
+      "sha256": "15f25f6cbec1725d174e336d8ecb2f74187c1478b684cb19cd98fb7863666b85"
+    },
+    "expat-2.9.0-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "cc293774e93509b714bcc6768a68e3d940b9302bc6ff57eeaf7ad8228b8c601e"
+    },
+    "extra.db": {
+      "bytes": 72540,
+      "sha256": "a101d2620827f24706cef30a05ad36733fc270c1c071c8c7cc46e0a73b39c9b2"
+    },
+    "fakeroot-1:1.37.2-3-armv7h.pkg.tar.xz": {
+      "bytes": 75724,
+      "sha256": "fd8a3c1063c2902589e36b587ec0aac1a4be0de41224dabc67d8349eab8b8c2f"
+    },
+    "fakeroot-1:1.37.2-3-armv7h.pkg.tar.xz.sig": {
+      "bytes": 565,
+      "sha256": "7c62eb4700f957315c6b0a42cf19e7ba428646b02157e278ae110acb15301480"
+    },
+    "fftw-3.3.11-1-armv7h.pkg.tar.xz": {
+      "bytes": 1104852,
+      "sha256": "ac9449fcecb73de2c064c45f02a635a984129be9f48f7a578bfec3b4cd1bfbe7"
+    },
+    "fftw-3.3.11-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "942d78288a6f4954de89b1bc010d9c4bb9846a9db6fc4627cc856948cfbd4312"
+    },
+    "file-5.48-1-armv7h.pkg.tar.xz": {
+      "bytes": 426208,
+      "sha256": "e9b9fb28172faa8c396d99920d781e848c0d25f6fbd89e51551b4db25d7f21b9"
+    },
+    "file-5.48-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "faf8906367787bfb53e5bec2b1af4bbf7e3b2dbe3a17fdba980a4a6fdbca2388"
+    },
+    "filesystem-2025.10.12-1-any.pkg.tar.xz": {
+      "bytes": 14888,
+      "sha256": "12d04b7a8895eb16b9ca93396725358f1addb89bdad1d9a5b1f1ee6130f37064"
+    },
+    "filesystem-2025.10.12-1-any.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "9d8d678d9f1f406328a999baeba95bf7726274c947d017324d5fed86c4f5e6cb"
+    },
+    "findutils-4.11.0-1-armv7h.pkg.tar.xz": {
+      "bytes": 496892,
+      "sha256": "dab9971f69443c66c13512d8b7b3dc8f9ac42f657ad32a44d9290b60317c8896"
+    },
+    "findutils-4.11.0-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "01c642d77541793c02552b566acb53039f57b55b405e291ddaed4c3818728668"
+    },
+    "flex-2.6.4-6-armv7h.pkg.tar.xz": {
+      "bytes": 287592,
+      "sha256": "41056029a5b52c6ba0e17acdf5156a2ae90a8feba25def374e74243762ecedc2"
+    },
+    "flex-2.6.4-6-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "31bbdaf2cc7214a68e71311cd05b288793db2993c6b3da3a55bc5b33953ddebf"
+    },
+    "gawk-5.4.1-1-armv7h.pkg.tar.xz": {
+      "bytes": 1433420,
+      "sha256": "d9bcb397e604683c46153614bd9c9e7ebbfa19831d38d22ce56baea0a03f4f57"
+    },
+    "gawk-5.4.1-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "dc579102e5d7fb663b31cd96312588d59f461a68a706b18d83e5889155a48dd5"
+    },
+    "gc-8.2.12-1-armv7h.pkg.tar.xz": {
+      "bytes": 220896,
+      "sha256": "5f511859506ec60adeb143edeac67ec9fbbd3d9a3272c82aa2e6c6452eec139e"
+    },
+    "gc-8.2.12-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "61516db4a114353663f1bb4754f41eb7ed20f9ca94efde8d08f475a998272b43"
+    },
+    "gcc-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz": {
+      "bytes": 38718816,
+      "sha256": "40bcf79371169a7c09f62b6f3641e71e2a6f4c4bd49d994265c1dbbf3cd74298"
+    },
+    "gcc-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "d0a8e602baebd35c60d03b54b7b92c8849b2a135da09447e7eefa987552ecfcb"
+    },
+    "gcc-libs-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz": {
+      "bytes": 2540,
+      "sha256": "befd3149a417db0584a3d55794557b09e116b03c6d4f232a8e7d1ff6f11df4bb"
+    },
+    "gcc-libs-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "3c3048f013806af6830e16db4a4d39a74fa9452958450fc870d4636f91886e36"
+    },
+    "gdb-18.1-1-armv7h.pkg.tar.xz": {
+      "bytes": 6271128,
+      "sha256": "daba0dfcf8aa441ec18ee6e49b7ae2513a53fa7304f6cfd16b996a4a6582b52d"
+    },
+    "gdb-18.1-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "80709d2d9cf129669b2dddc0b4b7ecf252086de02ed453f83239f2c7872dfe54"
+    },
+    "gdb-common-18.1-1-armv7h.pkg.tar.xz": {
+      "bytes": 118560,
+      "sha256": "7cfbf9c778e98360c94c09fd51d068dfce5924dbf3d30617b99a03672bd553b1"
+    },
+    "gdb-common-18.1-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "1feee8d1c53a56fd168ee22883cc492aaa9bd20e89183c89982d2e4a93c957eb"
+    },
+    "gdbm-1.26-2-armv7h.pkg.tar.xz": {
+      "bytes": 238092,
+      "sha256": "ae046162f6549fd842ee295793439691a40ac6ab2fd28d40ff763e2e45877dd7"
+    },
+    "gdbm-1.26-2-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "d16094efea3854ac464765881ed46802d0f54a5abf5c314e6c31265db6b66004"
+    },
+    "gettext-1.0-2-armv7h.pkg.tar.xz": {
+      "bytes": 3141416,
+      "sha256": "c3cfc8c36c7de715ae5d4d1c3ae988ebb09af4fd3a7f276ce19f2dfa236b6ee8"
+    },
+    "gettext-1.0-2-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "477628d78bbd3a5785d287899ded1231a596a1756988044eab2a0b5a76106681"
+    },
+    "git-2.56.0-1-armv7h.pkg.tar.xz": {
+      "bytes": 9159392,
+      "sha256": "f6106f7509bac33d9d146e71b8d67b04bd7cf041239db41b568fb9e0f3f10ef8"
+    },
+    "git-2.56.0-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "310d84fb9acdf3aa10ad292e5cd32b21d818c84e7c201c2f3c66b1c6393219f9"
+    },
+    "glib2-2.90.1-1-armv7h.pkg.tar.xz": {
+      "bytes": 4694944,
+      "sha256": "12521f9048b5eba55f374d2a0f3156d437b32baf125cb0a53faf097b8fc8d75e"
+    },
+    "glib2-2.90.1-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "a7872fbf36ace13d0c3e9c09c3d502e6c7bfadd28e08063c641b2545813c5460"
+    },
+    "glibc-2.43+r22+g8362e8ce10b2-2-armv7h.pkg.tar.xz": {
+      "bytes": 9131124,
+      "sha256": "e69881061ac32497cdfb3079fdf70150672627b20e9fd214ec8fcb87ba3a1389"
+    },
+    "glibc-2.43+r22+g8362e8ce10b2-2-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "49444e17108bf0d0045a71f784a8cb66be662c3adf0aa1ae2ef2d6f3d773d4e0"
+    },
+    "gmp-6.3.0-3-armv7h.pkg.tar.xz": {
+      "bytes": 351668,
+      "sha256": "88645121c305b719b5f0e795dc141adac3ec2e66c9055aa6f722a9e2b055ef9f"
+    },
+    "gmp-6.3.0-3-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "dca5d1299884df45d45db1e31b4d108c026c356a8f3f2aec79b3a042188b9134"
+    },
+    "gnulib-l10n-20241231-1-any.pkg.tar.xz": {
+      "bytes": 109524,
+      "sha256": "6e5ef654f16d8ba7c65a2faa77086f0526edbf7ece353c20cd8b63227e483b06"
+    },
+    "gnulib-l10n-20241231-1-any.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "4bafb192dfc615684261008e5deb0a2c4970beb8da61fcd1aebc071bb06dcd3a"
+    },
+    "gnupg-2.4.9-3-armv7h.pkg.tar.xz": {
+      "bytes": 2574532,
+      "sha256": "f58ea88ebc4ed517b3746d5117589ef7805736f1537416323624a9707fef5b66"
+    },
+    "gnupg-2.4.9-3-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "f7711b53755bdd5043113430d49aac2d9ef92826e2f5dec705ffc04ef34757df"
+    },
+    "gnutls-3.8.13-3-armv7h.pkg.tar.xz": {
+      "bytes": 1713772,
+      "sha256": "d1a137a7b94091fda1ccd5fc5ba5f98960e67c14a3a75d5f3d5466bffa34309c"
+    },
+    "gnutls-3.8.13-3-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "4e5ad826764e09595943d00d8746874cb9bf048f787bb27c8e092ddafdc5d4ee"
+    },
+    "gpgme-2.2.0-1-armv7h.pkg.tar.xz": {
+      "bytes": 296800,
+      "sha256": "4f976bc3cc68e22b8bf3492f1e022b823c38d6dee7ac9d8da3b749b698702d13"
+    },
+    "gpgme-2.2.0-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "3859a5dc6bb777186660de277c5ee3e5834eb582c2daea16c960c6c497212576"
+    },
+    "gpm-1.20.7.r38.ge82d1a6-7-armv7h.pkg.tar.xz": {
+      "bytes": 126068,
+      "sha256": "4369bf112f7b1da61e34bf52b4aa93776bbda9c1fdf65e49f892a1950c1ece0f"
+    },
+    "gpm-1.20.7.r38.ge82d1a6-7-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "f858cc83bdd140ad6dfad76d88549d26b56e03f0b54e394bb225e26fde44a716"
+    },
+    "grep-3.12-2-armv7h.pkg.tar.xz": {
+      "bytes": 219560,
+      "sha256": "9f62187b6a194d4f15b84deb8c79c9ca0a81ac7833d9295eab9bb831ccff8c1a"
+    },
+    "grep-3.12-2-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "b6186d2219f8d176abc82d34af56d7ee3fdc2fcca1d908d2efc88bbe40678ae1"
+    },
+    "groff-1.24.2-1-armv7h.pkg.tar.xz": {
+      "bytes": 2315932,
+      "sha256": "7806719d8940905c425d7791e6fbbc56bc37eb2110aaa3659946a26ac2328a31"
+    },
+    "groff-1.24.2-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "2cdfccc83b4f1550a8be617d540c94417ac78af4291d012471a2b0ca3fea445f"
+    },
+    "guile-3.0.11-1-armv7h.pkg.tar.xz": {
+      "bytes": 7743404,
+      "sha256": "8bbd49100700ec6c1fe9b77750a33eb48ae67ace536723a5d32dea989e5af83c"
+    },
+    "guile-3.0.11-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "15ac591781d99223e7e5219713b70bd69a82254d9b8a276d9d21866629af20aa"
+    },
+    "gzip-1.15-1-armv7h.pkg.tar.xz": {
+      "bytes": 87964,
+      "sha256": "aefa809aa2df83b36867d9dc64de8fdf9b01f8cb249297b5ac1167dcdb960523"
+    },
+    "gzip-1.15-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "2f4ebdaa47f5765eff0992f47b7544ac80238cb1e5768f11d368b04b54ef1c97"
+    },
+    "hwdata-0.412-1-any.pkg.tar.xz": {
+      "bytes": 1701488,
+      "sha256": "f418de879951c7f4b88e269f6998933ad15d16a7d91afbbb8c12bef25eac33dc"
+    },
+    "hwdata-0.412-1-any.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "2161b523cc8bb99e930d25a63a1cd2c7e9bcb9731071b96773d76cf2a429cf3a"
+    },
+    "iana-etc-20260617-1-any.pkg.tar.xz": {
+      "bytes": 393620,
+      "sha256": "4e6c737583700138dd92c072576e43b5583732983fe575836a831eed4d2b2d40"
+    },
+    "iana-etc-20260617-1-any.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "85d3c71ea0c9fa9f2f8093d49038be8550461262c32a760f35a8b1c0931bcd17"
+    },
+    "icu-78.3-1-armv7h.pkg.tar.xz": {
+      "bytes": 10539936,
+      "sha256": "e3a5a987d6989132db09ef4a4a7ee9c28c03a5c00f6c100e7d505b77cb336158"
+    },
+    "icu-78.3-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "c836cbb458d3481fc5a71237bdd00db34f10eb47aeefd4ece7889c107faa3a5a"
+    },
+    "iproute2-7.3.0-1-armv7h.pkg.tar.xz": {
+      "bytes": 1083692,
+      "sha256": "095768b734bcf936e56a24d9f83d122fa693f5f81bbf5b1067d986eff5357861"
+    },
+    "iproute2-7.3.0-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "70ed8ba988eab689d84bf62dc8f43fcd09e3db3962e2417b7a0cf2bf92efcef2"
+    },
+    "iptables-1:1.8.13-1-armv7h.pkg.tar.xz": {
+      "bytes": 382872,
+      "sha256": "dccce115673c7f87a53248197dc5a0e7325ab09fd22011d9a95c571d66662114"
+    },
+    "iptables-1:1.8.13-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "0222154c117fa2b305861f03386436319bb8c0b40b2f60b6ef095e7227506ce7"
+    },
+    "iputils-20250605-1-armv7h.pkg.tar.xz": {
+      "bytes": 131588,
+      "sha256": "0aded7deff68a5ff3f7abf77d3d9c6bacde9208b9b12641915d8d45b8ecd9c22"
+    },
+    "iputils-20250605-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "2047a5106fd4c1d21ebab9faa5c138f4fc66dafeeba6258dd579e0c36623b064"
+    },
+    "iw-6.17-1-armv7h.pkg.tar.xz": {
+      "bytes": 94768,
+      "sha256": "583584494a9bf8a01623143c8d914cf22226d8b499aafd1af06bd00ef2abc38f"
+    },
+    "iw-6.17-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "5620bf3194b8f5f222a67eada0734b9d21bf83e3937a0aad12209d9c7e5a6f10"
+    },
+    "iwd-3.12-2-armv7h.pkg.tar.xz": {
+      "bytes": 505584,
+      "sha256": "1d9d6193c22e0c7f8edfac2b1536eb1c352df878825b627accc8fd2b07a21dbc"
+    },
+    "iwd-3.12-2-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "7df47eb7f8854c1c5c3590a0de61260b3f79f521321853e0bb9f0503f00286df"
+    },
+    "jansson-2.15.1-1-armv7h.pkg.tar.xz": {
+      "bytes": 70536,
+      "sha256": "2998b87dbad70878ce9ff91cfe6cfab9490c59a7c46e120c9a4c72f23ba39934"
+    },
+    "jansson-2.15.1-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "e2afc558695771f76e7351f27078442b2e703b70e3d2b1164e53fc880ee07dd9"
+    },
+    "jbigkit-2.2-1-armv7h.pkg.tar.xz": {
+      "bytes": 46960,
+      "sha256": "ba5a217b77347357781436f8c6afc8c8efe1de6e04b7579df02b7d3354a76113"
+    },
+    "jbigkit-2.2-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "617aee692d3f3df7e04bd86ef95b759db3b579207fc33e9301ae03da6cd54131"
+    },
+    "json-c-0.19-1-armv7h.pkg.tar.xz": {
+      "bytes": 55332,
+      "sha256": "84bc2c3bcda8c7e1efc3d960dca7a87eb1eac0e4b1178652afa8f9d9b9431878"
+    },
+    "json-c-0.19-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "d117c02e274bfb16622e1f22590acb55852bc396f6ba49f2a0b30b97c6ac9d21"
+    },
+    "kbd-2.10.0-1-armv7h.pkg.tar.xz": {
+      "bytes": 1292404,
+      "sha256": "dd85c2f5e4c80ea57d39a8ce66b1a628e18d8854325eb3ea49182f0f47e87cf3"
+    },
+    "kbd-2.10.0-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "1b8bf6588429df4bfb02582640311fccd3dfe6ccc2f2fe0e4b333509fb822fef"
+    },
+    "keyutils-1.6.3-4-armv7h.pkg.tar.xz": {
+      "bytes": 99288,
+      "sha256": "b9427fe9f23503cba436c39d0c9fc5d50370d9ce360ef1d6e308b686ec54504f"
+    },
+    "keyutils-1.6.3-4-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "ae9d4ddb14302049255fcc91aeb51868fa02e8398626578d8df5597b6c591a74"
+    },
+    "kmod-34.2-1-armv7h.pkg.tar.xz": {
+      "bytes": 103736,
+      "sha256": "233b238eb9b9a0a01ee96a967ec97509394a943456b0740bf8537b2fd6c03973"
+    },
+    "kmod-34.2-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "8579acdd3090a72054e22b7046d98d3f58e87488817240d110fbc40a4972eeb7"
+    },
+    "krb5-1.22.2-1-armv7h.pkg.tar.xz": {
+      "bytes": 1170448,
+      "sha256": "6cd171700ff0c7ae92c5e36f6654556783575a9db3b7928aec10cb6ee593a48c"
+    },
+    "krb5-1.22.2-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "0cb694601b80494542a7c84be05d255309f54bb4407d9179726061690fd76c8d"
+    },
+    "lcms2-2.19.1-1-armv7h.pkg.tar.xz": {
+      "bytes": 182888,
+      "sha256": "23201e5f2a18febc44565c2c68a416af56174b1c15a3ccb2da3ce5b0d3ccb565"
+    },
+    "lcms2-2.19.1-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "14738545711451a1c3d5e979ada138afb7f77cf66143c117516e8fc9b0f799a2"
+    },
+    "leancrypto-1.9.1-1-armv7h.pkg.tar.xz": {
+      "bytes": 1335380,
+      "sha256": "2e29de4d1f6a90eab8d0501d95b2c2268ccb8eb817417a73dab7a5a0131d9d4b"
+    },
+    "leancrypto-1.9.1-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "38cefe8e91b57467b9059cb9533523345be9363be87b5fd05a01408c19c6fe2d"
+    },
+    "libarchive-3.8.10-1-armv7h.pkg.tar.xz": {
+      "bytes": 496576,
+      "sha256": "2d119142925f5a16533566219c96b8cad48f2a6c2dc10f017a4cc15de2b9bcc5"
+    },
+    "libarchive-3.8.10-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "274a57517d1638f1573542e73e919f9394571549a74e2e7bb91f6b0676d8223c"
+    },
+    "libasan-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz": {
+      "bytes": 416496,
+      "sha256": "22c0aed29083c04b50f2cf97dea3866e8cf90c7a21900da4968151e9bef81b30"
+    },
+    "libasan-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "fc21ec2c314a2565ae83dadbe961cadd08f4e7ff36f903c1d63dae61cab0dc8d"
+    },
+    "libassuan-3.0.0-1-armv7h.pkg.tar.xz": {
+      "bytes": 106952,
+      "sha256": "f6354810136ffd8a39d4e1b90c813040f147a8b9428ed34f9e6c14ddc192260e"
+    },
+    "libassuan-3.0.0-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "9709de3359596f6da1e32a3b82c249ca8442b3780855b93ab4b9371107151954"
+    },
+    "libatomic-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz": {
+      "bytes": 10352,
+      "sha256": "c40c69a245f3f6936f44246beb33ffb91fdd72fe705ea32757ed31c24855abd1"
+    },
+    "libatomic-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "16d12ae1b8d58f130149765a391e0be4fa3f4e9b226e1544b943f94818e67272"
+    },
+    "libbpf-1.7.0-1-armv7h.pkg.tar.xz": {
+      "bytes": 235648,
+      "sha256": "861ff0d99224d266afb19e2810c2d30ce0e4cecc3cc5be8ec061d7519010e29e"
+    },
+    "libbpf-1.7.0-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "c4dc2192a1745ad875f06c73ec57234ee3f2a6c78369b4bb6ce43a89952366c3"
+    },
+    "libcap-2.78-1-armv7h.pkg.tar.xz": {
+      "bytes": 714672,
+      "sha256": "f30d4b3a14fdefb9214f9f1ba65948d8b158008132143a54837ee5b6c62289ab"
+    },
+    "libcap-2.78-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "66f65d186580f049751a596c929721fd16f9a585c978429bc0d8eba2ef3418c1"
+    },
+    "libcap-ng-0.9.6-1-armv7h.pkg.tar.xz": {
+      "bytes": 64500,
+      "sha256": "ed74d1f89b76b8b82fcf9e0a5194b61ea9f8330eb7ded0254d21e3a51ea0845c"
+    },
+    "libcap-ng-0.9.6-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "616cfffce57a2c3ef749ff2e456ddd1627e2aef99909c1560d8b7cfe389ae177"
+    },
+    "libdaemon-0.14-6-armv7h.pkg.tar.xz": {
+      "bytes": 17624,
+      "sha256": "dde64ac2fd3fafe3038e57bf6b412976cc8b30d70a7367d34b3b77f129f1747d"
+    },
+    "libdaemon-0.14-6-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "64ecd72cb4d76a2bef9238ceaa7254a6fcfbb5fcfae291233582f7afc0e1181e"
+    },
+    "libdeflate-1.26-1-armv7h.pkg.tar.xz": {
+      "bytes": 49956,
+      "sha256": "f51375ec29cf3306ef9416fc5f630ad91fe16c68fcaa423492cc2f174e24f40b"
+    },
+    "libdeflate-1.26-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "def0d2da41446d7927fca7c620242ec4dc934cf2cb5c8466209a7a72a295139d"
+    },
+    "libdisplay-info-0.3.0-1-armv7h.pkg.tar.xz": {
+      "bytes": 108064,
+      "sha256": "180b71dc8ecb86c545270f60bab17ca7f42f956ed0388f4712494b34eb0f68e1"
+    },
+    "libdisplay-info-0.3.0-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "094369acd5aa0f621e8d30b6a85690064417f5a115761576a401d3e1da16bdec"
+    },
+    "libdrm-2.4.134-1-armv7h.pkg.tar.xz": {
+      "bytes": 388372,
+      "sha256": "00c87ece66e7604744ed892cbd78064ff0b71de0adee66de4b58728192815ed1"
+    },
+    "libdrm-2.4.134-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "3f15872024764adb1b1065f3797bb2008f3750abdc09ac0ded85b9be029a1f9d"
+    },
+    "libedit-20260512_3.1-1-armv7h.pkg.tar.xz": {
+      "bytes": 95452,
+      "sha256": "88f97338394e34fdb9133435e08fbab5605b73c3b250eb737974b9e865f8020b"
+    },
+    "libedit-20260512_3.1-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "ba6f4266e45bdf4ff39c8d1da100801c63c40c5d494a6d13d281664f4a9bd881"
+    },
+    "libelf-0.197-1-armv7h.pkg.tar.xz": {
+      "bytes": 537456,
+      "sha256": "21b2635107e5e9db31a3e1b40ac0d37c3e9fac76dc37442084869638064d6d58"
+    },
+    "libelf-0.197-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "30c225a55fbfb8758419abaf76e45fc83f02df1da86028dbab95ba4a0a9aa932"
+    },
+    "libevdev-1.14.0-1-armv7h.pkg.tar.xz": {
+      "bytes": 55260,
+      "sha256": "e7988d5bc60ecea85176b440c9f06d7a2f9559f05487329ba688dd93244a2cdf"
+    },
+    "libevdev-1.14.0-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "37b1d584374508ca9894f2a3a9efa138072bf295599c21df6f5c7a1176cb5f1f"
+    },
+    "libevent-2.1.13-2-armv7h.pkg.tar.xz": {
+      "bytes": 231724,
+      "sha256": "0ad00bd77a51b1fddc780141631d6a211a8ef7301a8081e430010c4ac9d4a6d7"
+    },
+    "libevent-2.1.13-2-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "acb299e25e211ed698ffc35382680d3b28efb0647b318f21e7d46355e5296060"
+    },
+    "libffi-3.8.0-1-armv7h.pkg.tar.xz": {
+      "bytes": 49764,
+      "sha256": "336ceae8c16dbadb1b22f4dd4dbfd787356a32bd1eaa1b218aeb85a767d200a7"
+    },
+    "libffi-3.8.0-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "9fe94780cb316dfef9955b14982890dad637b90ae600bfc8b48f4202ed7f1c16"
+    },
+    "libgcc-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz": {
+      "bytes": 45076,
+      "sha256": "f7cd881c11d38793833b9bb9565cd47f23d9e0cc59ea2e20cc3d46436d28b3d5"
+    },
+    "libgcc-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "edfc3cd2eeaa35351984b8dae8cc00da8e57d2949a18ce767cab213da2a523e4"
+    },
+    "libgcrypt-1.12.4-1-armv7h.pkg.tar.xz": {
+      "bytes": 572384,
+      "sha256": "e646b5b75cc1916a64538544cea0e537066565f8ca58e1c3c2d9eb290bcd2cd4"
+    },
+    "libgcrypt-1.12.4-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "755adca50dcf5d5edb7f51fa9b8af56cc105285345822dcb0f5db1a6d144ac3c"
+    },
+    "libgfortran-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz": {
+      "bytes": 330716,
+      "sha256": "736d20e4c6cd24931b0ef2b010bc1bfeae2f9700184f6e26d4908eda9b979088"
+    },
+    "libgfortran-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "5fd54c1e620f7f1043f4f16462a2f2d1c6092d0409a37fa5d8a2a6a0f0d846a1"
+    },
+    "libglvnd-1.7.0-3-armv7h.pkg.tar.xz": {
+      "bytes": 316348,
+      "sha256": "3a501b23329bd2c8edadebd434019ec80a5d52fe17a9fbeaa176335e2eca5a23"
+    },
+    "libglvnd-1.7.0-3-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "2bbc9c14b8fcf160b088989a81c097ebbb93fb9a74b7158177cf44075c9b0b08"
+    },
+    "libgomp-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz": {
+      "bytes": 204992,
+      "sha256": "49cb743d46cbfc3c6e67913790b44d50e98aa2ca2f51e662e99c34a954876c2b"
+    },
+    "libgomp-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "6c5fffb73ccb3e2a25840a634ea42ffc3caac919792b66195a20fe9e3cfefff4"
+    },
+    "libgpg-error-1.61-1-armv7h.pkg.tar.xz": {
+      "bytes": 241320,
+      "sha256": "89f81b87edca4f103824f5aa5eecb14348acd4fa640284cf19966018f4c0b9de"
+    },
+    "libgpg-error-1.61-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "fa487471ef18f7c7b17d8642d36c6cdbadcef2a02e4bd840e50fd7ba905468c8"
+    },
+    "libgudev-238-4-armv7h.pkg.tar.xz": {
+      "bytes": 25628,
+      "sha256": "80c563743d9ed1d3373e62407f499f76629c5bc6ce56cedf72bf6e06daa386d8"
+    },
+    "libgudev-238-4-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "3a37e2574231ff7c2e572f1b2d95e4f869c3dd584ca9a67b724754226fe4494a"
+    },
+    "libidn2-2.3.8-1-armv7h.pkg.tar.xz": {
+      "bytes": 142284,
+      "sha256": "64f0b66321b43cc22ed4dd39047ad405ff0664906aa7d832770813a14d8b6584"
+    },
+    "libidn2-2.3.8-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "60b53ae82c171fdd31d202b5a0fb4dd4876495285981627c8b9cd3a5e47c9f07"
+    },
+    "libinput-1.32.0-1-armv7h.pkg.tar.xz": {
+      "bytes": 198960,
+      "sha256": "beeb8a86ec25c2c41b1530bd121fe3c35b834ba1db9f227eb8a11bbc57d550f0"
+    },
+    "libinput-1.32.0-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "9a491f11c72fec1480b071b0507db2f053290dde157504b54f6cf62e0a360124"
+    },
+    "libisl-0.28-1-armv7h.pkg.tar.xz": {
+      "bytes": 1287332,
+      "sha256": "e6b0cf4ca4c07582ab645669d11b3a7f04dffd343042dbbb1a1c26ac7db18d3f"
+    },
+    "libisl-0.28-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "7de87de19ce9d251e368d7019652981256d5cf033c383162b9ced4ef798c1cf0"
+    },
+    "libjpeg-turbo-3.2.0-2-armv7h.pkg.tar.xz": {
+      "bytes": 477228,
+      "sha256": "e42dc3cb610ecad7cfe9d1cb6e80cfcda17fedc8a206e3a0afa98c4c8983a8d2"
+    },
+    "libjpeg-turbo-3.2.0-2-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "e77a58dba9bf606d8723126d4a402e630f03291f7caa240bc0a4e4bc3768516e"
+    },
+    "libksba-1.8.1-1-armv7h.pkg.tar.xz": {
+      "bytes": 119612,
+      "sha256": "e09dd3e4e425bd39686821e67050d865e7a98de568766ea41754842020c13b97"
+    },
+    "libksba-1.8.1-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "50946f553f77efdd8554b56982a0c35eb6bd740b252a372521910efcfbb8d602"
+    },
+    "libldap-2.7.2-2-armv7h.pkg.tar.xz": {
+      "bytes": 248860,
+      "sha256": "befab73273ed95fbb243e1cc178113d1a118281142080d084c9ad8d6fbfea2bd"
+    },
+    "libldap-2.7.2-2-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "058f768189d3bbd1e89fb58dddd07a157a7f125bea1d10776eff1948d8169f4d"
+    },
+    "libliftoff-0.5.0-1-armv7h.pkg.tar.xz": {
+      "bytes": 17568,
+      "sha256": "d967470ebcc591b7f5570f72048a55c85de274a5ed7dfa9d9036276387749929"
+    },
+    "libliftoff-0.5.0-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "0c52ae4e1863c120b2adef0e9fd74338736e1a44d4835649aeb2eae6b2afae5d"
+    },
+    "liblsan-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz": {
+      "bytes": 4172,
+      "sha256": "679162b30f6cb8502ba92b100fd504f3bcd7d52c08d0c054f835db817e4027e5"
+    },
+    "liblsan-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "d7966e8b79c67948ca2db395517aeaa3d395a94acecaf11f6eba15d6215e0285"
+    },
+    "libmakepkg-dropins-20-2-any.pkg.tar.xz": {
+      "bytes": 6232,
+      "sha256": "5aacf978716a63ab7c596af83712086e074d53f640fe84687fc14dd20cd6456a"
+    },
+    "libmakepkg-dropins-20-2-any.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "166177607aae0c4bed92053c8af684d08f387d0ca8d72e2d35ac857157540bc6"
+    },
+    "libmnl-1.0.5-2-armv7h.pkg.tar.xz": {
+      "bytes": 9628,
+      "sha256": "89b66841b488da13c6b8fffa58ddc8b6e510fc7e6f2311c0c59d41717ce0aa51"
+    },
+    "libmnl-1.0.5-2-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "86594e3661f78d10f227b2e0f0860c9c76faa4741a41a4354e7f2b839373d1df"
+    },
+    "libmpc-1.4.1-1-armv7h.pkg.tar.xz": {
+      "bytes": 81292,
+      "sha256": "e3c2dc2615c214b9b55fee3d4bfb026e27d0f54c288ff98b1933e6811fe22410"
+    },
+    "libmpc-1.4.1-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "b9da91904d9cbeefc5100b34f19659e99b82021b1e0a1c9fb4195d3a3a453996"
+    },
+    "libnetfilter_conntrack-1.1.1-1-armv7h.pkg.tar.xz": {
+      "bytes": 40756,
+      "sha256": "0196963accee2d7b3fec5e099fe6265147f02a12a4009fbade32717f1fe0b258"
+    },
+    "libnetfilter_conntrack-1.1.1-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "1e08cc53528c03e9fa83861ce49a298d93a43f601682796cd58ab45ee220e67c"
+    },
+    "libnfnetlink-1.0.2-2-armv7h.pkg.tar.xz": {
+      "bytes": 15356,
+      "sha256": "ddcd05f2c1e2406ddf3a59680308a07ef3a1c06f0d360d1a84e5f0f1677f6783"
+    },
+    "libnfnetlink-1.0.2-2-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "3ddda55aa201d4a5159aa7704d1545a2af3a39ca12816a7492bf880e252a8315"
+    },
+    "libnftnl-1.3.2-1-armv7h.pkg.tar.xz": {
+      "bytes": 55604,
+      "sha256": "80e1453ae33b0bc7d30d08e34a340aa51f8bb4a577384628472a8ccea829ec89"
+    },
+    "libnftnl-1.3.2-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "a901b0948c749b2608add4bff7bd34eabddc4e0df6ccd585f5daec2846d63dfe"
+    },
+    "libnghttp2-1.70.0-1-armv7h.pkg.tar.xz": {
+      "bytes": 87120,
+      "sha256": "045608afd919b27640c6bdce83e9f716f5e5835d4251d7fff39d06a8ebec02f1"
+    },
+    "libnghttp2-1.70.0-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "2f360825db942f5cf2a4a4a9ddb4257e27fb0bbe9c2687ef122dc46e28a1d0bb"
+    },
+    "libnghttp3-1.18.0-1-armv7h.pkg.tar.xz": {
+      "bytes": 75976,
+      "sha256": "e8a1c1862bed2b0bf23f32dcd708997f77f0c9913f5a859b8c93f1af2855e948"
+    },
+    "libnghttp3-1.18.0-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "a0f3196e43e6cedabc2543b31cb518701f73c410df958bbce173d97140a05c95"
+    },
+    "libngtcp2-1.25.0-1-armv7h.pkg.tar.xz": {
+      "bytes": 191772,
+      "sha256": "6ea8a1c9c29ac8af7d575d68a6408814188655fafd0b0d487103def89cb81471"
+    },
+    "libngtcp2-1.25.0-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "06ac7e06f8139e3336158c4a290cc30c85efa66297c56ed7cd49c8588b5acf55"
+    },
+    "libnl-3.12.0-1-armv7h.pkg.tar.xz": {
+      "bytes": 362232,
+      "sha256": "bd070ec28580c33c4864d5025137ef2a90320bb0bae0fa4996fd9d39c395b338"
+    },
+    "libnl-3.12.0-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "98bfcb04f06d9d06dee0ca149659dc9ac047b713c0b01ebbbde454cf33f21a68"
+    },
+    "libnsl-2.0.1-2-armv7h.pkg.tar.xz": {
+      "bytes": 20216,
+      "sha256": "205c6374db55d37b9402c4f0064ff439ce28e9484fd0e37b9cc9d14604436a0d"
+    },
+    "libnsl-2.0.1-2-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "a90e3e9a77446b0e7fb5b42bdd1cecdc3afca6852e8d88542d8aba9e2ec30055"
+    },
+    "libobjc-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz": {
+      "bytes": 29800,
+      "sha256": "7c38b20a4210e0342b6a12ec75edf6d29bed5a18599ffd6639e1492f6e70db76"
+    },
+    "libobjc-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "68c681b3cb1f11cc7acb8bbb2fcd64073dc212e1e28e2708b15902828366e854"
+    },
+    "libp11-kit-0.26.5-1-armv7h.pkg.tar.xz": {
+      "bytes": 408848,
+      "sha256": "cf24b2c9b1bc9121b645f951eceb63de9ed9267763c876eeac099db75eec8911"
+    },
+    "libp11-kit-0.26.5-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "397eee73ed95a9af3062e4857ecb7b30abaf70eca128c1fd67c2826301039e8b"
+    },
+    "libpcap-1.11.0-1-armv7h.pkg.tar.xz": {
+      "bytes": 288928,
+      "sha256": "5fb4bc2dcac7d9341c99be9d670cbd83f898d7dcb4b6055745fb6214e5d52dc3"
+    },
+    "libpcap-1.11.0-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "9ccc45259e270b7ab59f3a8a643bcc052e17b37c8f8a64c785cded2ae9a4e458"
+    },
+    "libpciaccess-0.19-1-armv7h.pkg.tar.xz": {
+      "bytes": 19732,
+      "sha256": "f7fd6bdc0cd179cf2b326084c8929457f4bf824f947c2c2fb13ccdc57c7120b0"
+    },
+    "libpciaccess-0.19-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "7cd13db6d17693d82f53c64cdb59975eaa24df27f32fd9d791afedb02bdf3d64"
+    },
+    "libpsl-0.21.5-2-armv7h.pkg.tar.xz": {
+      "bytes": 83452,
+      "sha256": "3d93fc1540229f6e0ef0e800d795656221a802661d2b37066f3878c60550029b"
+    },
+    "libpsl-0.21.5-2-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "a39e95979e2fe7799b5e82bfef8efee15c096a75fb791d48f05609cf107e17a8"
+    },
+    "libquadmath-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz": {
+      "bytes": 4156,
+      "sha256": "f674a3f8477fe5e71c34292d930c565b8ea9cf68902bf5123ee8ba2374027dbe"
+    },
+    "libquadmath-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "4d61d54929f78950462b079249ee15c1a356caa1a0992abab1a801a0ef099478"
+    },
+    "libsamplerate-0.2.2-3-armv7h.pkg.tar.xz": {
+      "bytes": 988144,
+      "sha256": "a28e98743d71cd2d785a3ac7d920aae793edcdff6244fad2dcc7f0dadbd8f535"
+    },
+    "libsamplerate-0.2.2-3-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "9d32ec79e49546e52070087c6b76c8681dfee842a805906a0f587ee8b7aa7017"
+    },
+    "libsasl-2.1.28-5-armv7h.pkg.tar.xz": {
+      "bytes": 128352,
+      "sha256": "7deb805ff8a64ecbf3b94b9b4d528b006fe220740ceb13bebf9ce2dc42c21ea2"
+    },
+    "libsasl-2.1.28-5-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "367d8cefe82f9ef42bf35a4e2c6c9a4934cdcfeb8a92da8b6e98534ac2353d96"
+    },
+    "libseccomp-2.6.0-1-armv7h.pkg.tar.xz": {
+      "bytes": 89632,
+      "sha256": "2f645cfb46e823b234448ef92fff83cce201b0d808fc1f615404d680f6e10c7f"
+    },
+    "libseccomp-2.6.0-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "43129c3dea27b7ce719b100ee4f383b67c23f345013164382908665020a2a6ab"
+    },
+    "libsecret-0.21.8.2-1-armv7h.pkg.tar.xz": {
+      "bytes": 171412,
+      "sha256": "3e2330dd871e89f5e7f07f33c04d1a3ed59138a70aff8378b8eb154398feecb1"
+    },
+    "libsecret-0.21.8.2-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "2321803d5e637dc9924ede1d19bb031e92d33417c83122c66c103956b2d0fabb"
+    },
+    "libssh2-1.11.1-7-armv7h.pkg.tar.xz": {
+      "bytes": 231636,
+      "sha256": "e51bb61c38708238be5127a58a6423f43069e02dc11b31322898f736783f7f92"
+    },
+    "libssh2-1.11.1-7-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "0bd72e4941adbef074ace4207263bed62a3cfd9de3b2e91e31da2aa9d6314da3"
+    },
+    "libstdc++-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz": {
+      "bytes": 659888,
+      "sha256": "e6c8b5dbd8b181360b7470660bb6ec164db2f208ab992ac495c0742eb069c178"
+    },
+    "libstdc++-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "50fdd023eca03a2c109e011263b7de2e2592c55f2684208fec4ce2101ef373a3"
+    },
+    "libsysprof-capture-51.0-1-armv7h.pkg.tar.xz": {
+      "bytes": 44456,
+      "sha256": "3698befb27e7306f792fb669eb74a9d1a706bc66ac43d3fe3141fa9ed56b5be1"
+    },
+    "libsysprof-capture-51.0-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "ce209e3e7a853b589616fc7b4e63b7493992c4c5f24c7dd754d82dfc5082e2a1"
+    },
+    "libtasn1-4.21.0-1-armv7h.pkg.tar.xz": {
+      "bytes": 126516,
+      "sha256": "2806d0e3b5b32aeedf3c22a259095848c962c82d4f53cd542503271da5f4557c"
+    },
+    "libtasn1-4.21.0-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "958666832593ab7afeae979997f85864ac8184b9d446372814a1d0ac7cb21485"
+    },
+    "libtiff-4.7.2-2-armv7h.pkg.tar.xz": {
+      "bytes": 356996,
+      "sha256": "06ecaca2ca51dc7543a9bc277a19ccbae9ddf6d2edcf612853657ee5a06f3f3b"
+    },
+    "libtiff-4.7.2-2-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "0b4547f8687cb7df5773a77f38f692f976d8907d6bf380ff1e321afdd60d75d1"
+    },
+    "libtirpc-1.3.8-1-armv7h.pkg.tar.xz": {
+      "bytes": 163892,
+      "sha256": "4fd15fba839d0dfec8437caa23acb35f9d882e116f093d2d2dd593bdd6b97ec8"
+    },
+    "libtirpc-1.3.8-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "669f7b894fffeaeeaded8a656821d49bea326359b77a2f8f3e6d7cfa7c5557fa"
+    },
+    "libtool-2.6.0+r23+gb08cb0a0-1-armv7h.pkg.tar.xz": {
+      "bytes": 429860,
+      "sha256": "a7c83a0c990036736de7fe000754872987f7ec8752973650ec59b1e911906af6"
+    },
+    "libtool-2.6.0+r23+gb08cb0a0-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "0e4091272359ec2cf667459753d2486a5295b5bab217818128cb1c71fda68011"
+    },
+    "libtsan-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz": {
+      "bytes": 4176,
+      "sha256": "c426606ebfe7e6ecf6362028e5f42490638029e5b6576936fd93de5a072ae5da"
+    },
+    "libtsan-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "90626fa307b64dbac794b348376bd3b743ef92422a70699abfe9dc32d5c558ef"
+    },
+    "libubsan-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz": {
+      "bytes": 171956,
+      "sha256": "84b811d18c3d8f343dbb98a0ff61a052b154b642cd80ef150e7b4c1d7156cb4c"
+    },
+    "libubsan-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "9e490f4d9bc49bc62fbd78e6599b66f0b64a1999c37f9e722de65f6127eaf3eb"
+    },
+    "libunistring-1.4.2-1-armv7h.pkg.tar.xz": {
+      "bytes": 573936,
+      "sha256": "de10566c29700cc5f152e38196fc8f43b6dcc938bce92acb0ef7924d16cf09de"
+    },
+    "libunistring-1.4.2-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "acfd77f538966ee7cc3c460938f2da9d6104958fe3b91f51e7f6cef821f8d828"
+    },
+    "libusb-1.0.30-1-armv7h.pkg.tar.xz": {
+      "bytes": 69116,
+      "sha256": "385093d57232e98c4220ee0b2e915c10997b9dc9cde09c441a40c8176d133922"
+    },
+    "libusb-1.0.30-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "fbd269adf68589ff1c472a3b3ac72df3dd9fcbe16948ceeea7e0f282534d9f06"
+    },
+    "libverto-0.3.2-6-armv7h.pkg.tar.xz": {
+      "bytes": 17268,
+      "sha256": "892fed73a5fbc20318e2f72c7d6d2ed74e71e3975a3b054f50f1a5109d8c741f"
+    },
+    "libverto-0.3.2-6-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "1ed2499e2b57ffa304f0d5b3dcddcf50022a5036eae28915e06aa5cde93c4109"
+    },
+    "libwacom-2.20.0-1-armv7h.pkg.tar.xz": {
+      "bytes": 182820,
+      "sha256": "706aafea6ec1c1a969f7c8a6792036027fdd06633468eba3a731fc8b1f4b194d"
+    },
+    "libwacom-2.20.0-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "cc60d7057b3968873c59dba70a494fc9109fd957d00db3be4bdb08cc2d0a1014"
+    },
+    "libwebp-1.6.0-2-armv7h.pkg.tar.xz": {
+      "bytes": 220740,
+      "sha256": "5f611e9294fc6eba70ccf7bb1ecc59df429fc36ca6fb477f27d38d6211d36376"
+    },
+    "libwebp-1.6.0-2-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "c7c8beac86993911ee40e6269ffae10c0494f0f5d9dbd2ed3645ed13527c1d31"
+    },
+    "libx11-1.8.14-1-armv7h.pkg.tar.xz": {
+      "bytes": 1970180,
+      "sha256": "029050a947f70e75751c68e3684a1aea6554ae0a442e4fe820aa825875f8c205"
+    },
+    "libx11-1.8.14-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "9beb6b530e3ec447cba21f94370c76689b6cbe0de8a4874a69edac6b4332af87"
+    },
+    "libxau-1.0.12-1-armv7h.pkg.tar.xz": {
+      "bytes": 10832,
+      "sha256": "b8b6acec50237a30b0222df495ccb80b3c2f0db83903c70465113cb8b0ed991c"
+    },
+    "libxau-1.0.12-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "998e8687aa8670f5f6db1a8ea4511d1353ec38bb340f0722f5690675819781af"
+    },
+    "libxcb-1.17.0-1-armv7h.pkg.tar.xz": {
+      "bytes": 990668,
+      "sha256": "fbb6f4b35e409dfdb350dcc045cf5ba69c2678025703fbb1e7c0b6f17cfc1b8d"
+    },
+    "libxcb-1.17.0-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "9c98ba7d186e4f5967552407e5c8e7db4739c491352597ba2f0965ed7f6d2902"
+    },
+    "libxcrypt-4.5.2-1-armv7h.pkg.tar.xz": {
+      "bytes": 96952,
+      "sha256": "0e1ccb168adaf490a83c35a5ab05ce591f0549e048877b777b32f3e0f382553a"
+    },
+    "libxcrypt-4.5.2-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "d075490ef7156f76b2e9e6ea23c3455efa2ee291ddcbf70fef4fbd5e1f64cd4e"
+    },
+    "libxdmcp-1.1.5-2-armv7h.pkg.tar.xz": {
+      "bytes": 25860,
+      "sha256": "e69af083363ff3b8bc707e7832cea49177d43a9d47748b272d240acd772655de"
+    },
+    "libxdmcp-1.1.5-2-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "03c73585c7530eb1fe22f0fe76a54b3bed3104283c8f1163c1c0cafdb60383f0"
+    },
+    "libxext-1.3.7-1-armv7h.pkg.tar.xz": {
+      "bytes": 101108,
+      "sha256": "d727f9f911120b8a9bdccfc204c8ea0747f86a66bf604cec56ec2eb6353bd7a4"
+    },
+    "libxext-1.3.7-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "6b9ca9c7182fe2bb0f67e98d38af0c4d633c524526c16c5aad4de5f662284649"
+    },
+    "libxkbcommon-1.13.2-1-armv7h.pkg.tar.xz": {
+      "bytes": 248056,
+      "sha256": "9da20cfbdd33f6df9fb9c1456bbf36cca5f58066da479d57c3b569579f0a6b79"
+    },
+    "libxkbcommon-1.13.2-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "2687dc63aa98df485ba6fc530de5414cac4d3de452e665aa318940b44f80240f"
+    },
+    "libxml2-2.15.4-1-armv7h.pkg.tar.xz": {
+      "bytes": 654064,
+      "sha256": "56c25ca72c828f9f3f3950a64157709f816b7e80c601b461d7d39e6a9155fe0c"
+    },
+    "libxml2-2.15.4-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "cc92af73457739e6b952b9f649129c8b3e95d98736f0e86c286f40a8ca7b075c"
+    },
+    "libxshmfence-1.3.3-1-armv7h.pkg.tar.xz": {
+      "bytes": 5920,
+      "sha256": "2f92bad9a73da1a2361db753e214dd6c484123894412e695e2ff8db579a157a2"
+    },
+    "libxshmfence-1.3.3-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "5afb034b9c835a2257608ef9b29aa9c37eb0042b04d9b52950bf395fb8e1dc65"
+    },
+    "libxxf86vm-1.1.7-1-armv7h.pkg.tar.xz": {
+      "bytes": 14676,
+      "sha256": "cf3aa7b24c2e7b484877ed37efa386aca2326aa3269a834c69981cbff416b4af"
+    },
+    "libxxf86vm-1.1.7-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "766e426129c7da083b537df548ee9da5e6b66b69f738510c689e9b615d8be83b"
+    },
+    "libyaml-0.2.5-3-armv7h.pkg.tar.xz": {
+      "bytes": 48496,
+      "sha256": "40973955654e0486996ddd35411be044b2b823da8813ca8846d4c631f3d6325f"
+    },
+    "libyaml-0.2.5-3-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "5007a4da7127e74480298891e8bc6231c7ccaef7dc05708e62cac4a441a6c460"
+    },
+    "licenses-20240728-1-any.pkg.tar.xz": {
+      "bytes": 104708,
+      "sha256": "78e8958e69a69ff8224b6e2880bc0f3e5972d0493439d8781c376f861503b816"
+    },
+    "licenses-20240728-1-any.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "555e2fb8bf600242e2581bbf24a3215681077b1addbda06a069104c95f13de09"
+    },
+    "linux-api-headers-7.3-1-armv7h.pkg.tar.xz": {
+      "bytes": 1506964,
+      "sha256": "895796272b9ec4d731a2389004a5bb686a899250d400b9d53bee50f9b1c242e9"
+    },
+    "linux-api-headers-7.3-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "f5b6ebd2180c847e213c52faeeb9411d347930e6a4f042ca3b5771e4f1dcce6f"
+    },
+    "linux-armv7-7.3-1-armv7h.pkg.tar.xz": {
+      "bytes": 36711320,
+      "sha256": "25cc88af49e61fce30a35d512d8240edd8a98cabd2026681c8cd4dba6fcbfe31"
+    },
+    "linux-armv7-7.3-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "6afb657fe89c84601a4d133f62981f7153164c4c43e6aa13cc51ca92b99b67ff"
+    },
+    "linux-armv7-headers-7.3-1-armv7h.pkg.tar.xz": {
+      "bytes": 24392484,
+      "sha256": "64f04762d8d89337e637a552a8ff972afda35c1c201d5e62531b2cced5d4c88a"
+    },
+    "linux-armv7-headers-7.3-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "ebc6c5de2365cb7bfb4e99142465fbca38b3fb3be6a13d0311a8d4f8f71d23ef"
+    },
+    "llvm-libs-23.1.4-1-armv7h.pkg.tar.xz": {
+      "bytes": 37020432,
+      "sha256": "cb8568a33606ba2548f3a08af5b4dd679cf266b955b9bb25b1201515ddca5807"
+    },
+    "llvm-libs-23.1.4-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "a6c526a20fa16afe981f99b3ac3c47c801894ab9a618545659690da8c9e2dac3"
+    },
+    "lm_sensors-1:3.6.2-1-armv7h.pkg.tar.xz": {
+      "bytes": 121148,
+      "sha256": "92a5165a2bede71fdaf20acc0429c33b7b2a2f8611f4ce0cb6d3cc24c6cea352"
+    },
+    "lm_sensors-1:3.6.2-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "1e129c68d5d7ab8ede331af563b02be69f3ab7f646f27eb8ae8b76ddb2d37707"
+    },
+    "lmdb-0.9.35-1-armv7h.pkg.tar.xz": {
+      "bytes": 77780,
+      "sha256": "9eaed275ea1812c947ec7d11ca575f503324823989b3fea8e6249c3cee5c1c6e"
+    },
+    "lmdb-0.9.35-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "0718c2ea5eb299dcea3d0e0646a05c127212e2cc83f23319db83dc6ce9b0e956"
+    },
+    "lua54-5.4.9-1-armv7h.pkg.tar.xz": {
+      "bytes": 272996,
+      "sha256": "5adeaaf40f3ec0d11d49dc5e5edb660b05609fa2d0fca5551700197bb3e9165b"
+    },
+    "lua54-5.4.9-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "1a5ae85eebd3b30cd3ca1cadd8bda70765893799926ac234cd770760970aefe7"
+    },
+    "lz4-1:1.10.0-2-armv7h.pkg.tar.xz": {
+      "bytes": 119540,
+      "sha256": "59e9786756fbfc5f3ac6f324de871b46a3d156b63a4e5d8b153052f549425cd9"
+    },
+    "lz4-1:1.10.0-2-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "01514ebb1040532106c128990e6911afe5fedd8543aaef59b26d30b71e79b71e"
+    },
+    "lzo-2.10-5-armv7h.pkg.tar.xz": {
+      "bytes": 76716,
+      "sha256": "4247845f84cd135acd4b270583236fb206daea4c8f8fab38f3547d0cf75fad24"
+    },
+    "lzo-2.10-5-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "12287924fdc80ac920bab3f9cc358fb69c93a6b320b8eee386ea3f21902cc78b"
+    },
+    "m4-1.4.21-2-armv7h.pkg.tar.xz": {
+      "bytes": 262864,
+      "sha256": "aa088e258225ad2dd6b22cab0b97d4292d8226349b720db7f32c82e270a7a5c8"
+    },
+    "m4-1.4.21-2-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "b71918a260d514a0cbca73a0f69c7c995165924988a7baa10e6c9babab3ff0ba"
+    },
+    "make-4.4.1-3-armv7h.pkg.tar.xz": {
+      "bytes": 488232,
+      "sha256": "cef25a88118e170d651d45eb631cab24061774479e638ac9461b582c280d81bb"
+    },
+    "make-4.4.1-3-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "a64b4ed69ec0cc64160f84d31d5749edc2009f43697cfd8a4af2f8c0079b4f10"
+    },
+    "mesa-1:26.2.5-1-armv7h.pkg.tar.xz": {
+      "bytes": 12268872,
+      "sha256": "81ff98beabd57cbefa606830fe6b1998242dd1328d5bad76abd3ec93dc9c17a3"
+    },
+    "mesa-1:26.2.5-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "d6157dee07cf854da9daa12ac9765b3dd55e27633464b5ae1f13705948a947d6"
+    },
+    "mkinitcpio-42.2-1-any.pkg.tar.xz": {
+      "bytes": 69932,
+      "sha256": "b6930a53b4ec320ff82062b6979d5a22f31c365e47dedbea66e7f65577cd88f2"
+    },
+    "mkinitcpio-42.2-1-any.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "1cc206a2fd44ac7f34e7185973efeae6ea97b5c4be25c0e9169eb53aa3743b72"
+    },
+    "mkinitcpio-busybox-1.36.1-1-armv7h.pkg.tar.xz": {
+      "bytes": 265180,
+      "sha256": "233a74234817dfabb42aefb433accbe1cee292944ee0f06f651b42f5a9cf5b96"
+    },
+    "mkinitcpio-busybox-1.36.1-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "5ce57633acbeb21e1e98cc3552e98504b9b565e4b7cc21076a066160cf630ac7"
+    },
+    "mpdecimal-4.0.1-3-armv7h.pkg.tar.xz": {
+      "bytes": 85036,
+      "sha256": "1c0d84b8987fa2fa422305209feee83e532e8c1153eea41dad4cd489b35a3e31"
+    },
+    "mpdecimal-4.0.1-3-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "2460c79e46d13f55e9fe334ab02eec4ad225a54d36761c266e6ae21f4d9c1bde"
+    },
+    "mpfr-4.2.2-1-armv7h.pkg.tar.xz": {
+      "bytes": 298396,
+      "sha256": "918d251de991b592f409408dcce9ec048b28927968b6071fcd86fd77bed9d1c4"
+    },
+    "mpfr-4.2.2-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "a62b844b8ead957840acb7e24773066d92fb7ea597e1001c44ab299971d2cdb2"
+    },
+    "mtdev-1.1.7-1-armv7h.pkg.tar.xz": {
+      "bytes": 15500,
+      "sha256": "1a4fd4698f610f40b781b4b57896d6a7ffc8f2ef70fee0b912dc2d4ba64efc80"
+    },
+    "mtdev-1.1.7-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "0122796af0a67a2d1eb3e770b80a8a92020a1d4f6f47800ff800ec3c36db90d3"
+    },
+    "nano-9.2-1-armv7h.pkg.tar.xz": {
+      "bytes": 609092,
+      "sha256": "f95614dbc3917e54f1a55c06a62b0bf64106f2956ce9174aa3b62059e70ad946"
+    },
+    "nano-9.2-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "9837f1b1e169e0b2207d0c05516a1d2865dc37136175397d75269f1b8a519676"
+    },
+    "ncurses-6.6-2-armv7h.pkg.tar.xz": {
+      "bytes": 1361808,
+      "sha256": "1d937cf1c9268eafc551357697997bdbce908bad5f07f98752bd7aa01a566a8f"
+    },
+    "ncurses-6.6-2-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "1bec46b7bebe8c8cef1515e3942b69c389a30449a401188a68ff396bccb85905"
+    },
+    "net-tools-2.10-3-armv7h.pkg.tar.xz": {
+      "bytes": 120408,
+      "sha256": "66e98de8753ee566048897e205ac6abc2905060d714f532b6bc96c3ca31b5166"
+    },
+    "net-tools-2.10-3-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "cebf599e72bbb62650f9a17c03fc1834873142d2ebf97aee8532e0cd18f36f52"
+    },
+    "netctl-1.29-2-any.pkg.tar.xz": {
+      "bytes": 40672,
+      "sha256": "f2fda85ad67ab0495d2163ea409d96af9b6d472ece031209ac447e1542395cb9"
+    },
+    "netctl-1.29-2-any.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "a374e301d2f506aea4614e87b2d9fbae1a21f89594ebf7e0a5f61afde3da2adc"
+    },
+    "nettle-4.0-1-armv7h.pkg.tar.xz": {
+      "bytes": 445356,
+      "sha256": "3b70b8da916b9b6e78da03703afbf160fd1b939ec465e2e84f371595dfa2bee9"
+    },
+    "nettle-4.0-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "71ee65d96dc02f1d9ea3523523e84850fb4aae3b2fe31c95a9c86a436ff71ee3"
+    },
+    "nftables-1:1.1.7-3-armv7h.pkg.tar.xz": {
+      "bytes": 371508,
+      "sha256": "d872e06510e282765a286c18305e23f386ca52a3045ac0fb5a42c562bd3b1cbd"
+    },
+    "nftables-1:1.1.7-3-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "cbc4bf77e53e9d4f12b823e103c5e65521f0af7656086ec98ebfad1c0c16a14c"
+    },
+    "npth-1.8-1-armv7h.pkg.tar.xz": {
+      "bytes": 26588,
+      "sha256": "2af7324a1b32159a5d18e3f71e3e099c02029125ca0bf78f2722fc3b7748efa9"
+    },
+    "npth-1.8-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "fda8efb4a35aba1d39de467ac451e6bd009bfd372d25ca755c3f54858738bcc9"
+    },
+    "openssh-10.6p1-2-armv7h.pkg.tar.xz": {
+      "bytes": 1136768,
+      "sha256": "4f08680dd5250aae65d6c7d160b94d6e54206c344ba97faa05a6140075bb6947"
+    },
+    "openssh-10.6p1-2-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "4ccc17276e180ab6f27a6ca612f80ad8e36c456eb95a9d48d130c3744301fe30"
+    },
+    "openssl-3.6.5-1-armv7h.pkg.tar.xz": {
+      "bytes": 5075952,
+      "sha256": "60a17be8902b0d0de8884f9aea8588c1c0de55a6729953a155524b11c9782f44"
+    },
+    "openssl-3.6.5-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "501eae92d36ea4635a7b1e66b694e5066181d2a228c9511db2ee5f564e101dcf"
+    },
+    "p11-kit-0.26.5-1-armv7h.pkg.tar.xz": {
+      "bytes": 233212,
+      "sha256": "76a3aebb1c8a78bedf722e868c4fad75f775256f71ecb66d49e27d9e4fdba8d3"
+    },
+    "p11-kit-0.26.5-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "8d9f3937f5a86d91e62ef35624fb9b6308065afc8c9f8c01abc703bd02fd0eb1"
+    },
+    "pacman-7.1.0.r9.g54d9411-3-armv7h.pkg.tar.xz": {
+      "bytes": 897220,
+      "sha256": "9c1e3174afb0d144d98ec38f2d0a95288425463895997c14075ab603919ed10b"
+    },
+    "pacman-7.1.0.r9.g54d9411-3-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "3d3e9817f7f7a85c80b75084e4c2179d898e98b0a2073f87b1906beffa1574d7"
+    },
+    "pacman-mirrorlist-20260411-2-any.pkg.tar.xz": {
+      "bytes": 2640,
+      "sha256": "8d41b9ab5bdb63443a12a94f600699618bf5ca0771c4a0b54d7d96d0e82f671c"
+    },
+    "pacman-mirrorlist-20260411-2-any.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "b2de78d2a0d206e13775e4d7f66013d709fa63ffb681f4ffd9b7b4a7fd8e8200"
+    },
+    "pam-1.7.3-1-armv7h.pkg.tar.xz": {
+      "bytes": 570240,
+      "sha256": "9b11764dd3412400d1c3fb0f178f2dccade3d7d21bf1511ab8bb28199de27e12"
+    },
+    "pam-1.7.3-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "19eea8eb97a5d46a045f9072fdc1cafa5d86d680ccb6ad5713ba44a8bde54b3c"
+    },
+    "pambase-20260616-1-any.pkg.tar.xz": {
+      "bytes": 3368,
+      "sha256": "6ea70ae35977b466cfc76cd6a785291a63e70d347ce0e49d3af17481d017b76e"
+    },
+    "pambase-20260616-1-any.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "4965fdfb9e658bd7748bbbcdcecd86a74f3b23d67bbefabbbf15daa0f7f0c510"
+    },
+    "patch-2.8.1-1-armv7h.pkg.tar.xz": {
+      "bytes": 81804,
+      "sha256": "7b68af31bcac6bbaab70a651e0830cbbc984dc06591ba827d7baa797a567ae72"
+    },
+    "patch-2.8.1-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "9a5922f7a70d373a4cf5cb6ffe740f6da20da8bb53778418181c6fb66b5ddde0"
+    },
+    "pciutils-3.15.0-1-armv7h.pkg.tar.xz": {
+      "bytes": 131452,
+      "sha256": "66ffe75ea60791921fcbfba20f95048daa1005a3b8fe45abcf4e94e68669b9fd"
+    },
+    "pciutils-3.15.0-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "dd6f5c7b25a4363f59555d27b8e8c2f8f0592cc13f53f798f038542be11d5d0f"
+    },
+    "pcre2-10.49-1-armv7h.pkg.tar.xz": {
+      "bytes": 1230860,
+      "sha256": "d91e8a58953c0f4f6f4b9ab9d46bab9c629f6603760599ad8107430b4376ed5f"
+    },
+    "pcre2-10.49-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "cf93f2ec7129d6fa82b4aabcfd1833a43ebe09f48f5c3bb0e753863e4345d9ab"
+    },
+    "perl-5.44.0-1-armv7h.pkg.tar.xz": {
+      "bytes": 15825488,
+      "sha256": "b5995c95c3f6f756ab98585bbea04defb8b7ca31552e896ddca0216c6ceb53f0"
+    },
+    "perl-5.44.0-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "9b870bfeb5340154e95c93c3415807668a838441b3316d14f9526434b5a48f7f"
+    },
+    "perl-error-0.17030-3-any.pkg.tar.xz": {
+      "bytes": 21288,
+      "sha256": "205107e390e65a821e82e10d4efdebb909a3f3e30d318853bc865764fd0a8de5"
+    },
+    "perl-error-0.17030-3-any.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "a936e04221b338d85ddb4b3db08050b6fb2f3d2726bcd9e38bcaf2d01c2d197d"
+    },
+    "perl-mailtools-2.22-3-any.pkg.tar.xz": {
+      "bytes": 59792,
+      "sha256": "b823b25974919d4bd0945071d86f6bbec74dfd28f1bd5e9bf52a341f71e8c90b"
+    },
+    "perl-mailtools-2.22-3-any.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "060ff648de980c526a9e9422181fc60e5c63ae684d66021b7da81cfe23614e1c"
+    },
+    "perl-timedate-2.35-1-any.pkg.tar.xz": {
+      "bytes": 61812,
+      "sha256": "46289551aeb2c7c31c689985215a44b525978c363bc037f3ac221537dc4aa0c1"
+    },
+    "perl-timedate-2.35-1-any.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "ea1c07d7acdf0fc51d94d3a6fd6d3cd604abaf41f13f325a6b6ca5c97827500b"
+    },
+    "pinentry-1.3.3-1-armv7h.pkg.tar.xz": {
+      "bytes": 125756,
+      "sha256": "f7d3c4966fdb9eb1ca81f026a0bc8f8789f47ef0ce27b4cf17aeabb77833d727"
+    },
+    "pinentry-1.3.3-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "3b853eb4c9afb2eba19a5a0be4486ce8a7f04bf2eb208a6766a75a183745ba69"
+    },
+    "pixman-0.46.4-1.1-armv7h.pkg.tar.xz": {
+      "bytes": 182324,
+      "sha256": "03e61ca326c36736eb54673bd1eb044b236950088faf9904f3fe857d919338b5"
+    },
+    "pixman-0.46.4-1.1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "a3fd164f94a219701a3819f86db6f87d7b213a068edb809f1ae457a8dbe72e57"
+    },
+    "pkgconf-3.0.10-1-armv7h.pkg.tar.xz": {
+      "bytes": 104540,
+      "sha256": "41420bf3da15d14b63d8a656a25723eab74d19e5ff7826d596353cb4b1be50c8"
+    },
+    "pkgconf-3.0.10-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "b0c51cb2b4185cbb28d11a4c5961f5ed81b044605c42e91c9ece6deaa25f4d83"
+    },
+    "popt-1.19-2-armv7h.pkg.tar.xz": {
+      "bytes": 65552,
+      "sha256": "7473e31822bda10d63ee5ca648d55f73ea7f089fa7aa8202afe70d92ff77aba2"
+    },
+    "popt-1.19-2-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "0341d266662966103f5a8d785566785964e314b9c39a522f294ccef0698b0ec3"
+    },
+    "procps-ng-4.0.7-1-armv7h.pkg.tar.xz": {
+      "bytes": 978400,
+      "sha256": "cfcbbad7153154d26251e9416bddf9217c6acb8dc71776d9f4f3b4b7747bb68b"
+    },
+    "procps-ng-4.0.7-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "9fe46ab911717a168ab54ea001fe1471ff2a9d3c1a7041d700958d6d4a1a99ca"
+    },
+    "psmisc-23.7-2-armv7h.pkg.tar.xz": {
+      "bytes": 252504,
+      "sha256": "705467fa3f2cd5f29c12692ba5e72f8023dd375a1c00046ee28bf0bd5ff7b8d9"
+    },
+    "psmisc-23.7-2-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "51633ac1e2eca1c3bf1e0a17315aba05d7ce638dd9f9843034cdf90aad267e75"
+    },
+    "python-3.14.8-1-armv7h.pkg.tar.xz": {
+      "bytes": 13122856,
+      "sha256": "8f99654c918e2474f70d6a0ee31b3fee564fd9899aa39a108d417922f02c6852"
+    },
+    "python-3.14.8-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "4544c649d79e3fc728061f6e4b33fd451853d7add61a5d6290f658869d2f04bf"
+    },
+    "python-autocommand-2.2.2-9-any.pkg.tar.xz": {
+      "bytes": 23916,
+      "sha256": "1db72f5bbb84c8fd577f6cde2c83620ff7a6fb3371b13a0716c8b21b15fb3bce"
+    },
+    "python-autocommand-2.2.2-9-any.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "25b02547fc2bb64220e351e6b7eebb8ca018b5dd10f20f198183fb5528042742"
+    },
+    "python-jaraco.collections-5.1.0-3-any.pkg.tar.xz": {
+      "bytes": 23628,
+      "sha256": "24f366d2edc516b20db359306c8dcbbc8b20876d6119b74680e4ceb44b277340"
+    },
+    "python-jaraco.collections-5.1.0-3-any.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "2f98793a972c71e071f0e89c0b9c7101e705df6dfd0870e8958cf319666028bb"
+    },
+    "python-jaraco.context-6.1.2-1-any.pkg.tar.xz": {
+      "bytes": 16192,
+      "sha256": "7a0efb35c303d199b70121bb2be5d0dad58b017f6e2f5c104077b5d317cada51"
+    },
+    "python-jaraco.context-6.1.2-1-any.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "5b464ede7472ed5729212718619946fecab1eec1b53e7b59cbb21050252ed3e7"
+    },
+    "python-jaraco.functools-4.1.0-3-any.pkg.tar.xz": {
+      "bytes": 18020,
+      "sha256": "8c3ac91d30035a8ae954a2762cd16c79424a32b2bb84cf9349c41a4f76e3e398"
+    },
+    "python-jaraco.functools-4.1.0-3-any.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "7ffadc15b1a06bbe1cb7e63a5d4ad2d1a5ab19a828bbfe4fabe5d128b3fb8275"
+    },
+    "python-jaraco.text-4.0.0-4-any.pkg.tar.xz": {
+      "bytes": 20984,
+      "sha256": "d07586c6d7ae7634e6def55114accd24b8a9940a1afce9cba1cdf28b116ef48a"
+    },
+    "python-jaraco.text-4.0.0-4-any.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "9d3c11467a253f1d5e8cf9a762c421c01e0c3fa108816baba359021c08ffede7"
+    },
+    "python-more-itertools-11.2.1-1-any.pkg.tar.xz": {
+      "bytes": 128016,
+      "sha256": "e91bf670e5b4d9a7d42fd07e9cfcd25607a5267bfa680249566d469b5eacdcd4"
+    },
+    "python-more-itertools-11.2.1-1-any.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "d6f71c1f47fcc8b88009d79a59d7149c03820ddb2f3563a65cc3158015548870"
+    },
+    "python-packaging-26.3-1-any.pkg.tar.xz": {
+      "bytes": 247500,
+      "sha256": "27031cdb11c388221d54b4a48d1c1dcb27c5e753b63bb922795077d4e9236967"
+    },
+    "python-packaging-26.3-1-any.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "cca37a5fc4bc4264585e676cc4ac5644981b1af4f7fe34503edc751704dbdfe5"
+    },
+    "python-platformdirs-4.13.5-1-any.pkg.tar.xz": {
+      "bytes": 65540,
+      "sha256": "9c46af4708ca1a62b05efa7737534e3d0a4f4ab5f031359759f7207b2390fa15"
+    },
+    "python-platformdirs-4.13.5-1-any.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "b5dc8f0f1660486a5df5fe0f670a829896e4f53b9c8ffd1b16f8435e57ed592f"
+    },
+    "python-pyelftools-0.33-1-any.pkg.tar.xz": {
+      "bytes": 389184,
+      "sha256": "169bfd4569bda1ba4b5ed7182cefb129d771a3b58077d2db46ac64eaa14d3dc7"
+    },
+    "python-pyelftools-0.33-1-any.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "5c282fded635bae1189dcb391213e2375a4bc29dc67a97d274957e04ad616d7d"
+    },
+    "python-setuptools-1:84.2.1-1-any.pkg.tar.xz": {
+      "bytes": 765772,
+      "sha256": "4c2208c318fee7dc41c31c83021999a80b48f4ac791b211c61abd5d6e9d55d3b"
+    },
+    "python-setuptools-1:84.2.1-1-any.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "3b112148bc1b0364caea271f35c19104ee99f0a697384943b3fff321db43d835"
+    },
+    "python-wheel-0.48.0-1-any.pkg.tar.xz": {
+      "bytes": 72908,
+      "sha256": "4152a0f0394b7b20d1479573f4d58027ef32f15113fc8aa2d7390234585b6403"
+    },
+    "python-wheel-0.48.0-1-any.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "a12aca182e4e53b86e87eb7317a428164b0050814d0ff73591f063d37cccef1f"
+    },
+    "readline-8.3.6-1-armv7h.pkg.tar.xz": {
+      "bytes": 386952,
+      "sha256": "d3661b93e96a434d924cf7798d44b2407e159a7c2070c532c11dbfb9578bdcaf"
+    },
+    "readline-8.3.6-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "d84cb39f82c586a192c2b5027740ecb94a5e0f6edb5ea200969dfa747a0ba2be"
+    },
+    "seatd-0.9.3-1-armv7h.pkg.tar.xz": {
+      "bytes": 33992,
+      "sha256": "d9b4493142e8b86da594da4d2eeb9010c36d0adf6db0901eae51118f1a217c2b"
+    },
+    "seatd-0.9.3-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "6fd66a39240fc98711c03a726f9421c404439dc12c2923004c4f039ba866d25e"
+    },
+    "sed-4.10-2-armv7h.pkg.tar.xz": {
+      "bytes": 230852,
+      "sha256": "9a18261ca19e7aff2d554df3ac8d80740082c415614e4682c6f280ff4d2e7ba4"
+    },
+    "sed-4.10-2-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "0bb2898faa71e72361bcdaa0fc2af9c54a1f6bd16d5491c2c3c3c35a7166eb15"
+    },
+    "shadow-4.20.0.arch1-1-armv7h.pkg.tar.xz": {
+      "bytes": 1188208,
+      "sha256": "d54c52d907ed21e00cabcd40fbeaf60a2dcc0ac8ebb669a0cb708335f588f696"
+    },
+    "shadow-4.20.0.arch1-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "727b9f485f21f9b83d9a9be3eda0f26809c461f173c8be0e9635fb1f39fdc8f6"
+    },
+    "source-highlight-3.1.9-19-armv7h.pkg.tar.xz": {
+      "bytes": 687048,
+      "sha256": "388f140e698d4449f675a104478c8232aa0adb5bf92a2419c7b0437e46d0d8da"
+    },
+    "source-highlight-3.1.9-19-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "9f7b839f417ae3bd9babf036e5f0399d3e849ece18c5ea40b771729f7516d25d"
+    },
+    "spirv-tools-1:1.4.363.0-1-armv7h.pkg.tar.xz": {
+      "bytes": 1798660,
+      "sha256": "dd85e133823c0d22b8c4e3b85c6b07c7cdb2fbf408b4a10c46b6cae9b1c4eec9"
+    },
+    "spirv-tools-1:1.4.363.0-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "9e773e89f24fef60756bfbb0ef018b4f35daa7d4aab42278303cae83d01e84c2"
+    },
+    "sqlite-3.54.0-1-armv7h.pkg.tar.xz": {
+      "bytes": 1525172,
+      "sha256": "fe6aa5b9e60577fce78c71c19ef4b018a831aaf42f33751e71438e2552b8c22d"
+    },
+    "sqlite-3.54.0-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "513734f598e29dfd21b95e280cbb2b590bf3776bda9f7fb05ba51f884338c662"
+    },
+    "sudo-1.9.17.p2-6-armv7h.pkg.tar.xz": {
+      "bytes": 1803308,
+      "sha256": "d2d2db0012bd8def20e99cce861c945fd899d79019d64b95b1fc9de36fa3cff6"
+    },
+    "sudo-1.9.17.p2-6-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "9d85ec300559e748aaad7d2845da7dc1ec7ae072e2116cebcc648e6177a230a2"
+    },
+    "swig-4.5.1-1-armv7h.pkg.tar.xz": {
+      "bytes": 1097348,
+      "sha256": "59c0ba9d95f0abf3c8e533fca392fba65ce8dbb987c4fe7983b5566804c4b0a7"
+    },
+    "swig-4.5.1-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 565,
+      "sha256": "f707bc17d84f8aa9b2d4576f55c01a92e4fbc57a302376f653219621f93bc5da"
+    },
+    "systemd-262.1-1-armv7h.pkg.tar.xz": {
+      "bytes": 9707272,
+      "sha256": "a0965177b3b3ffb97a40aa53e71f36e9016ade8fdff0eef28cab92f92fb9e5c6"
+    },
+    "systemd-262.1-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "59aafdc988a27129ce5cd5dbdf226725879152ff1569a7bbe05ddb8f809f0a98"
+    },
+    "systemd-libs-262.1-1-armv7h.pkg.tar.xz": {
+      "bytes": 1240736,
+      "sha256": "35d9bd1a51213f8100a688d6a5dda3e5843efe140a04ea85e43eae9f0d60de64"
+    },
+    "systemd-libs-262.1-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "ca69426f93e6fea60c55eab3563207d5b924a4f89b04146a8783ddf8b60008d3"
+    },
+    "systemd-resolvconf-262.1-1-armv7h.pkg.tar.xz": {
+      "bytes": 3408,
+      "sha256": "a43c423790f2293f008ad402ba1f5a7e59241d9ee15091638d2fa1a173338f3d"
+    },
+    "systemd-resolvconf-262.1-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "e557e90b502007450d72cc7dbb194207712b8d2a2d90853445fafba0342df0e2"
+    },
+    "systemd-sysvcompat-262.1-1-armv7h.pkg.tar.xz": {
+      "bytes": 6692,
+      "sha256": "cbc9818874ac5adb536fb1774ffc6f68bc5f3b44e314c16df993df296e7decba"
+    },
+    "systemd-sysvcompat-262.1-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "6800ad949decb1ca164b45156c26682f1469332b5698d24d22e56aac462024f7"
+    },
+    "tar-1.35-5-armv7h.pkg.tar.xz": {
+      "bytes": 722960,
+      "sha256": "7c92a585d15079ee5197cc97643bad861a4795d6eb38d63063573f9f605c2ba7"
+    },
+    "tar-1.35-5-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "0b1daebdd0c0793d6f6e72663d7f23d3189f272433fea01b1a0a391b4f82f866"
+    },
+    "texinfo-7.3-3-armv7h.pkg.tar.xz": {
+      "bytes": 2042120,
+      "sha256": "95ba36dacf37f4ed44a4551b71b34462252f2ef45c865ec6bbff3060f1a04e1a"
+    },
+    "texinfo-7.3-3-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "f62f58dcde23b6c2e63c81a9825d713b94d08de340fb0b43936547db398a9c1d"
+    },
+    "tpm2-tss-4.2.0-2-armv7h.pkg.tar.xz": {
+      "bytes": 962180,
+      "sha256": "40accdf106423fb3dd11bb7d726ee45c58ea2927b4a4205533858f68ad17ab3b"
+    },
+    "tpm2-tss-4.2.0-2-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "2309d9d12d8721e80043c4c48f145e4acb80a31ffb70c3b820b1dee3520d9525"
+    },
+    "ttf-dejavu-2.37+18+g9b5d1b2f-8-any.pkg.tar.xz": {
+      "bytes": 2476940,
+      "sha256": "b2a15083d7db369b3a237c62ed44997613a3b8bcf967261507bcda2fb2eade61"
+    },
+    "ttf-dejavu-2.37+18+g9b5d1b2f-8-any.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "9b2f473835e2403cfb4f6ca36a79f465bfe0e35e5be952765a0feb32e29a1bcb"
+    },
+    "tzdata-2026e-1-armv7h.pkg.tar.xz": {
+      "bytes": 298304,
+      "sha256": "53744f148b4938f9aa703571c05f154ea8d6de08136e0592ec2074a0c57d903b"
+    },
+    "tzdata-2026e-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "d631ba218ad0a14dfc8012d77c7d699cc09f3dcaa89083160c21a4a33252151f"
+    },
+    "util-linux-2.42.4-1-armv7h.pkg.tar.xz": {
+      "bytes": 6595784,
+      "sha256": "37925bcdaeade0d954145fc6e56be348e07d22f01d7fbcf526cdec30c0303dbf"
+    },
+    "util-linux-2.42.4-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "4314335d1c02a870dbe7a92ea76a3a98bf9444f24d0549f8c7540a02c84b1863"
+    },
+    "util-linux-libs-2.42.4-1-armv7h.pkg.tar.xz": {
+      "bytes": 473624,
+      "sha256": "c4a9ec2ab12782a127fa68606c0fadf6d38f32c58fa1a7e9200bef20e985e183"
+    },
+    "util-linux-libs-2.42.4-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "db3fb65d170feb6354af832e04ec939e41501929be5679c7ea7057391b2ba2d5"
+    },
+    "vim-9.2.1178-1-armv7h.pkg.tar.xz": {
+      "bytes": 1936592,
+      "sha256": "d9c0a1f0ef63d69aeb6c1d10cd32af751a1b490a98eeb2b52cd32f098539b224"
+    },
+    "vim-9.2.1178-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "eb1a43e6824a42f8826945e1ade88663ece2cea8fd43c9fff8b165383d94e879"
+    },
+    "vim-runtime-9.2.1178-1-armv7h.pkg.tar.xz": {
+      "bytes": 7702436,
+      "sha256": "49f1dd049f1499ed5976ee2cd9cccae560861d45da6e7576117f51e048d57ed1"
+    },
+    "vim-runtime-9.2.1178-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "7cc5f58feacf0388a3bcedcd7e9750a1f5773fa884beb32cf1dc73aff2461075"
+    },
+    "vulkan-icd-loader-1.4.363.0-1-armv7h.pkg.tar.xz": {
+      "bytes": 148244,
+      "sha256": "21122eb3e4c22baef14864ae425deab7129bab35770d516f5a181fa4b2a7d2e6"
+    },
+    "vulkan-icd-loader-1.4.363.0-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "5278cfc509a302f8c372aa067f45c1cbc89e6ba30e8520a3372b1070ae8f26e9"
+    },
+    "wayland-1.26.0-1-armv7h.pkg.tar.xz": {
+      "bytes": 132996,
+      "sha256": "2e5870c8ead7c1c00e5d4a7d3a610d529f11fe4681455cb1b7626314a8d7a3fd"
+    },
+    "wayland-1.26.0-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "4d5e89604cfe4bb71e022e0b35ba5aeb4416510f8e8b1d7b713108ae7c2e4837"
+    },
+    "wayland-protocols-1.49-1-any.pkg.tar.xz": {
+      "bytes": 139468,
+      "sha256": "0ed7895e23b6a4f89fbe28485946f6dead95ebf08ca78d29c25cb976ae83c4f0"
+    },
+    "wayland-protocols-1.49-1-any.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "69d7c1b7e99ff72d21b0256bff677ebb75c38e3fb04673433a904eea293844c2"
+    },
+    "which-2.25-1-armv7h.pkg.tar.xz": {
+      "bytes": 15488,
+      "sha256": "e11f0766c7a648d19b012279c01dcae64113c65a8b8e4d0506e2957739b4e9c4"
+    },
+    "which-2.25-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "4bd2961c7c873b2603bb61e2d6d4c369b47372e4ef8a79151b99bd24fc57b4f3"
+    },
+    "wireless-regdb-2026.09.03-1-any.pkg.tar.xz": {
+      "bytes": 11244,
+      "sha256": "c6116b2f44eaf1e6fd12386ae236db2d623926695876d65ff5ce9d2b4b2ecdc9"
+    },
+    "wireless-regdb-2026.09.03-1-any.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "54feebac231c55b642d3d65afc4ff4a633d2897b93efd2ebc23fc19ebe0a73e6"
+    },
+    "wlroots0.20-0.20.2-1-armv7h.pkg.tar.xz": {
+      "bytes": 427260,
+      "sha256": "0e34cf88696dc596ad447c35119ca7d78a62001074196f4e6abd1d1f6922202a"
+    },
+    "wlroots0.20-0.20.2-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "64bad7b5909f9fc05ff22b720c653fe7306a10639a8662cfb261ca6f75b821bd"
+    },
+    "xcb-proto-1.17.0-4-any.pkg.tar.xz": {
+      "bytes": 127684,
+      "sha256": "1214b3fc9b3445f3557b9c2d46c8486cb0a0219752c5c11c0ae7fc44d7a395ae"
+    },
+    "xcb-proto-1.17.0-4-any.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "1a39d4046dcac1379de6ef46ac985ff234c18bad7025e64b48c14d773694c239"
+    },
+    "xcb-util-errors-1.0.1-2-armv7h.pkg.tar.xz": {
+      "bytes": 12316,
+      "sha256": "a9a08a81b50a153ef2849f9e849f9323cdae449e657b31b0a2bd67ae5b3d79c5"
+    },
+    "xcb-util-errors-1.0.1-2-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "7fd7d3aa126ce224ec586f81b9790ba98b203b4cb5918c3569fbde1900be7c88"
+    },
+    "xcb-util-renderutil-0.3.10-2-armv7h.pkg.tar.xz": {
+      "bytes": 8656,
+      "sha256": "5b2e475510345addae68444bfce9d561c694beb151754f4c34a7f6befd164ff2"
+    },
+    "xcb-util-renderutil-0.3.10-2-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "ce300a32eec82a5642f33e5c02822975b56a8194d557b1962305609272df7553"
+    },
+    "xcb-util-wm-0.4.2-2-armv7h.pkg.tar.xz": {
+      "bytes": 29584,
+      "sha256": "ac2db3c2c39d00e76faa0883e229b0d3042dfd199c60f0bb1c20892935cb025e"
+    },
+    "xcb-util-wm-0.4.2-2-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "442c54fc88d95006e22ae116db26167636c0c209f8f9b781e3913d71484205f3"
+    },
+    "xkeyboard-config-2.48-1-any.pkg.tar.xz": {
+      "bytes": 842952,
+      "sha256": "c63dde9247ba422731204a8aec356597e0b0d783536e8d5f700e077dfa5105d7"
+    },
+    "xkeyboard-config-2.48-1-any.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "97ebacf8ee1a162325f9803dac0c9dbffdf99ee8f3a38820ee5fe527284fa683"
+    },
+    "xorgproto-2026.1-1-any.pkg.tar.xz": {
+      "bytes": 239064,
+      "sha256": "2924d700b242b602ba5e9bf2a88339857505a0cf861e1718e5c22e2613f74041"
+    },
+    "xorgproto-2026.1-1-any.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "1694a7159d83f27b95e0385080f1956765ee76e0d90a2045abb939cc7c9614a9"
+    },
+    "xxhash-0.8.4-1-armv7h.pkg.tar.xz": {
+      "bytes": 92660,
+      "sha256": "69aff80b0f882c68d7e42a74ade91e57dafe3330c1f195b209d3992d881659dd"
+    },
+    "xxhash-0.8.4-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "57d6174d704b0fd165077415520cf64b89a802a21c51a4f1765286671dfc97cf"
+    },
+    "xz-5.8.4-1-armv7h.pkg.tar.xz": {
+      "bytes": 815100,
+      "sha256": "4147100a4f8a6cc365d0536c592073a5167609544deefbfc8a6170bad76b0e12"
+    },
+    "xz-5.8.4-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "eab8653d0f99a9995fb40c20a65f649a663c72f7eb00f1fece96a79deb2ad2ad"
+    },
+    "zlib-1:1.3.2-4-armv7h.pkg.tar.xz": {
+      "bytes": 71248,
+      "sha256": "56ab08b5bfc6c64988ca3d872bc716d8ffdc16acdb22181e5f51addd070a3134"
+    },
+    "zlib-1:1.3.2-4-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "bf1935f989482ec1b11ccd39ae048425f1ba8fd247273093e3c1e6de8f772985"
+    },
+    "zlib-ng-2.3.3-1-armv7h.pkg.tar.xz": {
+      "bytes": 87244,
+      "sha256": "031f8750b4eacb01ce17afd0fa3d4f7152d0a4cc9d09d6d3454d192538d0962f"
+    },
+    "zlib-ng-2.3.3-1-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "53e1da327c25ffcf1ee0f6844ff734a09e894b5c4997c2cdaf9de60cafd23a18"
+    },
+    "zstd-1.5.7-3-armv7h.pkg.tar.xz": {
+      "bytes": 424512,
+      "sha256": "f2b39a761e27d091d1dbe1f3d1a751fd3cd705ec4ddcdbc3d605ac1a875451be"
+    },
+    "zstd-1.5.7-3-armv7h.pkg.tar.xz.sig": {
+      "bytes": 566,
+      "sha256": "f4b9f69dbee6c41973204750c13e4406ece13aff5d46be3d0de36e1e1a52c80e"
+    }
+  },
+  "build_packages": {
+    "acl": "2.4.0-1",
+    "archlinux-keyring": "20260909-1",
+    "archlinuxarm-keyring": "20240419-2",
+    "attr": "2.6.0-1",
+    "audit": "4.2.1-1",
+    "autoconf": "2.73-1",
+    "automake": "1.19-1",
+    "base": "3-3",
+    "base-devel": "1-2",
+    "bash": "5.3.20-1",
+    "bc": "1.08.2-1",
+    "binutils": "2.46+r70+g155188ea10a7-1",
+    "bison": "3.8.2-8",
+    "boost-libs": "1.92.0-1",
+    "brotli": "1.2.1-1",
+    "bzip2": "1.0.8-6",
+    "ca-certificates": "20240618-1",
+    "ca-certificates-mozilla": "3.132-1",
+    "ca-certificates-utils": "20240618-1",
+    "coreutils": "9.12-2",
+    "cpio": "2.15-3",
+    "cryptsetup": "2.8.8-1",
+    "curl": "8.23.0-1",
+    "db5.3": "5.3.28-7",
+    "dbus": "1.16.2-2",
+    "dbus-broker": "37-3",
+    "dbus-broker-units": "37-3",
+    "dbus-units": "37-3",
+    "debugedit": "5.3-2",
+    "device-mapper": "2.03.43-2",
+    "dhcpcd": "10.5.2-1",
+    "diffutils": "3.12-2",
+    "dtc": "1:1.8.1-1",
+    "e2fsprogs": "1.47.4-1",
+    "elfutils": "0.197-1",
+    "ex-vi-compat": "3-1",
+    "expat": "2.9.0-1",
+    "fakeroot": "1:1.37.2-3",
+    "file": "5.48-1",
+    "filesystem": "2025.10.12-1",
+    "findutils": "4.11.0-1",
+    "flex": "2.6.4-6",
+    "gawk": "5.4.1-1",
+    "gc": "8.2.12-1",
+    "gcc": "16.1.1+r12+g301eb08fa2c5-1",
+    "gcc-libs": "16.1.1+r12+g301eb08fa2c5-1",
+    "gdb": "18.1-1",
+    "gdb-common": "18.1-1",
+    "gdbm": "1.26-2",
+    "gettext": "1.0-2",
+    "git": "2.56.0-1",
+    "glib2": "2.90.1-1",
+    "glibc": "2.43+r22+g8362e8ce10b2-2",
+    "gmp": "6.3.0-3",
+    "gnulib-l10n": "20241231-1",
+    "gnupg": "2.4.9-3",
+    "gnutls": "3.8.13-3",
+    "gpgme": "2.2.0-1",
+    "gpm": "1.20.7.r38.ge82d1a6-7",
+    "grep": "3.12-2",
+    "groff": "1.24.2-1",
+    "guile": "3.0.11-1",
+    "gzip": "1.15-1",
+    "hwdata": "0.412-1",
+    "iana-etc": "20260617-1",
+    "icu": "78.3-1",
+    "iproute2": "7.3.0-1",
+    "iptables": "1:1.8.13-1",
+    "iputils": "20250605-1",
+    "iw": "6.17-1",
+    "jansson": "2.15.1-1",
+    "json-c": "0.19-1",
+    "kbd": "2.10.0-1",
+    "keyutils": "1.6.3-4",
+    "kmod": "34.2-1",
+    "krb5": "1.22.2-1",
+    "leancrypto": "1.9.1-1",
+    "libarchive": "3.8.10-1",
+    "libasan": "16.1.1+r12+g301eb08fa2c5-1",
+    "libassuan": "3.0.0-1",
+    "libatomic": "16.1.1+r12+g301eb08fa2c5-1",
+    "libbpf": "1.7.0-1",
+    "libcap": "2.78-1",
+    "libcap-ng": "0.9.6-1",
+    "libedit": "20260512_3.1-1",
+    "libelf": "0.197-1",
+    "libevent": "2.1.13-2",
+    "libffi": "3.8.0-1",
+    "libgcc": "16.1.1+r12+g301eb08fa2c5-1",
+    "libgcrypt": "1.12.4-1",
+    "libgfortran": "16.1.1+r12+g301eb08fa2c5-1",
+    "libgomp": "16.1.1+r12+g301eb08fa2c5-1",
+    "libgpg-error": "1.61-1",
+    "libidn2": "2.3.8-1",
+    "libisl": "0.28-1",
+    "libksba": "1.8.1-1",
+    "libldap": "2.7.2-2",
+    "liblsan": "16.1.1+r12+g301eb08fa2c5-1",
+    "libmakepkg-dropins": "20-2",
+    "libmnl": "1.0.5-2",
+    "libmpc": "1.4.1-1",
+    "libnetfilter_conntrack": "1.1.1-1",
+    "libnfnetlink": "1.0.2-2",
+    "libnftnl": "1.3.2-1",
+    "libnghttp2": "1.70.0-1",
+    "libnghttp3": "1.18.0-1",
+    "libngtcp2": "1.25.0-1",
+    "libnl": "3.12.0-1",
+    "libnsl": "2.0.1-2",
+    "libobjc": "16.1.1+r12+g301eb08fa2c5-1",
+    "libp11-kit": "0.26.5-1",
+    "libpcap": "1.11.0-1",
+    "libpsl": "0.21.5-2",
+    "libquadmath": "16.1.1+r12+g301eb08fa2c5-1",
+    "libsasl": "2.1.28-5",
+    "libseccomp": "2.6.0-1",
+    "libsecret": "0.21.8.2-1",
+    "libssh2": "1.11.1-7",
+    "libstdc++": "16.1.1+r12+g301eb08fa2c5-1",
+    "libsysprof-capture": "51.0-1",
+    "libtasn1": "4.21.0-1",
+    "libtirpc": "1.3.8-1",
+    "libtool": "2.6.0+r23+gb08cb0a0-1",
+    "libtsan": "16.1.1+r12+g301eb08fa2c5-1",
+    "libubsan": "16.1.1+r12+g301eb08fa2c5-1",
+    "libunistring": "1.4.2-1",
+    "libusb": "1.0.30-1",
+    "libverto": "0.3.2-6",
+    "libxcrypt": "4.5.2-1",
+    "libxml2": "2.15.4-1",
+    "libyaml": "0.2.5-3",
+    "licenses": "20240728-1",
+    "linux-api-headers": "7.3-1",
+    "linux-armv7": "7.3-1",
+    "linux-armv7-headers": "7.3-1",
+    "lmdb": "0.9.35-1",
+    "lz4": "1:1.10.0-2",
+    "m4": "1.4.21-2",
+    "make": "4.4.1-3",
+    "mkinitcpio": "42.2-1",
+    "mkinitcpio-busybox": "1.36.1-1",
+    "mpdecimal": "4.0.1-3",
+    "mpfr": "4.2.2-1",
+    "nano": "9.2-1",
+    "ncurses": "6.6-2",
+    "net-tools": "2.10-3",
+    "netctl": "1.29-2",
+    "nettle": "4.0-1",
+    "nftables": "1:1.1.7-3",
+    "npth": "1.8-1",
+    "openssh": "10.6p1-2",
+    "openssl": "3.6.5-1",
+    "p11-kit": "0.26.5-1",
+    "pacman": "7.1.0.r9.g54d9411-3",
+    "pacman-mirrorlist": "20260411-2",
+    "pam": "1.7.3-1",
+    "pambase": "20260616-1",
+    "patch": "2.8.1-1",
+    "pciutils": "3.15.0-1",
+    "pcre2": "10.49-1",
+    "perl": "5.44.0-1",
+    "perl-error": "0.17030-3",
+    "perl-mailtools": "2.22-3",
+    "perl-timedate": "2.35-1",
+    "pinentry": "1.3.3-1",
+    "pkgconf": "3.0.10-1",
+    "popt": "1.19-2",
+    "procps-ng": "4.0.7-1",
+    "psmisc": "23.7-2",
+    "python": "3.14.8-1",
+    "python-autocommand": "2.2.2-9",
+    "python-jaraco.collections": "5.1.0-3",
+    "python-jaraco.context": "6.1.2-1",
+    "python-jaraco.functools": "4.1.0-3",
+    "python-jaraco.text": "4.0.0-4",
+    "python-more-itertools": "11.2.1-1",
+    "python-packaging": "26.3-1",
+    "python-platformdirs": "4.13.5-1",
+    "python-pyelftools": "0.33-1",
+    "python-setuptools": "1:84.2.1-1",
+    "python-wheel": "0.48.0-1",
+    "readline": "8.3.6-1",
+    "sed": "4.10-2",
+    "shadow": "4.20.0.arch1-1",
+    "source-highlight": "3.1.9-19",
+    "sqlite": "3.54.0-1",
+    "sudo": "1.9.17.p2-6",
+    "swig": "4.5.1-1",
+    "systemd": "262.1-1",
+    "systemd-libs": "262.1-1",
+    "systemd-resolvconf": "262.1-1",
+    "systemd-sysvcompat": "262.1-1",
+    "tar": "1.35-5",
+    "texinfo": "7.3-3",
+    "tpm2-tss": "4.2.0-2",
+    "tzdata": "2026e-1",
+    "util-linux": "2.42.4-1",
+    "util-linux-libs": "2.42.4-1",
+    "vim": "9.2.1178-1",
+    "vim-runtime": "9.2.1178-1",
+    "which": "2.25-1",
+    "wireless-regdb": "2026.09.03-1",
+    "xxhash": "0.8.4-1",
+    "xz": "5.8.4-1",
+    "zlib": "1:1.3.2-4",
+    "zlib-ng": "2.3.3-1",
+    "zstd": "1.5.7-3"
+  },
+  "runtime_packages": {
+    "acl": "2.4.0-1",
+    "alsa-lib": "1.2.16.1-1",
+    "alsa-topology-conf": "1.2.5.1-4",
+    "alsa-ucm-conf": "1.2.16.1-1",
+    "alsa-utils": "1.2.16-1",
+    "archlinux-keyring": "20260909-1",
+    "archlinuxarm-keyring": "20240419-2",
+    "attr": "2.6.0-1",
+    "audit": "4.2.1-1",
+    "avahi": "1:0.9rc5-2",
+    "base": "3-3",
+    "bash": "5.3.20-1",
+    "binutils": "2.46+r70+g155188ea10a7-1",
+    "brotli": "1.2.1-1",
+    "btrfs-progs": "7.3-1",
+    "busybox": "1.36.1-4",
+    "bzip2": "1.0.8-6",
+    "ca-certificates": "20240618-1",
+    "ca-certificates-mozilla": "3.132-1",
+    "ca-certificates-utils": "20240618-1",
+    "coreutils": "9.12-2",
+    "cryptsetup": "2.8.8-1",
+    "curl": "8.23.0-1",
+    "dbus": "1.16.2-2",
+    "dbus-broker": "37-3",
+    "dbus-broker-units": "37-3",
+    "dbus-units": "37-3",
+    "default-cursors": "3-1",
+    "device-mapper": "2.03.43-2",
+    "dhcpcd": "10.5.2-1",
+    "diffutils": "3.12-2",
+    "dkms": "3.4.4-1",
+    "dosfstools": "4.2-5",
+    "dtc": "1:1.8.1-1",
+    "e2fsprogs": "1.47.4-1",
+    "ell": "0.83-1",
+    "ex-vi-compat": "3-1",
+    "expat": "2.9.0-1",
+    "fftw": "3.3.11-1",
+    "file": "5.48-1",
+    "filesystem": "2025.10.12-1",
+    "findutils": "4.11.0-1",
+    "gawk": "5.4.1-1",
+    "gc": "8.2.12-1",
+    "gcc": "16.1.1+r12+g301eb08fa2c5-1",
+    "gcc-libs": "16.1.1+r12+g301eb08fa2c5-1",
+    "gdbm": "1.26-2",
+    "gettext": "1.0-2",
+    "glib2": "2.90.1-1",
+    "glibc": "2.43+r22+g8362e8ce10b2-2",
+    "gmp": "6.3.0-3",
+    "gnulib-l10n": "20241231-1",
+    "gnupg": "2.4.9-3",
+    "gnutls": "3.8.13-3",
+    "gpgme": "2.2.0-1",
+    "gpm": "1.20.7.r38.ge82d1a6-7",
+    "grep": "3.12-2",
+    "guile": "3.0.11-1",
+    "gzip": "1.15-1",
+    "hwdata": "0.412-1",
+    "iana-etc": "20260617-1",
+    "icu": "78.3-1",
+    "iproute2": "7.3.0-1",
+    "iptables": "1:1.8.13-1",
+    "iputils": "20250605-1",
+    "iw": "6.17-1",
+    "iwd": "3.12-2",
+    "jansson": "2.15.1-1",
+    "jbigkit": "2.2-1",
+    "json-c": "0.19-1",
+    "kbd": "2.10.0-1",
+    "keyutils": "1.6.3-4",
+    "kmod": "34.2-1",
+    "krb5": "1.22.2-1",
+    "lcms2": "2.19.1-1",
+    "leancrypto": "1.9.1-1",
+    "libarchive": "3.8.10-1",
+    "libasan": "16.1.1+r12+g301eb08fa2c5-1",
+    "libassuan": "3.0.0-1",
+    "libatomic": "16.1.1+r12+g301eb08fa2c5-1",
+    "libbpf": "1.7.0-1",
+    "libcap": "2.78-1",
+    "libcap-ng": "0.9.6-1",
+    "libdaemon": "0.14-6",
+    "libdeflate": "1.26-1",
+    "libdisplay-info": "0.3.0-1",
+    "libdrm": "2.4.134-1",
+    "libedit": "20260512_3.1-1",
+    "libelf": "0.197-1",
+    "libevdev": "1.14.0-1",
+    "libevent": "2.1.13-2",
+    "libffi": "3.8.0-1",
+    "libgcc": "16.1.1+r12+g301eb08fa2c5-1",
+    "libgcrypt": "1.12.4-1",
+    "libgfortran": "16.1.1+r12+g301eb08fa2c5-1",
+    "libglvnd": "1.7.0-3",
+    "libgomp": "16.1.1+r12+g301eb08fa2c5-1",
+    "libgpg-error": "1.61-1",
+    "libgudev": "238-4",
+    "libidn2": "2.3.8-1",
+    "libinput": "1.32.0-1",
+    "libisl": "0.28-1",
+    "libjpeg-turbo": "3.2.0-2",
+    "libksba": "1.8.1-1",
+    "libldap": "2.7.2-2",
+    "libliftoff": "0.5.0-1",
+    "liblsan": "16.1.1+r12+g301eb08fa2c5-1",
+    "libmakepkg-dropins": "20-2",
+    "libmnl": "1.0.5-2",
+    "libmpc": "1.4.1-1",
+    "libnetfilter_conntrack": "1.1.1-1",
+    "libnfnetlink": "1.0.2-2",
+    "libnftnl": "1.3.2-1",
+    "libnghttp2": "1.70.0-1",
+    "libnghttp3": "1.18.0-1",
+    "libngtcp2": "1.25.0-1",
+    "libnl": "3.12.0-1",
+    "libnsl": "2.0.1-2",
+    "libobjc": "16.1.1+r12+g301eb08fa2c5-1",
+    "libp11-kit": "0.26.5-1",
+    "libpcap": "1.11.0-1",
+    "libpciaccess": "0.19-1",
+    "libpsl": "0.21.5-2",
+    "libquadmath": "16.1.1+r12+g301eb08fa2c5-1",
+    "libsamplerate": "0.2.2-3",
+    "libsasl": "2.1.28-5",
+    "libseccomp": "2.6.0-1",
+    "libsecret": "0.21.8.2-1",
+    "libssh2": "1.11.1-7",
+    "libstdc++": "16.1.1+r12+g301eb08fa2c5-1",
+    "libsysprof-capture": "51.0-1",
+    "libtasn1": "4.21.0-1",
+    "libtiff": "4.7.2-2",
+    "libtirpc": "1.3.8-1",
+    "libtsan": "16.1.1+r12+g301eb08fa2c5-1",
+    "libubsan": "16.1.1+r12+g301eb08fa2c5-1",
+    "libunistring": "1.4.2-1",
+    "libusb": "1.0.30-1",
+    "libverto": "0.3.2-6",
+    "libwacom": "2.20.0-1",
+    "libwebp": "1.6.0-2",
+    "libx11": "1.8.14-1",
+    "libxau": "1.0.12-1",
+    "libxcb": "1.17.0-1",
+    "libxcrypt": "4.5.2-1",
+    "libxdmcp": "1.1.5-2",
+    "libxext": "1.3.7-1",
+    "libxkbcommon": "1.13.2-1",
+    "libxml2": "2.15.4-1",
+    "libxshmfence": "1.3.3-1",
+    "libxxf86vm": "1.1.7-1",
+    "libyaml": "0.2.5-3",
+    "licenses": "20240728-1",
+    "linux-api-headers": "7.3-1",
+    "linux-armv7": "7.3-1",
+    "linux-armv7-headers": "7.3-1",
+    "llvm-libs": "23.1.4-1",
+    "lm_sensors": "1:3.6.2-1",
+    "lmdb": "0.9.35-1",
+    "lua54": "5.4.9-1",
+    "lz4": "1:1.10.0-2",
+    "lzo": "2.10-5",
+    "make": "4.4.1-3",
+    "mesa": "1:26.2.5-1",
+    "mkinitcpio": "42.2-1",
+    "mkinitcpio-busybox": "1.36.1-1",
+    "mpdecimal": "4.0.1-3",
+    "mpfr": "4.2.2-1",
+    "mtdev": "1.1.7-1",
+    "nano": "9.2-1",
+    "ncurses": "6.6-2",
+    "net-tools": "2.10-3",
+    "netctl": "1.29-2",
+    "nettle": "4.0-1",
+    "nftables": "1:1.1.7-3",
+    "npth": "1.8-1",
+    "openssh": "10.6p1-2",
+    "openssl": "3.6.5-1",
+    "p11-kit": "0.26.5-1",
+    "pacman": "7.1.0.r9.g54d9411-3",
+    "pacman-mirrorlist": "20260411-2",
+    "pam": "1.7.3-1",
+    "pambase": "20260616-1",
+    "patch": "2.8.1-1",
+    "pciutils": "3.15.0-1",
+    "pcre2": "10.49-1",
+    "pinentry": "1.3.3-1",
+    "pixman": "0.46.4-1.1",
+    "popt": "1.19-2",
+    "procps-ng": "4.0.7-1",
+    "psmisc": "23.7-2",
+    "python": "3.14.8-1",
+    "readline": "8.3.6-1",
+    "seatd": "0.9.3-1",
+    "sed": "4.10-2",
+    "shadow": "4.20.0.arch1-1",
+    "spirv-tools": "1:1.4.363.0-1",
+    "sqlite": "3.54.0-1",
+    "sudo": "1.9.17.p2-6",
+    "systemd": "262.1-1",
+    "systemd-libs": "262.1-1",
+    "systemd-resolvconf": "262.1-1",
+    "systemd-sysvcompat": "262.1-1",
+    "tar": "1.35-5",
+    "tpm2-tss": "4.2.0-2",
+    "ttf-dejavu": "2.37+18+g9b5d1b2f-8",
+    "tzdata": "2026e-1",
+    "util-linux": "2.42.4-1",
+    "util-linux-libs": "2.42.4-1",
+    "vim": "9.2.1178-1",
+    "vim-runtime": "9.2.1178-1",
+    "vulkan-icd-loader": "1.4.363.0-1",
+    "wayland": "1.26.0-1",
+    "wayland-protocols": "1.49-1",
+    "which": "2.25-1",
+    "wireless-regdb": "2026.09.03-1",
+    "wlroots0.20": "0.20.2-1",
+    "xcb-proto": "1.17.0-4",
+    "xcb-util-errors": "1.0.1-2",
+    "xcb-util-renderutil": "0.3.10-2",
+    "xcb-util-wm": "0.4.2-2",
+    "xkeyboard-config": "2.48-1",
+    "xorgproto": "2026.1-1",
+    "xz": "5.8.4-1",
+    "zlib": "1:1.3.2-4",
+    "zstd": "1.5.7-3"
+  },
+  "upstream": {
+    "acl": {
+      "file": "acl-2.4.0-1-armv7h.pkg.tar.xz",
+      "sha256": "fd9c07d4df3fcd50bc0ab5ca5ce85cd2fc6c0dba4a23cd9ff668815d78abc096",
+      "bytes": 139692,
+      "version": "2.4.0-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/acl-2.4.0-1-armv7h.pkg.tar.xz"
+    },
+    "alsa-lib": {
+      "file": "alsa-lib-1.2.16.1-1-armv7h.pkg.tar.xz",
+      "sha256": "ed176a4e706f8ca8e3825d8dfdf2be005d3786c3def42ddd44d12604a8861346",
+      "bytes": 432508,
+      "version": "1.2.16.1-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/alsa-lib-1.2.16.1-1-armv7h.pkg.tar.xz"
+    },
+    "alsa-topology-conf": {
+      "file": "alsa-topology-conf-1.2.5.1-4-any.pkg.tar.xz",
+      "sha256": "104486f90aa891cb38c6a4ac9a16183bea7f533fd6b11a740877a75222eb2156",
+      "bytes": 13532,
+      "version": "1.2.5.1-4",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/alsa-topology-conf-1.2.5.1-4-any.pkg.tar.xz"
+    },
+    "alsa-ucm-conf": {
+      "file": "alsa-ucm-conf-1.2.16.1-1-any.pkg.tar.xz",
+      "sha256": "656d02914577f519a4121e775152148593d826cee997511baa321dfc94ec51e1",
+      "bytes": 130864,
+      "version": "1.2.16.1-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/alsa-ucm-conf-1.2.16.1-1-any.pkg.tar.xz"
+    },
+    "alsa-utils": {
+      "file": "alsa-utils-1.2.16-1-armv7h.pkg.tar.xz",
+      "sha256": "25ee7cc5969b03cbed8e3a809891425c47c1f90fb655363e79408016ec3d6f9a",
+      "bytes": 1118048,
+      "version": "1.2.16-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/alsa-utils-1.2.16-1-armv7h.pkg.tar.xz"
+    },
+    "archlinux-keyring": {
+      "file": "archlinux-keyring-20260909-1-any.pkg.tar.xz",
+      "sha256": "0928e7bae6a593d22ee637676b2b6ffeab164387af001f516b2a81a0cddc9d77",
+      "bytes": 1280072,
+      "version": "20260909-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/archlinux-keyring-20260909-1-any.pkg.tar.xz"
+    },
+    "archlinuxarm-keyring": {
+      "file": "archlinuxarm-keyring-20240419-2-any.pkg.tar.xz",
+      "sha256": "ba5873af6ffe030bb338c90e49c98e89807ad510033222eda96064beee64cb66",
+      "bytes": 5144,
+      "version": "20240419-2",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/archlinuxarm-keyring-20240419-2-any.pkg.tar.xz"
+    },
+    "attr": {
+      "file": "attr-2.6.0-1-armv7h.pkg.tar.xz",
+      "sha256": "deb7db89667ca2336282a445aa0dba940ce0e197e1e1493996ae44542f9ac5aa",
+      "bytes": 68228,
+      "version": "2.6.0-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/attr-2.6.0-1-armv7h.pkg.tar.xz"
+    },
+    "audit": {
+      "file": "audit-4.2.1-1-armv7h.pkg.tar.xz",
+      "sha256": "9e5f187296d8f755ad6c688393224c9db170cf23559d3d7fb2d457641a839997",
+      "bytes": 360396,
+      "version": "4.2.1-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/audit-4.2.1-1-armv7h.pkg.tar.xz"
+    },
+    "autoconf": {
+      "file": "autoconf-2.73-1-any.pkg.tar.xz",
+      "sha256": "3ee1f22f541431d758e08e84d70899a7486dfe7ce04fbe0ac44f80822237b6f1",
+      "bytes": 662248,
+      "version": "2.73-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/autoconf-2.73-1-any.pkg.tar.xz"
+    },
+    "automake": {
+      "file": "automake-1.19-1-any.pkg.tar.xz",
+      "sha256": "3b47937265345e3db320bcad561344c317a36d0f6593b05672378f4bb60fd394",
+      "bytes": 653336,
+      "version": "1.19-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/automake-1.19-1-any.pkg.tar.xz"
+    },
+    "avahi": {
+      "file": "avahi-1:0.9rc5-2-armv7h.pkg.tar.xz",
+      "sha256": "603ce1f3c447939316e0934ffbf4b0b969b36833857f2ed4e2db266164a9dc0f",
+      "bytes": 365680,
+      "version": "1:0.9rc5-2",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/avahi-1:0.9rc5-2-armv7h.pkg.tar.xz"
+    },
+    "base": {
+      "file": "base-3-3-any.pkg.tar.xz",
+      "sha256": "7304ff73753832c8b65acf97fa4e0c2415c5ce191aa59b9942711e0059835a9f",
+      "bytes": 2380,
+      "version": "3-3",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/base-3-3-any.pkg.tar.xz"
+    },
+    "base-devel": {
+      "file": "base-devel-1-2-any.pkg.tar.xz",
+      "sha256": "61bc0294e7be806d085c88c50392b367531349bf704f5f2a1fe24e6a35bfe03c",
+      "bytes": 2160,
+      "version": "1-2",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/base-devel-1-2-any.pkg.tar.xz"
+    },
+    "bash": {
+      "file": "bash-5.3.20-1-armv7h.pkg.tar.xz",
+      "sha256": "add30ae1489c78f5cfa5f34962f148a279e062702f5ce91d3b24f08e71b2f6cf",
+      "bytes": 1786784,
+      "version": "5.3.20-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/bash-5.3.20-1-armv7h.pkg.tar.xz"
+    },
+    "bc": {
+      "file": "bc-1.08.2-1-armv7h.pkg.tar.xz",
+      "sha256": "1b2efa4504e1c9929815afd733bedaa2bd94387338122eb8eb1e2a1530ac8798",
+      "bytes": 84216,
+      "version": "1.08.2-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/bc-1.08.2-1-armv7h.pkg.tar.xz"
+    },
+    "binutils": {
+      "file": "binutils-2.46+r70+g155188ea10a7-1-armv7h.pkg.tar.xz",
+      "sha256": "612a09c2dc878160efcb08312ebdace53f579cd1118b5275706b6645480feaf4",
+      "bytes": 5896744,
+      "version": "2.46+r70+g155188ea10a7-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/binutils-2.46+r70+g155188ea10a7-1-armv7h.pkg.tar.xz"
+    },
+    "bison": {
+      "file": "bison-3.8.2-8-armv7h.pkg.tar.xz",
+      "sha256": "3b5fac6f28878c82871009bd2639581f383ad688c2b5af8c1bbe218c6a9b1420",
+      "bytes": 731792,
+      "version": "3.8.2-8",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/bison-3.8.2-8-armv7h.pkg.tar.xz"
+    },
+    "boost-libs": {
+      "file": "boost-libs-1.92.0-1-armv7h.pkg.tar.xz",
+      "sha256": "37f85d8ffbb603936d5a1afe9eee845a957b0db180086dd9af330c5f8fa5c183",
+      "bytes": 4859960,
+      "version": "1.92.0-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/boost-libs-1.92.0-1-armv7h.pkg.tar.xz"
+    },
+    "brotli": {
+      "file": "brotli-1.2.1-1-armv7h.pkg.tar.xz",
+      "sha256": "f5dd06c1bec6bc13f74d0e140d8da2db37f0d9819219cdd2f186572019007525",
+      "bytes": 385184,
+      "version": "1.2.1-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/brotli-1.2.1-1-armv7h.pkg.tar.xz"
+    },
+    "btrfs-progs": {
+      "file": "btrfs-progs-7.3-1-armv7h.pkg.tar.xz",
+      "sha256": "6477a6d0c2fcef545623e5633882a08633100871e254597da6727109052b544c",
+      "bytes": 966236,
+      "version": "7.3-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/btrfs-progs-7.3-1-armv7h.pkg.tar.xz"
+    },
+    "busybox": {
+      "file": "busybox-1.36.1-4-armv7h.pkg.tar.xz",
+      "sha256": "5298ce9c9fa5a4b1c67112aa92fd3fc71e46ee3c61277643e602a3ac17161eec",
+      "bytes": 804692,
+      "version": "1.36.1-4",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/busybox-1.36.1-4-armv7h.pkg.tar.xz"
+    },
+    "bzip2": {
+      "file": "bzip2-1.0.8-6-armv7h.pkg.tar.xz",
+      "sha256": "76bebf6574f96bd4de468ede862c4ccf284b295cbdda01f7729b1bd7c15c8977",
+      "bytes": 52092,
+      "version": "1.0.8-6",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/bzip2-1.0.8-6-armv7h.pkg.tar.xz"
+    },
+    "ca-certificates": {
+      "file": "ca-certificates-20240618-1-any.pkg.tar.xz",
+      "sha256": "ff0de577cd09264ad7505e627539ab06565c4f57d3e9d47cb3622f7f0c8335ae",
+      "bytes": 2164,
+      "version": "20240618-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/ca-certificates-20240618-1-any.pkg.tar.xz"
+    },
+    "ca-certificates-mozilla": {
+      "file": "ca-certificates-mozilla-3.132-1-armv7h.pkg.tar.xz",
+      "sha256": "3c339dd90840eae516d5347932bba6cf75451823fd2312615a2f2f42761294d1",
+      "bytes": 377140,
+      "version": "3.132-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/ca-certificates-mozilla-3.132-1-armv7h.pkg.tar.xz"
+    },
+    "ca-certificates-utils": {
+      "file": "ca-certificates-utils-20240618-1-any.pkg.tar.xz",
+      "sha256": "7be85932099aa7703e300a40509a0704804c53c6d23940aef9ae044b6aa8e166",
+      "bytes": 10872,
+      "version": "20240618-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/ca-certificates-utils-20240618-1-any.pkg.tar.xz"
+    },
+    "coreutils": {
+      "file": "coreutils-9.12-2-armv7h.pkg.tar.xz",
+      "sha256": "579a136ee28a3f20c85b3e7370b81a38505a342729fb9f1be2086ce19a2eba8c",
+      "bytes": 2753220,
+      "version": "9.12-2",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/coreutils-9.12-2-armv7h.pkg.tar.xz"
+    },
+    "cpio": {
+      "file": "cpio-2.15-3-armv7h.pkg.tar.xz",
+      "sha256": "1c287b186fff8fb471610e7bd8cf8341622cdd6cdd90d074414bd81aed87dfdb",
+      "bytes": 213452,
+      "version": "2.15-3",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/cpio-2.15-3-armv7h.pkg.tar.xz"
+    },
+    "cryptsetup": {
+      "file": "cryptsetup-2.8.8-1-armv7h.pkg.tar.xz",
+      "sha256": "54d2bf447256c22648fab42a08114473ea94ad52444742987e5ec14efb5a9e48",
+      "bytes": 786684,
+      "version": "2.8.8-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/cryptsetup-2.8.8-1-armv7h.pkg.tar.xz"
+    },
+    "curl": {
+      "file": "curl-8.23.0-1-armv7h.pkg.tar.xz",
+      "sha256": "ee6c57b8c163d5694f2c4cf0fef59e48db216827611b79ecb6c16d3d7051baff",
+      "bytes": 1244720,
+      "version": "8.23.0-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/curl-8.23.0-1-armv7h.pkg.tar.xz"
+    },
+    "db5.3": {
+      "file": "db5.3-5.3.28-7-armv7h.pkg.tar.xz",
+      "sha256": "7e19a22317749aff590ec2641844b191214d86f1cd7daad7f6761c183258b5e5",
+      "bytes": 978120,
+      "version": "5.3.28-7",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/db5.3-5.3.28-7-armv7h.pkg.tar.xz"
+    },
+    "dbus": {
+      "file": "dbus-1.16.2-2-armv7h.pkg.tar.xz",
+      "sha256": "0312209d69d7a277cd25bcc1502e718ba98a4d4b37c0587e4c4786bf885aa782",
+      "bytes": 269968,
+      "version": "1.16.2-2",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/dbus-1.16.2-2-armv7h.pkg.tar.xz"
+    },
+    "dbus-broker": {
+      "file": "dbus-broker-37-3-armv7h.pkg.tar.xz",
+      "sha256": "c85731f58f9ca50ccf175a292c45d3440445007a11a77e69c080f7bc4e087b54",
+      "bytes": 129132,
+      "version": "37-3",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/dbus-broker-37-3-armv7h.pkg.tar.xz"
+    },
+    "dbus-broker-units": {
+      "file": "dbus-broker-units-37-3-armv7h.pkg.tar.xz",
+      "sha256": "178e7133962ac269f9eb7f2c6ed1d885fc37be0416aa93c010f929a52d4fe675",
+      "bytes": 2532,
+      "version": "37-3",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/dbus-broker-units-37-3-armv7h.pkg.tar.xz"
+    },
+    "dbus-units": {
+      "file": "dbus-units-37-3-armv7h.pkg.tar.xz",
+      "sha256": "692fe42df2bb75cd6f11ed4f5b4f7bb6660d3fb0865c9d0f07f358067ba2ec42",
+      "bytes": 2272,
+      "version": "37-3",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/dbus-units-37-3-armv7h.pkg.tar.xz"
+    },
+    "debugedit": {
+      "file": "debugedit-5.3-2-armv7h.pkg.tar.xz",
+      "sha256": "72e8266b07f471e54a79fca2ae9268733e374d05e28adc6049e6629c14e20f3d",
+      "bytes": 51364,
+      "version": "5.3-2",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/debugedit-5.3-2-armv7h.pkg.tar.xz"
+    },
+    "default-cursors": {
+      "file": "default-cursors-3-1-any.pkg.tar.xz",
+      "sha256": "ba76fd971a5a4fe34193bf874214a342fb2535b899fc577b9042e4d2fab374a6",
+      "bytes": 2420,
+      "version": "3-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/default-cursors-3-1-any.pkg.tar.xz"
+    },
+    "device-mapper": {
+      "file": "device-mapper-2.03.43-2-armv7h.pkg.tar.xz",
+      "sha256": "919273b4b39fcabf325dd3bd8594770289d062b4525d9e0516b1d1d636a6811e",
+      "bytes": 288128,
+      "version": "2.03.43-2",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/device-mapper-2.03.43-2-armv7h.pkg.tar.xz"
+    },
+    "dhcpcd": {
+      "file": "dhcpcd-10.5.2-1-armv7h.pkg.tar.xz",
+      "sha256": "4490c5c7024590d53ab2caf984ba4293d7de2376e40052196a3e4c6f177abd2c",
+      "bytes": 175824,
+      "version": "10.5.2-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/dhcpcd-10.5.2-1-armv7h.pkg.tar.xz"
+    },
+    "diffutils": {
+      "file": "diffutils-3.12-2-armv7h.pkg.tar.xz",
+      "sha256": "ed780e90daa33566ad40f7aa3ad4618770f782245012ba5f24fe9e348eb0e0e4",
+      "bytes": 319280,
+      "version": "3.12-2",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/diffutils-3.12-2-armv7h.pkg.tar.xz"
+    },
+    "dkms": {
+      "file": "dkms-3.4.4-1-any.pkg.tar.xz",
+      "sha256": "5cf359c13cab0eeaeb54994504d999697bf6d8075974a0a8e966a00766697e5f",
+      "bytes": 50980,
+      "version": "3.4.4-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/dkms-3.4.4-1-any.pkg.tar.xz"
+    },
+    "dosfstools": {
+      "file": "dosfstools-4.2-5-armv7h.pkg.tar.xz",
+      "sha256": "352888c1daa4f8e1ba2dd2d8428cfa0a7d8f7b0cdf65b29ae0baf4dfb1987782",
+      "bytes": 129976,
+      "version": "4.2-5",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/dosfstools-4.2-5-armv7h.pkg.tar.xz"
+    },
+    "dtc": {
+      "file": "dtc-1:1.8.1-1-armv7h.pkg.tar.xz",
+      "sha256": "1033649a8f4095f5c483f478937693b52692b18f4d513c3173591623014a5a56",
+      "bytes": 138856,
+      "version": "1:1.8.1-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/dtc-1:1.8.1-1-armv7h.pkg.tar.xz"
+    },
+    "e2fsprogs": {
+      "file": "e2fsprogs-1.47.4-1-armv7h.pkg.tar.xz",
+      "sha256": "e48cb784726c5771c3caa21cc95bbdf134f5ac93b833d3574f295086c085cc0d",
+      "bytes": 1168180,
+      "version": "1.47.4-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/e2fsprogs-1.47.4-1-armv7h.pkg.tar.xz"
+    },
+    "elfutils": {
+      "file": "elfutils-0.197-1-armv7h.pkg.tar.xz",
+      "sha256": "9d46b5e4dfbfab34394a9933c99c296ff097dc250537d9c5149d53fc951dc49b",
+      "bytes": 651228,
+      "version": "0.197-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/elfutils-0.197-1-armv7h.pkg.tar.xz"
+    },
+    "ell": {
+      "file": "ell-0.83-1-armv7h.pkg.tar.xz",
+      "sha256": "f9c32db9127812f9514dd6d354eb44e4fdd5fbcf7d0e9d62f1ca0d568b9464e4",
+      "bytes": 208456,
+      "version": "0.83-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/ell-0.83-1-armv7h.pkg.tar.xz"
+    },
+    "ex-vi-compat": {
+      "file": "ex-vi-compat-3-1-any.pkg.tar.xz",
+      "sha256": "f556f500985ede0d8591c37b96aff54a266458fe23d81845f80887741762ced7",
+      "bytes": 3476,
+      "version": "3-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/ex-vi-compat-3-1-any.pkg.tar.xz"
+    },
+    "expat": {
+      "file": "expat-2.9.0-1-armv7h.pkg.tar.xz",
+      "sha256": "15f25f6cbec1725d174e336d8ecb2f74187c1478b684cb19cd98fb7863666b85",
+      "bytes": 114400,
+      "version": "2.9.0-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/expat-2.9.0-1-armv7h.pkg.tar.xz"
+    },
+    "fakeroot": {
+      "file": "fakeroot-1:1.37.2-3-armv7h.pkg.tar.xz",
+      "sha256": "fd8a3c1063c2902589e36b587ec0aac1a4be0de41224dabc67d8349eab8b8c2f",
+      "bytes": 75724,
+      "version": "1:1.37.2-3",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/fakeroot-1:1.37.2-3-armv7h.pkg.tar.xz"
+    },
+    "fftw": {
+      "file": "fftw-3.3.11-1-armv7h.pkg.tar.xz",
+      "sha256": "ac9449fcecb73de2c064c45f02a635a984129be9f48f7a578bfec3b4cd1bfbe7",
+      "bytes": 1104852,
+      "version": "3.3.11-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/fftw-3.3.11-1-armv7h.pkg.tar.xz"
+    },
+    "file": {
+      "file": "file-5.48-1-armv7h.pkg.tar.xz",
+      "sha256": "e9b9fb28172faa8c396d99920d781e848c0d25f6fbd89e51551b4db25d7f21b9",
+      "bytes": 426208,
+      "version": "5.48-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/file-5.48-1-armv7h.pkg.tar.xz"
+    },
+    "filesystem": {
+      "file": "filesystem-2025.10.12-1-any.pkg.tar.xz",
+      "sha256": "12d04b7a8895eb16b9ca93396725358f1addb89bdad1d9a5b1f1ee6130f37064",
+      "bytes": 14888,
+      "version": "2025.10.12-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/filesystem-2025.10.12-1-any.pkg.tar.xz"
+    },
+    "findutils": {
+      "file": "findutils-4.11.0-1-armv7h.pkg.tar.xz",
+      "sha256": "dab9971f69443c66c13512d8b7b3dc8f9ac42f657ad32a44d9290b60317c8896",
+      "bytes": 496892,
+      "version": "4.11.0-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/findutils-4.11.0-1-armv7h.pkg.tar.xz"
+    },
+    "flex": {
+      "file": "flex-2.6.4-6-armv7h.pkg.tar.xz",
+      "sha256": "41056029a5b52c6ba0e17acdf5156a2ae90a8feba25def374e74243762ecedc2",
+      "bytes": 287592,
+      "version": "2.6.4-6",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/flex-2.6.4-6-armv7h.pkg.tar.xz"
+    },
+    "gawk": {
+      "file": "gawk-5.4.1-1-armv7h.pkg.tar.xz",
+      "sha256": "d9bcb397e604683c46153614bd9c9e7ebbfa19831d38d22ce56baea0a03f4f57",
+      "bytes": 1433420,
+      "version": "5.4.1-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/gawk-5.4.1-1-armv7h.pkg.tar.xz"
+    },
+    "gc": {
+      "file": "gc-8.2.12-1-armv7h.pkg.tar.xz",
+      "sha256": "5f511859506ec60adeb143edeac67ec9fbbd3d9a3272c82aa2e6c6452eec139e",
+      "bytes": 220896,
+      "version": "8.2.12-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/gc-8.2.12-1-armv7h.pkg.tar.xz"
+    },
+    "gcc": {
+      "file": "gcc-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz",
+      "sha256": "40bcf79371169a7c09f62b6f3641e71e2a6f4c4bd49d994265c1dbbf3cd74298",
+      "bytes": 38718816,
+      "version": "16.1.1+r12+g301eb08fa2c5-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/gcc-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz"
+    },
+    "gcc-libs": {
+      "file": "gcc-libs-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz",
+      "sha256": "befd3149a417db0584a3d55794557b09e116b03c6d4f232a8e7d1ff6f11df4bb",
+      "bytes": 2540,
+      "version": "16.1.1+r12+g301eb08fa2c5-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/gcc-libs-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz"
+    },
+    "gdb": {
+      "file": "gdb-18.1-1-armv7h.pkg.tar.xz",
+      "sha256": "daba0dfcf8aa441ec18ee6e49b7ae2513a53fa7304f6cfd16b996a4a6582b52d",
+      "bytes": 6271128,
+      "version": "18.1-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/gdb-18.1-1-armv7h.pkg.tar.xz"
+    },
+    "gdb-common": {
+      "file": "gdb-common-18.1-1-armv7h.pkg.tar.xz",
+      "sha256": "7cfbf9c778e98360c94c09fd51d068dfce5924dbf3d30617b99a03672bd553b1",
+      "bytes": 118560,
+      "version": "18.1-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/gdb-common-18.1-1-armv7h.pkg.tar.xz"
+    },
+    "gdbm": {
+      "file": "gdbm-1.26-2-armv7h.pkg.tar.xz",
+      "sha256": "ae046162f6549fd842ee295793439691a40ac6ab2fd28d40ff763e2e45877dd7",
+      "bytes": 238092,
+      "version": "1.26-2",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/gdbm-1.26-2-armv7h.pkg.tar.xz"
+    },
+    "gettext": {
+      "file": "gettext-1.0-2-armv7h.pkg.tar.xz",
+      "sha256": "c3cfc8c36c7de715ae5d4d1c3ae988ebb09af4fd3a7f276ce19f2dfa236b6ee8",
+      "bytes": 3141416,
+      "version": "1.0-2",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/gettext-1.0-2-armv7h.pkg.tar.xz"
+    },
+    "git": {
+      "file": "git-2.56.0-1-armv7h.pkg.tar.xz",
+      "sha256": "f6106f7509bac33d9d146e71b8d67b04bd7cf041239db41b568fb9e0f3f10ef8",
+      "bytes": 9159392,
+      "version": "2.56.0-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/git-2.56.0-1-armv7h.pkg.tar.xz"
+    },
+    "glib2": {
+      "file": "glib2-2.90.1-1-armv7h.pkg.tar.xz",
+      "sha256": "12521f9048b5eba55f374d2a0f3156d437b32baf125cb0a53faf097b8fc8d75e",
+      "bytes": 4694944,
+      "version": "2.90.1-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/glib2-2.90.1-1-armv7h.pkg.tar.xz"
+    },
+    "glibc": {
+      "file": "glibc-2.43+r22+g8362e8ce10b2-2-armv7h.pkg.tar.xz",
+      "sha256": "e69881061ac32497cdfb3079fdf70150672627b20e9fd214ec8fcb87ba3a1389",
+      "bytes": 9131124,
+      "version": "2.43+r22+g8362e8ce10b2-2",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/glibc-2.43+r22+g8362e8ce10b2-2-armv7h.pkg.tar.xz"
+    },
+    "gmp": {
+      "file": "gmp-6.3.0-3-armv7h.pkg.tar.xz",
+      "sha256": "88645121c305b719b5f0e795dc141adac3ec2e66c9055aa6f722a9e2b055ef9f",
+      "bytes": 351668,
+      "version": "6.3.0-3",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/gmp-6.3.0-3-armv7h.pkg.tar.xz"
+    },
+    "gnulib-l10n": {
+      "file": "gnulib-l10n-20241231-1-any.pkg.tar.xz",
+      "sha256": "6e5ef654f16d8ba7c65a2faa77086f0526edbf7ece353c20cd8b63227e483b06",
+      "bytes": 109524,
+      "version": "20241231-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/gnulib-l10n-20241231-1-any.pkg.tar.xz"
+    },
+    "gnupg": {
+      "file": "gnupg-2.4.9-3-armv7h.pkg.tar.xz",
+      "sha256": "f58ea88ebc4ed517b3746d5117589ef7805736f1537416323624a9707fef5b66",
+      "bytes": 2574532,
+      "version": "2.4.9-3",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/gnupg-2.4.9-3-armv7h.pkg.tar.xz"
+    },
+    "gnutls": {
+      "file": "gnutls-3.8.13-3-armv7h.pkg.tar.xz",
+      "sha256": "d1a137a7b94091fda1ccd5fc5ba5f98960e67c14a3a75d5f3d5466bffa34309c",
+      "bytes": 1713772,
+      "version": "3.8.13-3",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/gnutls-3.8.13-3-armv7h.pkg.tar.xz"
+    },
+    "gpgme": {
+      "file": "gpgme-2.2.0-1-armv7h.pkg.tar.xz",
+      "sha256": "4f976bc3cc68e22b8bf3492f1e022b823c38d6dee7ac9d8da3b749b698702d13",
+      "bytes": 296800,
+      "version": "2.2.0-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/gpgme-2.2.0-1-armv7h.pkg.tar.xz"
+    },
+    "gpm": {
+      "file": "gpm-1.20.7.r38.ge82d1a6-7-armv7h.pkg.tar.xz",
+      "sha256": "4369bf112f7b1da61e34bf52b4aa93776bbda9c1fdf65e49f892a1950c1ece0f",
+      "bytes": 126068,
+      "version": "1.20.7.r38.ge82d1a6-7",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/gpm-1.20.7.r38.ge82d1a6-7-armv7h.pkg.tar.xz"
+    },
+    "grep": {
+      "file": "grep-3.12-2-armv7h.pkg.tar.xz",
+      "sha256": "9f62187b6a194d4f15b84deb8c79c9ca0a81ac7833d9295eab9bb831ccff8c1a",
+      "bytes": 219560,
+      "version": "3.12-2",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/grep-3.12-2-armv7h.pkg.tar.xz"
+    },
+    "groff": {
+      "file": "groff-1.24.2-1-armv7h.pkg.tar.xz",
+      "sha256": "7806719d8940905c425d7791e6fbbc56bc37eb2110aaa3659946a26ac2328a31",
+      "bytes": 2315932,
+      "version": "1.24.2-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/groff-1.24.2-1-armv7h.pkg.tar.xz"
+    },
+    "guile": {
+      "file": "guile-3.0.11-1-armv7h.pkg.tar.xz",
+      "sha256": "8bbd49100700ec6c1fe9b77750a33eb48ae67ace536723a5d32dea989e5af83c",
+      "bytes": 7743404,
+      "version": "3.0.11-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/guile-3.0.11-1-armv7h.pkg.tar.xz"
+    },
+    "gzip": {
+      "file": "gzip-1.15-1-armv7h.pkg.tar.xz",
+      "sha256": "aefa809aa2df83b36867d9dc64de8fdf9b01f8cb249297b5ac1167dcdb960523",
+      "bytes": 87964,
+      "version": "1.15-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/gzip-1.15-1-armv7h.pkg.tar.xz"
+    },
+    "hwdata": {
+      "file": "hwdata-0.412-1-any.pkg.tar.xz",
+      "sha256": "f418de879951c7f4b88e269f6998933ad15d16a7d91afbbb8c12bef25eac33dc",
+      "bytes": 1701488,
+      "version": "0.412-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/hwdata-0.412-1-any.pkg.tar.xz"
+    },
+    "iana-etc": {
+      "file": "iana-etc-20260617-1-any.pkg.tar.xz",
+      "sha256": "4e6c737583700138dd92c072576e43b5583732983fe575836a831eed4d2b2d40",
+      "bytes": 393620,
+      "version": "20260617-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/iana-etc-20260617-1-any.pkg.tar.xz"
+    },
+    "icu": {
+      "file": "icu-78.3-1-armv7h.pkg.tar.xz",
+      "sha256": "e3a5a987d6989132db09ef4a4a7ee9c28c03a5c00f6c100e7d505b77cb336158",
+      "bytes": 10539936,
+      "version": "78.3-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/icu-78.3-1-armv7h.pkg.tar.xz"
+    },
+    "iproute2": {
+      "file": "iproute2-7.3.0-1-armv7h.pkg.tar.xz",
+      "sha256": "095768b734bcf936e56a24d9f83d122fa693f5f81bbf5b1067d986eff5357861",
+      "bytes": 1083692,
+      "version": "7.3.0-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/iproute2-7.3.0-1-armv7h.pkg.tar.xz"
+    },
+    "iptables": {
+      "file": "iptables-1:1.8.13-1-armv7h.pkg.tar.xz",
+      "sha256": "dccce115673c7f87a53248197dc5a0e7325ab09fd22011d9a95c571d66662114",
+      "bytes": 382872,
+      "version": "1:1.8.13-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/iptables-1:1.8.13-1-armv7h.pkg.tar.xz"
+    },
+    "iputils": {
+      "file": "iputils-20250605-1-armv7h.pkg.tar.xz",
+      "sha256": "0aded7deff68a5ff3f7abf77d3d9c6bacde9208b9b12641915d8d45b8ecd9c22",
+      "bytes": 131588,
+      "version": "20250605-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/iputils-20250605-1-armv7h.pkg.tar.xz"
+    },
+    "iw": {
+      "file": "iw-6.17-1-armv7h.pkg.tar.xz",
+      "sha256": "583584494a9bf8a01623143c8d914cf22226d8b499aafd1af06bd00ef2abc38f",
+      "bytes": 94768,
+      "version": "6.17-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/iw-6.17-1-armv7h.pkg.tar.xz"
+    },
+    "iwd": {
+      "file": "iwd-3.12-2-armv7h.pkg.tar.xz",
+      "sha256": "1d9d6193c22e0c7f8edfac2b1536eb1c352df878825b627accc8fd2b07a21dbc",
+      "bytes": 505584,
+      "version": "3.12-2",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/iwd-3.12-2-armv7h.pkg.tar.xz"
+    },
+    "jansson": {
+      "file": "jansson-2.15.1-1-armv7h.pkg.tar.xz",
+      "sha256": "2998b87dbad70878ce9ff91cfe6cfab9490c59a7c46e120c9a4c72f23ba39934",
+      "bytes": 70536,
+      "version": "2.15.1-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/jansson-2.15.1-1-armv7h.pkg.tar.xz"
+    },
+    "jbigkit": {
+      "file": "jbigkit-2.2-1-armv7h.pkg.tar.xz",
+      "sha256": "ba5a217b77347357781436f8c6afc8c8efe1de6e04b7579df02b7d3354a76113",
+      "bytes": 46960,
+      "version": "2.2-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/jbigkit-2.2-1-armv7h.pkg.tar.xz"
+    },
+    "json-c": {
+      "file": "json-c-0.19-1-armv7h.pkg.tar.xz",
+      "sha256": "84bc2c3bcda8c7e1efc3d960dca7a87eb1eac0e4b1178652afa8f9d9b9431878",
+      "bytes": 55332,
+      "version": "0.19-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/json-c-0.19-1-armv7h.pkg.tar.xz"
+    },
+    "kbd": {
+      "file": "kbd-2.10.0-1-armv7h.pkg.tar.xz",
+      "sha256": "dd85c2f5e4c80ea57d39a8ce66b1a628e18d8854325eb3ea49182f0f47e87cf3",
+      "bytes": 1292404,
+      "version": "2.10.0-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/kbd-2.10.0-1-armv7h.pkg.tar.xz"
+    },
+    "keyutils": {
+      "file": "keyutils-1.6.3-4-armv7h.pkg.tar.xz",
+      "sha256": "b9427fe9f23503cba436c39d0c9fc5d50370d9ce360ef1d6e308b686ec54504f",
+      "bytes": 99288,
+      "version": "1.6.3-4",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/keyutils-1.6.3-4-armv7h.pkg.tar.xz"
+    },
+    "kmod": {
+      "file": "kmod-34.2-1-armv7h.pkg.tar.xz",
+      "sha256": "233b238eb9b9a0a01ee96a967ec97509394a943456b0740bf8537b2fd6c03973",
+      "bytes": 103736,
+      "version": "34.2-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/kmod-34.2-1-armv7h.pkg.tar.xz"
+    },
+    "krb5": {
+      "file": "krb5-1.22.2-1-armv7h.pkg.tar.xz",
+      "sha256": "6cd171700ff0c7ae92c5e36f6654556783575a9db3b7928aec10cb6ee593a48c",
+      "bytes": 1170448,
+      "version": "1.22.2-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/krb5-1.22.2-1-armv7h.pkg.tar.xz"
+    },
+    "lcms2": {
+      "file": "lcms2-2.19.1-1-armv7h.pkg.tar.xz",
+      "sha256": "23201e5f2a18febc44565c2c68a416af56174b1c15a3ccb2da3ce5b0d3ccb565",
+      "bytes": 182888,
+      "version": "2.19.1-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/lcms2-2.19.1-1-armv7h.pkg.tar.xz"
+    },
+    "leancrypto": {
+      "file": "leancrypto-1.9.1-1-armv7h.pkg.tar.xz",
+      "sha256": "2e29de4d1f6a90eab8d0501d95b2c2268ccb8eb817417a73dab7a5a0131d9d4b",
+      "bytes": 1335380,
+      "version": "1.9.1-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/leancrypto-1.9.1-1-armv7h.pkg.tar.xz"
+    },
+    "libarchive": {
+      "file": "libarchive-3.8.10-1-armv7h.pkg.tar.xz",
+      "sha256": "2d119142925f5a16533566219c96b8cad48f2a6c2dc10f017a4cc15de2b9bcc5",
+      "bytes": 496576,
+      "version": "3.8.10-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libarchive-3.8.10-1-armv7h.pkg.tar.xz"
+    },
+    "libasan": {
+      "file": "libasan-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz",
+      "sha256": "22c0aed29083c04b50f2cf97dea3866e8cf90c7a21900da4968151e9bef81b30",
+      "bytes": 416496,
+      "version": "16.1.1+r12+g301eb08fa2c5-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libasan-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz"
+    },
+    "libassuan": {
+      "file": "libassuan-3.0.0-1-armv7h.pkg.tar.xz",
+      "sha256": "f6354810136ffd8a39d4e1b90c813040f147a8b9428ed34f9e6c14ddc192260e",
+      "bytes": 106952,
+      "version": "3.0.0-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libassuan-3.0.0-1-armv7h.pkg.tar.xz"
+    },
+    "libatomic": {
+      "file": "libatomic-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz",
+      "sha256": "c40c69a245f3f6936f44246beb33ffb91fdd72fe705ea32757ed31c24855abd1",
+      "bytes": 10352,
+      "version": "16.1.1+r12+g301eb08fa2c5-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libatomic-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz"
+    },
+    "libbpf": {
+      "file": "libbpf-1.7.0-1-armv7h.pkg.tar.xz",
+      "sha256": "861ff0d99224d266afb19e2810c2d30ce0e4cecc3cc5be8ec061d7519010e29e",
+      "bytes": 235648,
+      "version": "1.7.0-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libbpf-1.7.0-1-armv7h.pkg.tar.xz"
+    },
+    "libcap": {
+      "file": "libcap-2.78-1-armv7h.pkg.tar.xz",
+      "sha256": "f30d4b3a14fdefb9214f9f1ba65948d8b158008132143a54837ee5b6c62289ab",
+      "bytes": 714672,
+      "version": "2.78-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libcap-2.78-1-armv7h.pkg.tar.xz"
+    },
+    "libcap-ng": {
+      "file": "libcap-ng-0.9.6-1-armv7h.pkg.tar.xz",
+      "sha256": "ed74d1f89b76b8b82fcf9e0a5194b61ea9f8330eb7ded0254d21e3a51ea0845c",
+      "bytes": 64500,
+      "version": "0.9.6-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libcap-ng-0.9.6-1-armv7h.pkg.tar.xz"
+    },
+    "libdaemon": {
+      "file": "libdaemon-0.14-6-armv7h.pkg.tar.xz",
+      "sha256": "dde64ac2fd3fafe3038e57bf6b412976cc8b30d70a7367d34b3b77f129f1747d",
+      "bytes": 17624,
+      "version": "0.14-6",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/libdaemon-0.14-6-armv7h.pkg.tar.xz"
+    },
+    "libdeflate": {
+      "file": "libdeflate-1.26-1-armv7h.pkg.tar.xz",
+      "sha256": "f51375ec29cf3306ef9416fc5f630ad91fe16c68fcaa423492cc2f174e24f40b",
+      "bytes": 49956,
+      "version": "1.26-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/libdeflate-1.26-1-armv7h.pkg.tar.xz"
+    },
+    "libdisplay-info": {
+      "file": "libdisplay-info-0.3.0-1-armv7h.pkg.tar.xz",
+      "sha256": "180b71dc8ecb86c545270f60bab17ca7f42f956ed0388f4712494b34eb0f68e1",
+      "bytes": 108064,
+      "version": "0.3.0-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/libdisplay-info-0.3.0-1-armv7h.pkg.tar.xz"
+    },
+    "libdrm": {
+      "file": "libdrm-2.4.134-1-armv7h.pkg.tar.xz",
+      "sha256": "00c87ece66e7604744ed892cbd78064ff0b71de0adee66de4b58728192815ed1",
+      "bytes": 388372,
+      "version": "2.4.134-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/libdrm-2.4.134-1-armv7h.pkg.tar.xz"
+    },
+    "libedit": {
+      "file": "libedit-20260512_3.1-1-armv7h.pkg.tar.xz",
+      "sha256": "88f97338394e34fdb9133435e08fbab5605b73c3b250eb737974b9e865f8020b",
+      "bytes": 95452,
+      "version": "20260512_3.1-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libedit-20260512_3.1-1-armv7h.pkg.tar.xz"
+    },
+    "libelf": {
+      "file": "libelf-0.197-1-armv7h.pkg.tar.xz",
+      "sha256": "21b2635107e5e9db31a3e1b40ac0d37c3e9fac76dc37442084869638064d6d58",
+      "bytes": 537456,
+      "version": "0.197-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libelf-0.197-1-armv7h.pkg.tar.xz"
+    },
+    "libevdev": {
+      "file": "libevdev-1.14.0-1-armv7h.pkg.tar.xz",
+      "sha256": "e7988d5bc60ecea85176b440c9f06d7a2f9559f05487329ba688dd93244a2cdf",
+      "bytes": 55260,
+      "version": "1.14.0-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/libevdev-1.14.0-1-armv7h.pkg.tar.xz"
+    },
+    "libevent": {
+      "file": "libevent-2.1.13-2-armv7h.pkg.tar.xz",
+      "sha256": "0ad00bd77a51b1fddc780141631d6a211a8ef7301a8081e430010c4ac9d4a6d7",
+      "bytes": 231724,
+      "version": "2.1.13-2",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libevent-2.1.13-2-armv7h.pkg.tar.xz"
+    },
+    "libffi": {
+      "file": "libffi-3.8.0-1-armv7h.pkg.tar.xz",
+      "sha256": "336ceae8c16dbadb1b22f4dd4dbfd787356a32bd1eaa1b218aeb85a767d200a7",
+      "bytes": 49764,
+      "version": "3.8.0-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libffi-3.8.0-1-armv7h.pkg.tar.xz"
+    },
+    "libgcc": {
+      "file": "libgcc-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz",
+      "sha256": "f7cd881c11d38793833b9bb9565cd47f23d9e0cc59ea2e20cc3d46436d28b3d5",
+      "bytes": 45076,
+      "version": "16.1.1+r12+g301eb08fa2c5-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libgcc-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz"
+    },
+    "libgcrypt": {
+      "file": "libgcrypt-1.12.4-1-armv7h.pkg.tar.xz",
+      "sha256": "e646b5b75cc1916a64538544cea0e537066565f8ca58e1c3c2d9eb290bcd2cd4",
+      "bytes": 572384,
+      "version": "1.12.4-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libgcrypt-1.12.4-1-armv7h.pkg.tar.xz"
+    },
+    "libgfortran": {
+      "file": "libgfortran-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz",
+      "sha256": "736d20e4c6cd24931b0ef2b010bc1bfeae2f9700184f6e26d4908eda9b979088",
+      "bytes": 330716,
+      "version": "16.1.1+r12+g301eb08fa2c5-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libgfortran-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz"
+    },
+    "libglvnd": {
+      "file": "libglvnd-1.7.0-3-armv7h.pkg.tar.xz",
+      "sha256": "3a501b23329bd2c8edadebd434019ec80a5d52fe17a9fbeaa176335e2eca5a23",
+      "bytes": 316348,
+      "version": "1.7.0-3",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/libglvnd-1.7.0-3-armv7h.pkg.tar.xz"
+    },
+    "libgomp": {
+      "file": "libgomp-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz",
+      "sha256": "49cb743d46cbfc3c6e67913790b44d50e98aa2ca2f51e662e99c34a954876c2b",
+      "bytes": 204992,
+      "version": "16.1.1+r12+g301eb08fa2c5-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libgomp-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz"
+    },
+    "libgpg-error": {
+      "file": "libgpg-error-1.61-1-armv7h.pkg.tar.xz",
+      "sha256": "89f81b87edca4f103824f5aa5eecb14348acd4fa640284cf19966018f4c0b9de",
+      "bytes": 241320,
+      "version": "1.61-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libgpg-error-1.61-1-armv7h.pkg.tar.xz"
+    },
+    "libgudev": {
+      "file": "libgudev-238-4-armv7h.pkg.tar.xz",
+      "sha256": "80c563743d9ed1d3373e62407f499f76629c5bc6ce56cedf72bf6e06daa386d8",
+      "bytes": 25628,
+      "version": "238-4",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/libgudev-238-4-armv7h.pkg.tar.xz"
+    },
+    "libidn2": {
+      "file": "libidn2-2.3.8-1-armv7h.pkg.tar.xz",
+      "sha256": "64f0b66321b43cc22ed4dd39047ad405ff0664906aa7d832770813a14d8b6584",
+      "bytes": 142284,
+      "version": "2.3.8-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libidn2-2.3.8-1-armv7h.pkg.tar.xz"
+    },
+    "libinput": {
+      "file": "libinput-1.32.0-1-armv7h.pkg.tar.xz",
+      "sha256": "beeb8a86ec25c2c41b1530bd121fe3c35b834ba1db9f227eb8a11bbc57d550f0",
+      "bytes": 198960,
+      "version": "1.32.0-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/libinput-1.32.0-1-armv7h.pkg.tar.xz"
+    },
+    "libisl": {
+      "file": "libisl-0.28-1-armv7h.pkg.tar.xz",
+      "sha256": "e6b0cf4ca4c07582ab645669d11b3a7f04dffd343042dbbb1a1c26ac7db18d3f",
+      "bytes": 1287332,
+      "version": "0.28-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libisl-0.28-1-armv7h.pkg.tar.xz"
+    },
+    "libjpeg-turbo": {
+      "file": "libjpeg-turbo-3.2.0-2-armv7h.pkg.tar.xz",
+      "sha256": "e42dc3cb610ecad7cfe9d1cb6e80cfcda17fedc8a206e3a0afa98c4c8983a8d2",
+      "bytes": 477228,
+      "version": "3.2.0-2",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/libjpeg-turbo-3.2.0-2-armv7h.pkg.tar.xz"
+    },
+    "libksba": {
+      "file": "libksba-1.8.1-1-armv7h.pkg.tar.xz",
+      "sha256": "e09dd3e4e425bd39686821e67050d865e7a98de568766ea41754842020c13b97",
+      "bytes": 119612,
+      "version": "1.8.1-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libksba-1.8.1-1-armv7h.pkg.tar.xz"
+    },
+    "libldap": {
+      "file": "libldap-2.7.2-2-armv7h.pkg.tar.xz",
+      "sha256": "befab73273ed95fbb243e1cc178113d1a118281142080d084c9ad8d6fbfea2bd",
+      "bytes": 248860,
+      "version": "2.7.2-2",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libldap-2.7.2-2-armv7h.pkg.tar.xz"
+    },
+    "libliftoff": {
+      "file": "libliftoff-0.5.0-1-armv7h.pkg.tar.xz",
+      "sha256": "d967470ebcc591b7f5570f72048a55c85de274a5ed7dfa9d9036276387749929",
+      "bytes": 17568,
+      "version": "0.5.0-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/libliftoff-0.5.0-1-armv7h.pkg.tar.xz"
+    },
+    "liblsan": {
+      "file": "liblsan-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz",
+      "sha256": "679162b30f6cb8502ba92b100fd504f3bcd7d52c08d0c054f835db817e4027e5",
+      "bytes": 4172,
+      "version": "16.1.1+r12+g301eb08fa2c5-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/liblsan-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz"
+    },
+    "libmakepkg-dropins": {
+      "file": "libmakepkg-dropins-20-2-any.pkg.tar.xz",
+      "sha256": "5aacf978716a63ab7c596af83712086e074d53f640fe84687fc14dd20cd6456a",
+      "bytes": 6232,
+      "version": "20-2",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libmakepkg-dropins-20-2-any.pkg.tar.xz"
+    },
+    "libmnl": {
+      "file": "libmnl-1.0.5-2-armv7h.pkg.tar.xz",
+      "sha256": "89b66841b488da13c6b8fffa58ddc8b6e510fc7e6f2311c0c59d41717ce0aa51",
+      "bytes": 9628,
+      "version": "1.0.5-2",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libmnl-1.0.5-2-armv7h.pkg.tar.xz"
+    },
+    "libmpc": {
+      "file": "libmpc-1.4.1-1-armv7h.pkg.tar.xz",
+      "sha256": "e3c2dc2615c214b9b55fee3d4bfb026e27d0f54c288ff98b1933e6811fe22410",
+      "bytes": 81292,
+      "version": "1.4.1-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libmpc-1.4.1-1-armv7h.pkg.tar.xz"
+    },
+    "libnetfilter_conntrack": {
+      "file": "libnetfilter_conntrack-1.1.1-1-armv7h.pkg.tar.xz",
+      "sha256": "0196963accee2d7b3fec5e099fe6265147f02a12a4009fbade32717f1fe0b258",
+      "bytes": 40756,
+      "version": "1.1.1-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libnetfilter_conntrack-1.1.1-1-armv7h.pkg.tar.xz"
+    },
+    "libnfnetlink": {
+      "file": "libnfnetlink-1.0.2-2-armv7h.pkg.tar.xz",
+      "sha256": "ddcd05f2c1e2406ddf3a59680308a07ef3a1c06f0d360d1a84e5f0f1677f6783",
+      "bytes": 15356,
+      "version": "1.0.2-2",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libnfnetlink-1.0.2-2-armv7h.pkg.tar.xz"
+    },
+    "libnftnl": {
+      "file": "libnftnl-1.3.2-1-armv7h.pkg.tar.xz",
+      "sha256": "80e1453ae33b0bc7d30d08e34a340aa51f8bb4a577384628472a8ccea829ec89",
+      "bytes": 55604,
+      "version": "1.3.2-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libnftnl-1.3.2-1-armv7h.pkg.tar.xz"
+    },
+    "libnghttp2": {
+      "file": "libnghttp2-1.70.0-1-armv7h.pkg.tar.xz",
+      "sha256": "045608afd919b27640c6bdce83e9f716f5e5835d4251d7fff39d06a8ebec02f1",
+      "bytes": 87120,
+      "version": "1.70.0-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libnghttp2-1.70.0-1-armv7h.pkg.tar.xz"
+    },
+    "libnghttp3": {
+      "file": "libnghttp3-1.18.0-1-armv7h.pkg.tar.xz",
+      "sha256": "e8a1c1862bed2b0bf23f32dcd708997f77f0c9913f5a859b8c93f1af2855e948",
+      "bytes": 75976,
+      "version": "1.18.0-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libnghttp3-1.18.0-1-armv7h.pkg.tar.xz"
+    },
+    "libngtcp2": {
+      "file": "libngtcp2-1.25.0-1-armv7h.pkg.tar.xz",
+      "sha256": "6ea8a1c9c29ac8af7d575d68a6408814188655fafd0b0d487103def89cb81471",
+      "bytes": 191772,
+      "version": "1.25.0-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libngtcp2-1.25.0-1-armv7h.pkg.tar.xz"
+    },
+    "libnl": {
+      "file": "libnl-3.12.0-1-armv7h.pkg.tar.xz",
+      "sha256": "bd070ec28580c33c4864d5025137ef2a90320bb0bae0fa4996fd9d39c395b338",
+      "bytes": 362232,
+      "version": "3.12.0-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libnl-3.12.0-1-armv7h.pkg.tar.xz"
+    },
+    "libnsl": {
+      "file": "libnsl-2.0.1-2-armv7h.pkg.tar.xz",
+      "sha256": "205c6374db55d37b9402c4f0064ff439ce28e9484fd0e37b9cc9d14604436a0d",
+      "bytes": 20216,
+      "version": "2.0.1-2",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libnsl-2.0.1-2-armv7h.pkg.tar.xz"
+    },
+    "libobjc": {
+      "file": "libobjc-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz",
+      "sha256": "7c38b20a4210e0342b6a12ec75edf6d29bed5a18599ffd6639e1492f6e70db76",
+      "bytes": 29800,
+      "version": "16.1.1+r12+g301eb08fa2c5-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libobjc-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz"
+    },
+    "libp11-kit": {
+      "file": "libp11-kit-0.26.5-1-armv7h.pkg.tar.xz",
+      "sha256": "cf24b2c9b1bc9121b645f951eceb63de9ed9267763c876eeac099db75eec8911",
+      "bytes": 408848,
+      "version": "0.26.5-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libp11-kit-0.26.5-1-armv7h.pkg.tar.xz"
+    },
+    "libpcap": {
+      "file": "libpcap-1.11.0-1-armv7h.pkg.tar.xz",
+      "sha256": "5fb4bc2dcac7d9341c99be9d670cbd83f898d7dcb4b6055745fb6214e5d52dc3",
+      "bytes": 288928,
+      "version": "1.11.0-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libpcap-1.11.0-1-armv7h.pkg.tar.xz"
+    },
+    "libpciaccess": {
+      "file": "libpciaccess-0.19-1-armv7h.pkg.tar.xz",
+      "sha256": "f7fd6bdc0cd179cf2b326084c8929457f4bf824f947c2c2fb13ccdc57c7120b0",
+      "bytes": 19732,
+      "version": "0.19-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/libpciaccess-0.19-1-armv7h.pkg.tar.xz"
+    },
+    "libpsl": {
+      "file": "libpsl-0.21.5-2-armv7h.pkg.tar.xz",
+      "sha256": "3d93fc1540229f6e0ef0e800d795656221a802661d2b37066f3878c60550029b",
+      "bytes": 83452,
+      "version": "0.21.5-2",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libpsl-0.21.5-2-armv7h.pkg.tar.xz"
+    },
+    "libquadmath": {
+      "file": "libquadmath-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz",
+      "sha256": "f674a3f8477fe5e71c34292d930c565b8ea9cf68902bf5123ee8ba2374027dbe",
+      "bytes": 4156,
+      "version": "16.1.1+r12+g301eb08fa2c5-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libquadmath-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz"
+    },
+    "libsamplerate": {
+      "file": "libsamplerate-0.2.2-3-armv7h.pkg.tar.xz",
+      "sha256": "a28e98743d71cd2d785a3ac7d920aae793edcdff6244fad2dcc7f0dadbd8f535",
+      "bytes": 988144,
+      "version": "0.2.2-3",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/libsamplerate-0.2.2-3-armv7h.pkg.tar.xz"
+    },
+    "libsasl": {
+      "file": "libsasl-2.1.28-5-armv7h.pkg.tar.xz",
+      "sha256": "7deb805ff8a64ecbf3b94b9b4d528b006fe220740ceb13bebf9ce2dc42c21ea2",
+      "bytes": 128352,
+      "version": "2.1.28-5",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libsasl-2.1.28-5-armv7h.pkg.tar.xz"
+    },
+    "libseccomp": {
+      "file": "libseccomp-2.6.0-1-armv7h.pkg.tar.xz",
+      "sha256": "2f645cfb46e823b234448ef92fff83cce201b0d808fc1f615404d680f6e10c7f",
+      "bytes": 89632,
+      "version": "2.6.0-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libseccomp-2.6.0-1-armv7h.pkg.tar.xz"
+    },
+    "libsecret": {
+      "file": "libsecret-0.21.8.2-1-armv7h.pkg.tar.xz",
+      "sha256": "3e2330dd871e89f5e7f07f33c04d1a3ed59138a70aff8378b8eb154398feecb1",
+      "bytes": 171412,
+      "version": "0.21.8.2-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libsecret-0.21.8.2-1-armv7h.pkg.tar.xz"
+    },
+    "libssh2": {
+      "file": "libssh2-1.11.1-7-armv7h.pkg.tar.xz",
+      "sha256": "e51bb61c38708238be5127a58a6423f43069e02dc11b31322898f736783f7f92",
+      "bytes": 231636,
+      "version": "1.11.1-7",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libssh2-1.11.1-7-armv7h.pkg.tar.xz"
+    },
+    "libstdc++": {
+      "file": "libstdc++-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz",
+      "sha256": "e6c8b5dbd8b181360b7470660bb6ec164db2f208ab992ac495c0742eb069c178",
+      "bytes": 659888,
+      "version": "16.1.1+r12+g301eb08fa2c5-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libstdc++-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz"
+    },
+    "libsysprof-capture": {
+      "file": "libsysprof-capture-51.0-1-armv7h.pkg.tar.xz",
+      "sha256": "3698befb27e7306f792fb669eb74a9d1a706bc66ac43d3fe3141fa9ed56b5be1",
+      "bytes": 44456,
+      "version": "51.0-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/libsysprof-capture-51.0-1-armv7h.pkg.tar.xz"
+    },
+    "libtasn1": {
+      "file": "libtasn1-4.21.0-1-armv7h.pkg.tar.xz",
+      "sha256": "2806d0e3b5b32aeedf3c22a259095848c962c82d4f53cd542503271da5f4557c",
+      "bytes": 126516,
+      "version": "4.21.0-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libtasn1-4.21.0-1-armv7h.pkg.tar.xz"
+    },
+    "libtiff": {
+      "file": "libtiff-4.7.2-2-armv7h.pkg.tar.xz",
+      "sha256": "06ecaca2ca51dc7543a9bc277a19ccbae9ddf6d2edcf612853657ee5a06f3f3b",
+      "bytes": 356996,
+      "version": "4.7.2-2",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/libtiff-4.7.2-2-armv7h.pkg.tar.xz"
+    },
+    "libtirpc": {
+      "file": "libtirpc-1.3.8-1-armv7h.pkg.tar.xz",
+      "sha256": "4fd15fba839d0dfec8437caa23acb35f9d882e116f093d2d2dd593bdd6b97ec8",
+      "bytes": 163892,
+      "version": "1.3.8-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libtirpc-1.3.8-1-armv7h.pkg.tar.xz"
+    },
+    "libtool": {
+      "file": "libtool-2.6.0+r23+gb08cb0a0-1-armv7h.pkg.tar.xz",
+      "sha256": "a7c83a0c990036736de7fe000754872987f7ec8752973650ec59b1e911906af6",
+      "bytes": 429860,
+      "version": "2.6.0+r23+gb08cb0a0-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libtool-2.6.0+r23+gb08cb0a0-1-armv7h.pkg.tar.xz"
+    },
+    "libtsan": {
+      "file": "libtsan-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz",
+      "sha256": "c426606ebfe7e6ecf6362028e5f42490638029e5b6576936fd93de5a072ae5da",
+      "bytes": 4176,
+      "version": "16.1.1+r12+g301eb08fa2c5-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libtsan-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz"
+    },
+    "libubsan": {
+      "file": "libubsan-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz",
+      "sha256": "84b811d18c3d8f343dbb98a0ff61a052b154b642cd80ef150e7b4c1d7156cb4c",
+      "bytes": 171956,
+      "version": "16.1.1+r12+g301eb08fa2c5-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libubsan-16.1.1+r12+g301eb08fa2c5-1-armv7h.pkg.tar.xz"
+    },
+    "libunistring": {
+      "file": "libunistring-1.4.2-1-armv7h.pkg.tar.xz",
+      "sha256": "de10566c29700cc5f152e38196fc8f43b6dcc938bce92acb0ef7924d16cf09de",
+      "bytes": 573936,
+      "version": "1.4.2-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libunistring-1.4.2-1-armv7h.pkg.tar.xz"
+    },
+    "libusb": {
+      "file": "libusb-1.0.30-1-armv7h.pkg.tar.xz",
+      "sha256": "385093d57232e98c4220ee0b2e915c10997b9dc9cde09c441a40c8176d133922",
+      "bytes": 69116,
+      "version": "1.0.30-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libusb-1.0.30-1-armv7h.pkg.tar.xz"
+    },
+    "libverto": {
+      "file": "libverto-0.3.2-6-armv7h.pkg.tar.xz",
+      "sha256": "892fed73a5fbc20318e2f72c7d6d2ed74e71e3975a3b054f50f1a5109d8c741f",
+      "bytes": 17268,
+      "version": "0.3.2-6",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libverto-0.3.2-6-armv7h.pkg.tar.xz"
+    },
+    "libwacom": {
+      "file": "libwacom-2.20.0-1-armv7h.pkg.tar.xz",
+      "sha256": "706aafea6ec1c1a969f7c8a6792036027fdd06633468eba3a731fc8b1f4b194d",
+      "bytes": 182820,
+      "version": "2.20.0-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/libwacom-2.20.0-1-armv7h.pkg.tar.xz"
+    },
+    "libwebp": {
+      "file": "libwebp-1.6.0-2-armv7h.pkg.tar.xz",
+      "sha256": "5f611e9294fc6eba70ccf7bb1ecc59df429fc36ca6fb477f27d38d6211d36376",
+      "bytes": 220740,
+      "version": "1.6.0-2",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/libwebp-1.6.0-2-armv7h.pkg.tar.xz"
+    },
+    "libx11": {
+      "file": "libx11-1.8.14-1-armv7h.pkg.tar.xz",
+      "sha256": "029050a947f70e75751c68e3684a1aea6554ae0a442e4fe820aa825875f8c205",
+      "bytes": 1970180,
+      "version": "1.8.14-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/libx11-1.8.14-1-armv7h.pkg.tar.xz"
+    },
+    "libxau": {
+      "file": "libxau-1.0.12-1-armv7h.pkg.tar.xz",
+      "sha256": "b8b6acec50237a30b0222df495ccb80b3c2f0db83903c70465113cb8b0ed991c",
+      "bytes": 10832,
+      "version": "1.0.12-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/libxau-1.0.12-1-armv7h.pkg.tar.xz"
+    },
+    "libxcb": {
+      "file": "libxcb-1.17.0-1-armv7h.pkg.tar.xz",
+      "sha256": "fbb6f4b35e409dfdb350dcc045cf5ba69c2678025703fbb1e7c0b6f17cfc1b8d",
+      "bytes": 990668,
+      "version": "1.17.0-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/libxcb-1.17.0-1-armv7h.pkg.tar.xz"
+    },
+    "libxcrypt": {
+      "file": "libxcrypt-4.5.2-1-armv7h.pkg.tar.xz",
+      "sha256": "0e1ccb168adaf490a83c35a5ab05ce591f0549e048877b777b32f3e0f382553a",
+      "bytes": 96952,
+      "version": "4.5.2-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libxcrypt-4.5.2-1-armv7h.pkg.tar.xz"
+    },
+    "libxdmcp": {
+      "file": "libxdmcp-1.1.5-2-armv7h.pkg.tar.xz",
+      "sha256": "e69af083363ff3b8bc707e7832cea49177d43a9d47748b272d240acd772655de",
+      "bytes": 25860,
+      "version": "1.1.5-2",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/libxdmcp-1.1.5-2-armv7h.pkg.tar.xz"
+    },
+    "libxext": {
+      "file": "libxext-1.3.7-1-armv7h.pkg.tar.xz",
+      "sha256": "d727f9f911120b8a9bdccfc204c8ea0747f86a66bf604cec56ec2eb6353bd7a4",
+      "bytes": 101108,
+      "version": "1.3.7-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/libxext-1.3.7-1-armv7h.pkg.tar.xz"
+    },
+    "libxkbcommon": {
+      "file": "libxkbcommon-1.13.2-1-armv7h.pkg.tar.xz",
+      "sha256": "9da20cfbdd33f6df9fb9c1456bbf36cca5f58066da479d57c3b569579f0a6b79",
+      "bytes": 248056,
+      "version": "1.13.2-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/libxkbcommon-1.13.2-1-armv7h.pkg.tar.xz"
+    },
+    "libxml2": {
+      "file": "libxml2-2.15.4-1-armv7h.pkg.tar.xz",
+      "sha256": "56c25ca72c828f9f3f3950a64157709f816b7e80c601b461d7d39e6a9155fe0c",
+      "bytes": 654064,
+      "version": "2.15.4-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/libxml2-2.15.4-1-armv7h.pkg.tar.xz"
+    },
+    "libxshmfence": {
+      "file": "libxshmfence-1.3.3-1-armv7h.pkg.tar.xz",
+      "sha256": "2f92bad9a73da1a2361db753e214dd6c484123894412e695e2ff8db579a157a2",
+      "bytes": 5920,
+      "version": "1.3.3-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/libxshmfence-1.3.3-1-armv7h.pkg.tar.xz"
+    },
+    "libxxf86vm": {
+      "file": "libxxf86vm-1.1.7-1-armv7h.pkg.tar.xz",
+      "sha256": "cf3aa7b24c2e7b484877ed37efa386aca2326aa3269a834c69981cbff416b4af",
+      "bytes": 14676,
+      "version": "1.1.7-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/libxxf86vm-1.1.7-1-armv7h.pkg.tar.xz"
+    },
+    "libyaml": {
+      "file": "libyaml-0.2.5-3-armv7h.pkg.tar.xz",
+      "sha256": "40973955654e0486996ddd35411be044b2b823da8813ca8846d4c631f3d6325f",
+      "bytes": 48496,
+      "version": "0.2.5-3",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/libyaml-0.2.5-3-armv7h.pkg.tar.xz"
+    },
+    "licenses": {
+      "file": "licenses-20240728-1-any.pkg.tar.xz",
+      "sha256": "78e8958e69a69ff8224b6e2880bc0f3e5972d0493439d8781c376f861503b816",
+      "bytes": 104708,
+      "version": "20240728-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/licenses-20240728-1-any.pkg.tar.xz"
+    },
+    "linux-api-headers": {
+      "file": "linux-api-headers-7.3-1-armv7h.pkg.tar.xz",
+      "sha256": "895796272b9ec4d731a2389004a5bb686a899250d400b9d53bee50f9b1c242e9",
+      "bytes": 1506964,
+      "version": "7.3-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/linux-api-headers-7.3-1-armv7h.pkg.tar.xz"
+    },
+    "linux-armv7": {
+      "file": "linux-armv7-7.3-1-armv7h.pkg.tar.xz",
+      "sha256": "25cc88af49e61fce30a35d512d8240edd8a98cabd2026681c8cd4dba6fcbfe31",
+      "bytes": 36711320,
+      "version": "7.3-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/linux-armv7-7.3-1-armv7h.pkg.tar.xz"
+    },
+    "linux-armv7-headers": {
+      "file": "linux-armv7-headers-7.3-1-armv7h.pkg.tar.xz",
+      "sha256": "64f04762d8d89337e637a552a8ff972afda35c1c201d5e62531b2cced5d4c88a",
+      "bytes": 24392484,
+      "version": "7.3-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/linux-armv7-headers-7.3-1-armv7h.pkg.tar.xz"
+    },
+    "llvm-libs": {
+      "file": "llvm-libs-23.1.4-1-armv7h.pkg.tar.xz",
+      "sha256": "cb8568a33606ba2548f3a08af5b4dd679cf266b955b9bb25b1201515ddca5807",
+      "bytes": 37020432,
+      "version": "23.1.4-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/llvm-libs-23.1.4-1-armv7h.pkg.tar.xz"
+    },
+    "lm_sensors": {
+      "file": "lm_sensors-1:3.6.2-1-armv7h.pkg.tar.xz",
+      "sha256": "92a5165a2bede71fdaf20acc0429c33b7b2a2f8611f4ce0cb6d3cc24c6cea352",
+      "bytes": 121148,
+      "version": "1:3.6.2-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/lm_sensors-1:3.6.2-1-armv7h.pkg.tar.xz"
+    },
+    "lmdb": {
+      "file": "lmdb-0.9.35-1-armv7h.pkg.tar.xz",
+      "sha256": "9eaed275ea1812c947ec7d11ca575f503324823989b3fea8e6249c3cee5c1c6e",
+      "bytes": 77780,
+      "version": "0.9.35-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/lmdb-0.9.35-1-armv7h.pkg.tar.xz"
+    },
+    "lua54": {
+      "file": "lua54-5.4.9-1-armv7h.pkg.tar.xz",
+      "sha256": "5adeaaf40f3ec0d11d49dc5e5edb660b05609fa2d0fca5551700197bb3e9165b",
+      "bytes": 272996,
+      "version": "5.4.9-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/lua54-5.4.9-1-armv7h.pkg.tar.xz"
+    },
+    "lz4": {
+      "file": "lz4-1:1.10.0-2-armv7h.pkg.tar.xz",
+      "sha256": "59e9786756fbfc5f3ac6f324de871b46a3d156b63a4e5d8b153052f549425cd9",
+      "bytes": 119540,
+      "version": "1:1.10.0-2",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/lz4-1:1.10.0-2-armv7h.pkg.tar.xz"
+    },
+    "lzo": {
+      "file": "lzo-2.10-5-armv7h.pkg.tar.xz",
+      "sha256": "4247845f84cd135acd4b270583236fb206daea4c8f8fab38f3547d0cf75fad24",
+      "bytes": 76716,
+      "version": "2.10-5",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/lzo-2.10-5-armv7h.pkg.tar.xz"
+    },
+    "m4": {
+      "file": "m4-1.4.21-2-armv7h.pkg.tar.xz",
+      "sha256": "aa088e258225ad2dd6b22cab0b97d4292d8226349b720db7f32c82e270a7a5c8",
+      "bytes": 262864,
+      "version": "1.4.21-2",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/m4-1.4.21-2-armv7h.pkg.tar.xz"
+    },
+    "make": {
+      "file": "make-4.4.1-3-armv7h.pkg.tar.xz",
+      "sha256": "cef25a88118e170d651d45eb631cab24061774479e638ac9461b582c280d81bb",
+      "bytes": 488232,
+      "version": "4.4.1-3",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/make-4.4.1-3-armv7h.pkg.tar.xz"
+    },
+    "mesa": {
+      "file": "mesa-1:26.2.5-1-armv7h.pkg.tar.xz",
+      "sha256": "81ff98beabd57cbefa606830fe6b1998242dd1328d5bad76abd3ec93dc9c17a3",
+      "bytes": 12268872,
+      "version": "1:26.2.5-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/mesa-1:26.2.5-1-armv7h.pkg.tar.xz"
+    },
+    "mkinitcpio": {
+      "file": "mkinitcpio-42.2-1-any.pkg.tar.xz",
+      "sha256": "b6930a53b4ec320ff82062b6979d5a22f31c365e47dedbea66e7f65577cd88f2",
+      "bytes": 69932,
+      "version": "42.2-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/mkinitcpio-42.2-1-any.pkg.tar.xz"
+    },
+    "mkinitcpio-busybox": {
+      "file": "mkinitcpio-busybox-1.36.1-1-armv7h.pkg.tar.xz",
+      "sha256": "233a74234817dfabb42aefb433accbe1cee292944ee0f06f651b42f5a9cf5b96",
+      "bytes": 265180,
+      "version": "1.36.1-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/mkinitcpio-busybox-1.36.1-1-armv7h.pkg.tar.xz"
+    },
+    "mpdecimal": {
+      "file": "mpdecimal-4.0.1-3-armv7h.pkg.tar.xz",
+      "sha256": "1c0d84b8987fa2fa422305209feee83e532e8c1153eea41dad4cd489b35a3e31",
+      "bytes": 85036,
+      "version": "4.0.1-3",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/mpdecimal-4.0.1-3-armv7h.pkg.tar.xz"
+    },
+    "mpfr": {
+      "file": "mpfr-4.2.2-1-armv7h.pkg.tar.xz",
+      "sha256": "918d251de991b592f409408dcce9ec048b28927968b6071fcd86fd77bed9d1c4",
+      "bytes": 298396,
+      "version": "4.2.2-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/mpfr-4.2.2-1-armv7h.pkg.tar.xz"
+    },
+    "mtdev": {
+      "file": "mtdev-1.1.7-1-armv7h.pkg.tar.xz",
+      "sha256": "1a4fd4698f610f40b781b4b57896d6a7ffc8f2ef70fee0b912dc2d4ba64efc80",
+      "bytes": 15500,
+      "version": "1.1.7-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/mtdev-1.1.7-1-armv7h.pkg.tar.xz"
+    },
+    "nano": {
+      "file": "nano-9.2-1-armv7h.pkg.tar.xz",
+      "sha256": "f95614dbc3917e54f1a55c06a62b0bf64106f2956ce9174aa3b62059e70ad946",
+      "bytes": 609092,
+      "version": "9.2-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/nano-9.2-1-armv7h.pkg.tar.xz"
+    },
+    "ncurses": {
+      "file": "ncurses-6.6-2-armv7h.pkg.tar.xz",
+      "sha256": "1d937cf1c9268eafc551357697997bdbce908bad5f07f98752bd7aa01a566a8f",
+      "bytes": 1361808,
+      "version": "6.6-2",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/ncurses-6.6-2-armv7h.pkg.tar.xz"
+    },
+    "net-tools": {
+      "file": "net-tools-2.10-3-armv7h.pkg.tar.xz",
+      "sha256": "66e98de8753ee566048897e205ac6abc2905060d714f532b6bc96c3ca31b5166",
+      "bytes": 120408,
+      "version": "2.10-3",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/net-tools-2.10-3-armv7h.pkg.tar.xz"
+    },
+    "netctl": {
+      "file": "netctl-1.29-2-any.pkg.tar.xz",
+      "sha256": "f2fda85ad67ab0495d2163ea409d96af9b6d472ece031209ac447e1542395cb9",
+      "bytes": 40672,
+      "version": "1.29-2",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/netctl-1.29-2-any.pkg.tar.xz"
+    },
+    "nettle": {
+      "file": "nettle-4.0-1-armv7h.pkg.tar.xz",
+      "sha256": "3b70b8da916b9b6e78da03703afbf160fd1b939ec465e2e84f371595dfa2bee9",
+      "bytes": 445356,
+      "version": "4.0-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/nettle-4.0-1-armv7h.pkg.tar.xz"
+    },
+    "nftables": {
+      "file": "nftables-1:1.1.7-3-armv7h.pkg.tar.xz",
+      "sha256": "d872e06510e282765a286c18305e23f386ca52a3045ac0fb5a42c562bd3b1cbd",
+      "bytes": 371508,
+      "version": "1:1.1.7-3",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/nftables-1:1.1.7-3-armv7h.pkg.tar.xz"
+    },
+    "npth": {
+      "file": "npth-1.8-1-armv7h.pkg.tar.xz",
+      "sha256": "2af7324a1b32159a5d18e3f71e3e099c02029125ca0bf78f2722fc3b7748efa9",
+      "bytes": 26588,
+      "version": "1.8-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/npth-1.8-1-armv7h.pkg.tar.xz"
+    },
+    "openssh": {
+      "file": "openssh-10.6p1-2-armv7h.pkg.tar.xz",
+      "sha256": "4f08680dd5250aae65d6c7d160b94d6e54206c344ba97faa05a6140075bb6947",
+      "bytes": 1136768,
+      "version": "10.6p1-2",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/openssh-10.6p1-2-armv7h.pkg.tar.xz"
+    },
+    "openssl": {
+      "file": "openssl-3.6.5-1-armv7h.pkg.tar.xz",
+      "sha256": "60a17be8902b0d0de8884f9aea8588c1c0de55a6729953a155524b11c9782f44",
+      "bytes": 5075952,
+      "version": "3.6.5-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/openssl-3.6.5-1-armv7h.pkg.tar.xz"
+    },
+    "p11-kit": {
+      "file": "p11-kit-0.26.5-1-armv7h.pkg.tar.xz",
+      "sha256": "76a3aebb1c8a78bedf722e868c4fad75f775256f71ecb66d49e27d9e4fdba8d3",
+      "bytes": 233212,
+      "version": "0.26.5-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/p11-kit-0.26.5-1-armv7h.pkg.tar.xz"
+    },
+    "pacman": {
+      "file": "pacman-7.1.0.r9.g54d9411-3-armv7h.pkg.tar.xz",
+      "sha256": "9c1e3174afb0d144d98ec38f2d0a95288425463895997c14075ab603919ed10b",
+      "bytes": 897220,
+      "version": "7.1.0.r9.g54d9411-3",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/pacman-7.1.0.r9.g54d9411-3-armv7h.pkg.tar.xz"
+    },
+    "pacman-mirrorlist": {
+      "file": "pacman-mirrorlist-20260411-2-any.pkg.tar.xz",
+      "sha256": "8d41b9ab5bdb63443a12a94f600699618bf5ca0771c4a0b54d7d96d0e82f671c",
+      "bytes": 2640,
+      "version": "20260411-2",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/pacman-mirrorlist-20260411-2-any.pkg.tar.xz"
+    },
+    "pam": {
+      "file": "pam-1.7.3-1-armv7h.pkg.tar.xz",
+      "sha256": "9b11764dd3412400d1c3fb0f178f2dccade3d7d21bf1511ab8bb28199de27e12",
+      "bytes": 570240,
+      "version": "1.7.3-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/pam-1.7.3-1-armv7h.pkg.tar.xz"
+    },
+    "pambase": {
+      "file": "pambase-20260616-1-any.pkg.tar.xz",
+      "sha256": "6ea70ae35977b466cfc76cd6a785291a63e70d347ce0e49d3af17481d017b76e",
+      "bytes": 3368,
+      "version": "20260616-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/pambase-20260616-1-any.pkg.tar.xz"
+    },
+    "patch": {
+      "file": "patch-2.8.1-1-armv7h.pkg.tar.xz",
+      "sha256": "7b68af31bcac6bbaab70a651e0830cbbc984dc06591ba827d7baa797a567ae72",
+      "bytes": 81804,
+      "version": "2.8.1-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/patch-2.8.1-1-armv7h.pkg.tar.xz"
+    },
+    "pciutils": {
+      "file": "pciutils-3.15.0-1-armv7h.pkg.tar.xz",
+      "sha256": "66ffe75ea60791921fcbfba20f95048daa1005a3b8fe45abcf4e94e68669b9fd",
+      "bytes": 131452,
+      "version": "3.15.0-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/pciutils-3.15.0-1-armv7h.pkg.tar.xz"
+    },
+    "pcre2": {
+      "file": "pcre2-10.49-1-armv7h.pkg.tar.xz",
+      "sha256": "d91e8a58953c0f4f6f4b9ab9d46bab9c629f6603760599ad8107430b4376ed5f",
+      "bytes": 1230860,
+      "version": "10.49-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/pcre2-10.49-1-armv7h.pkg.tar.xz"
+    },
+    "perl": {
+      "file": "perl-5.44.0-1-armv7h.pkg.tar.xz",
+      "sha256": "b5995c95c3f6f756ab98585bbea04defb8b7ca31552e896ddca0216c6ceb53f0",
+      "bytes": 15825488,
+      "version": "5.44.0-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/perl-5.44.0-1-armv7h.pkg.tar.xz"
+    },
+    "perl-error": {
+      "file": "perl-error-0.17030-3-any.pkg.tar.xz",
+      "sha256": "205107e390e65a821e82e10d4efdebb909a3f3e30d318853bc865764fd0a8de5",
+      "bytes": 21288,
+      "version": "0.17030-3",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/perl-error-0.17030-3-any.pkg.tar.xz"
+    },
+    "perl-mailtools": {
+      "file": "perl-mailtools-2.22-3-any.pkg.tar.xz",
+      "sha256": "b823b25974919d4bd0945071d86f6bbec74dfd28f1bd5e9bf52a341f71e8c90b",
+      "bytes": 59792,
+      "version": "2.22-3",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/perl-mailtools-2.22-3-any.pkg.tar.xz"
+    },
+    "perl-timedate": {
+      "file": "perl-timedate-2.35-1-any.pkg.tar.xz",
+      "sha256": "46289551aeb2c7c31c689985215a44b525978c363bc037f3ac221537dc4aa0c1",
+      "bytes": 61812,
+      "version": "2.35-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/perl-timedate-2.35-1-any.pkg.tar.xz"
+    },
+    "pinentry": {
+      "file": "pinentry-1.3.3-1-armv7h.pkg.tar.xz",
+      "sha256": "f7d3c4966fdb9eb1ca81f026a0bc8f8789f47ef0ce27b4cf17aeabb77833d727",
+      "bytes": 125756,
+      "version": "1.3.3-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/pinentry-1.3.3-1-armv7h.pkg.tar.xz"
+    },
+    "pixman": {
+      "file": "pixman-0.46.4-1.1-armv7h.pkg.tar.xz",
+      "sha256": "03e61ca326c36736eb54673bd1eb044b236950088faf9904f3fe857d919338b5",
+      "bytes": 182324,
+      "version": "0.46.4-1.1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/pixman-0.46.4-1.1-armv7h.pkg.tar.xz"
+    },
+    "pkgconf": {
+      "file": "pkgconf-3.0.10-1-armv7h.pkg.tar.xz",
+      "sha256": "41420bf3da15d14b63d8a656a25723eab74d19e5ff7826d596353cb4b1be50c8",
+      "bytes": 104540,
+      "version": "3.0.10-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/pkgconf-3.0.10-1-armv7h.pkg.tar.xz"
+    },
+    "popt": {
+      "file": "popt-1.19-2-armv7h.pkg.tar.xz",
+      "sha256": "7473e31822bda10d63ee5ca648d55f73ea7f089fa7aa8202afe70d92ff77aba2",
+      "bytes": 65552,
+      "version": "1.19-2",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/popt-1.19-2-armv7h.pkg.tar.xz"
+    },
+    "procps-ng": {
+      "file": "procps-ng-4.0.7-1-armv7h.pkg.tar.xz",
+      "sha256": "cfcbbad7153154d26251e9416bddf9217c6acb8dc71776d9f4f3b4b7747bb68b",
+      "bytes": 978400,
+      "version": "4.0.7-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/procps-ng-4.0.7-1-armv7h.pkg.tar.xz"
+    },
+    "psmisc": {
+      "file": "psmisc-23.7-2-armv7h.pkg.tar.xz",
+      "sha256": "705467fa3f2cd5f29c12692ba5e72f8023dd375a1c00046ee28bf0bd5ff7b8d9",
+      "bytes": 252504,
+      "version": "23.7-2",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/psmisc-23.7-2-armv7h.pkg.tar.xz"
+    },
+    "python": {
+      "file": "python-3.14.8-1-armv7h.pkg.tar.xz",
+      "sha256": "8f99654c918e2474f70d6a0ee31b3fee564fd9899aa39a108d417922f02c6852",
+      "bytes": 13122856,
+      "version": "3.14.8-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/python-3.14.8-1-armv7h.pkg.tar.xz"
+    },
+    "python-autocommand": {
+      "file": "python-autocommand-2.2.2-9-any.pkg.tar.xz",
+      "sha256": "1db72f5bbb84c8fd577f6cde2c83620ff7a6fb3371b13a0716c8b21b15fb3bce",
+      "bytes": 23916,
+      "version": "2.2.2-9",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/python-autocommand-2.2.2-9-any.pkg.tar.xz"
+    },
+    "python-jaraco.collections": {
+      "file": "python-jaraco.collections-5.1.0-3-any.pkg.tar.xz",
+      "sha256": "24f366d2edc516b20db359306c8dcbbc8b20876d6119b74680e4ceb44b277340",
+      "bytes": 23628,
+      "version": "5.1.0-3",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/python-jaraco.collections-5.1.0-3-any.pkg.tar.xz"
+    },
+    "python-jaraco.context": {
+      "file": "python-jaraco.context-6.1.2-1-any.pkg.tar.xz",
+      "sha256": "7a0efb35c303d199b70121bb2be5d0dad58b017f6e2f5c104077b5d317cada51",
+      "bytes": 16192,
+      "version": "6.1.2-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/python-jaraco.context-6.1.2-1-any.pkg.tar.xz"
+    },
+    "python-jaraco.functools": {
+      "file": "python-jaraco.functools-4.1.0-3-any.pkg.tar.xz",
+      "sha256": "8c3ac91d30035a8ae954a2762cd16c79424a32b2bb84cf9349c41a4f76e3e398",
+      "bytes": 18020,
+      "version": "4.1.0-3",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/python-jaraco.functools-4.1.0-3-any.pkg.tar.xz"
+    },
+    "python-jaraco.text": {
+      "file": "python-jaraco.text-4.0.0-4-any.pkg.tar.xz",
+      "sha256": "d07586c6d7ae7634e6def55114accd24b8a9940a1afce9cba1cdf28b116ef48a",
+      "bytes": 20984,
+      "version": "4.0.0-4",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/python-jaraco.text-4.0.0-4-any.pkg.tar.xz"
+    },
+    "python-more-itertools": {
+      "file": "python-more-itertools-11.2.1-1-any.pkg.tar.xz",
+      "sha256": "e91bf670e5b4d9a7d42fd07e9cfcd25607a5267bfa680249566d469b5eacdcd4",
+      "bytes": 128016,
+      "version": "11.2.1-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/python-more-itertools-11.2.1-1-any.pkg.tar.xz"
+    },
+    "python-packaging": {
+      "file": "python-packaging-26.3-1-any.pkg.tar.xz",
+      "sha256": "27031cdb11c388221d54b4a48d1c1dcb27c5e753b63bb922795077d4e9236967",
+      "bytes": 247500,
+      "version": "26.3-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/python-packaging-26.3-1-any.pkg.tar.xz"
+    },
+    "python-platformdirs": {
+      "file": "python-platformdirs-4.13.5-1-any.pkg.tar.xz",
+      "sha256": "9c46af4708ca1a62b05efa7737534e3d0a4f4ab5f031359759f7207b2390fa15",
+      "bytes": 65540,
+      "version": "4.13.5-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/python-platformdirs-4.13.5-1-any.pkg.tar.xz"
+    },
+    "python-pyelftools": {
+      "file": "python-pyelftools-0.33-1-any.pkg.tar.xz",
+      "sha256": "169bfd4569bda1ba4b5ed7182cefb129d771a3b58077d2db46ac64eaa14d3dc7",
+      "bytes": 389184,
+      "version": "0.33-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/python-pyelftools-0.33-1-any.pkg.tar.xz"
+    },
+    "python-setuptools": {
+      "file": "python-setuptools-1:84.2.1-1-any.pkg.tar.xz",
+      "sha256": "4c2208c318fee7dc41c31c83021999a80b48f4ac791b211c61abd5d6e9d55d3b",
+      "bytes": 765772,
+      "version": "1:84.2.1-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/python-setuptools-1:84.2.1-1-any.pkg.tar.xz"
+    },
+    "python-wheel": {
+      "file": "python-wheel-0.48.0-1-any.pkg.tar.xz",
+      "sha256": "4152a0f0394b7b20d1479573f4d58027ef32f15113fc8aa2d7390234585b6403",
+      "bytes": 72908,
+      "version": "0.48.0-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/python-wheel-0.48.0-1-any.pkg.tar.xz"
+    },
+    "readline": {
+      "file": "readline-8.3.6-1-armv7h.pkg.tar.xz",
+      "sha256": "d3661b93e96a434d924cf7798d44b2407e159a7c2070c532c11dbfb9578bdcaf",
+      "bytes": 386952,
+      "version": "8.3.6-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/readline-8.3.6-1-armv7h.pkg.tar.xz"
+    },
+    "seatd": {
+      "file": "seatd-0.9.3-1-armv7h.pkg.tar.xz",
+      "sha256": "d9b4493142e8b86da594da4d2eeb9010c36d0adf6db0901eae51118f1a217c2b",
+      "bytes": 33992,
+      "version": "0.9.3-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/seatd-0.9.3-1-armv7h.pkg.tar.xz"
+    },
+    "sed": {
+      "file": "sed-4.10-2-armv7h.pkg.tar.xz",
+      "sha256": "9a18261ca19e7aff2d554df3ac8d80740082c415614e4682c6f280ff4d2e7ba4",
+      "bytes": 230852,
+      "version": "4.10-2",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/sed-4.10-2-armv7h.pkg.tar.xz"
+    },
+    "shadow": {
+      "file": "shadow-4.20.0.arch1-1-armv7h.pkg.tar.xz",
+      "sha256": "d54c52d907ed21e00cabcd40fbeaf60a2dcc0ac8ebb669a0cb708335f588f696",
+      "bytes": 1188208,
+      "version": "4.20.0.arch1-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/shadow-4.20.0.arch1-1-armv7h.pkg.tar.xz"
+    },
+    "source-highlight": {
+      "file": "source-highlight-3.1.9-19-armv7h.pkg.tar.xz",
+      "sha256": "388f140e698d4449f675a104478c8232aa0adb5bf92a2419c7b0437e46d0d8da",
+      "bytes": 687048,
+      "version": "3.1.9-19",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/source-highlight-3.1.9-19-armv7h.pkg.tar.xz"
+    },
+    "spirv-tools": {
+      "file": "spirv-tools-1:1.4.363.0-1-armv7h.pkg.tar.xz",
+      "sha256": "dd85e133823c0d22b8c4e3b85c6b07c7cdb2fbf408b4a10c46b6cae9b1c4eec9",
+      "bytes": 1798660,
+      "version": "1:1.4.363.0-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/spirv-tools-1:1.4.363.0-1-armv7h.pkg.tar.xz"
+    },
+    "sqlite": {
+      "file": "sqlite-3.54.0-1-armv7h.pkg.tar.xz",
+      "sha256": "fe6aa5b9e60577fce78c71c19ef4b018a831aaf42f33751e71438e2552b8c22d",
+      "bytes": 1525172,
+      "version": "3.54.0-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/sqlite-3.54.0-1-armv7h.pkg.tar.xz"
+    },
+    "sudo": {
+      "file": "sudo-1.9.17.p2-6-armv7h.pkg.tar.xz",
+      "sha256": "d2d2db0012bd8def20e99cce861c945fd899d79019d64b95b1fc9de36fa3cff6",
+      "bytes": 1803308,
+      "version": "1.9.17.p2-6",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/sudo-1.9.17.p2-6-armv7h.pkg.tar.xz"
+    },
+    "swig": {
+      "file": "swig-4.5.1-1-armv7h.pkg.tar.xz",
+      "sha256": "59c0ba9d95f0abf3c8e533fca392fba65ce8dbb987c4fe7983b5566804c4b0a7",
+      "bytes": 1097348,
+      "version": "4.5.1-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/swig-4.5.1-1-armv7h.pkg.tar.xz"
+    },
+    "systemd": {
+      "file": "systemd-262.1-1-armv7h.pkg.tar.xz",
+      "sha256": "a0965177b3b3ffb97a40aa53e71f36e9016ade8fdff0eef28cab92f92fb9e5c6",
+      "bytes": 9707272,
+      "version": "262.1-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/systemd-262.1-1-armv7h.pkg.tar.xz"
+    },
+    "systemd-libs": {
+      "file": "systemd-libs-262.1-1-armv7h.pkg.tar.xz",
+      "sha256": "35d9bd1a51213f8100a688d6a5dda3e5843efe140a04ea85e43eae9f0d60de64",
+      "bytes": 1240736,
+      "version": "262.1-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/systemd-libs-262.1-1-armv7h.pkg.tar.xz"
+    },
+    "systemd-resolvconf": {
+      "file": "systemd-resolvconf-262.1-1-armv7h.pkg.tar.xz",
+      "sha256": "a43c423790f2293f008ad402ba1f5a7e59241d9ee15091638d2fa1a173338f3d",
+      "bytes": 3408,
+      "version": "262.1-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/systemd-resolvconf-262.1-1-armv7h.pkg.tar.xz"
+    },
+    "systemd-sysvcompat": {
+      "file": "systemd-sysvcompat-262.1-1-armv7h.pkg.tar.xz",
+      "sha256": "cbc9818874ac5adb536fb1774ffc6f68bc5f3b44e314c16df993df296e7decba",
+      "bytes": 6692,
+      "version": "262.1-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/systemd-sysvcompat-262.1-1-armv7h.pkg.tar.xz"
+    },
+    "tar": {
+      "file": "tar-1.35-5-armv7h.pkg.tar.xz",
+      "sha256": "7c92a585d15079ee5197cc97643bad861a4795d6eb38d63063573f9f605c2ba7",
+      "bytes": 722960,
+      "version": "1.35-5",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/tar-1.35-5-armv7h.pkg.tar.xz"
+    },
+    "texinfo": {
+      "file": "texinfo-7.3-3-armv7h.pkg.tar.xz",
+      "sha256": "95ba36dacf37f4ed44a4551b71b34462252f2ef45c865ec6bbff3060f1a04e1a",
+      "bytes": 2042120,
+      "version": "7.3-3",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/texinfo-7.3-3-armv7h.pkg.tar.xz"
+    },
+    "tpm2-tss": {
+      "file": "tpm2-tss-4.2.0-2-armv7h.pkg.tar.xz",
+      "sha256": "40accdf106423fb3dd11bb7d726ee45c58ea2927b4a4205533858f68ad17ab3b",
+      "bytes": 962180,
+      "version": "4.2.0-2",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/tpm2-tss-4.2.0-2-armv7h.pkg.tar.xz"
+    },
+    "ttf-dejavu": {
+      "file": "ttf-dejavu-2.37+18+g9b5d1b2f-8-any.pkg.tar.xz",
+      "sha256": "b2a15083d7db369b3a237c62ed44997613a3b8bcf967261507bcda2fb2eade61",
+      "bytes": 2476940,
+      "version": "2.37+18+g9b5d1b2f-8",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/ttf-dejavu-2.37+18+g9b5d1b2f-8-any.pkg.tar.xz"
+    },
+    "tzdata": {
+      "file": "tzdata-2026e-1-armv7h.pkg.tar.xz",
+      "sha256": "53744f148b4938f9aa703571c05f154ea8d6de08136e0592ec2074a0c57d903b",
+      "bytes": 298304,
+      "version": "2026e-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/tzdata-2026e-1-armv7h.pkg.tar.xz"
+    },
+    "util-linux": {
+      "file": "util-linux-2.42.4-1-armv7h.pkg.tar.xz",
+      "sha256": "37925bcdaeade0d954145fc6e56be348e07d22f01d7fbcf526cdec30c0303dbf",
+      "bytes": 6595784,
+      "version": "2.42.4-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/util-linux-2.42.4-1-armv7h.pkg.tar.xz"
+    },
+    "util-linux-libs": {
+      "file": "util-linux-libs-2.42.4-1-armv7h.pkg.tar.xz",
+      "sha256": "c4a9ec2ab12782a127fa68606c0fadf6d38f32c58fa1a7e9200bef20e985e183",
+      "bytes": 473624,
+      "version": "2.42.4-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/util-linux-libs-2.42.4-1-armv7h.pkg.tar.xz"
+    },
+    "vim": {
+      "file": "vim-9.2.1178-1-armv7h.pkg.tar.xz",
+      "sha256": "d9c0a1f0ef63d69aeb6c1d10cd32af751a1b490a98eeb2b52cd32f098539b224",
+      "bytes": 1936592,
+      "version": "9.2.1178-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/vim-9.2.1178-1-armv7h.pkg.tar.xz"
+    },
+    "vim-runtime": {
+      "file": "vim-runtime-9.2.1178-1-armv7h.pkg.tar.xz",
+      "sha256": "49f1dd049f1499ed5976ee2cd9cccae560861d45da6e7576117f51e048d57ed1",
+      "bytes": 7702436,
+      "version": "9.2.1178-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/vim-runtime-9.2.1178-1-armv7h.pkg.tar.xz"
+    },
+    "vulkan-icd-loader": {
+      "file": "vulkan-icd-loader-1.4.363.0-1-armv7h.pkg.tar.xz",
+      "sha256": "21122eb3e4c22baef14864ae425deab7129bab35770d516f5a181fa4b2a7d2e6",
+      "bytes": 148244,
+      "version": "1.4.363.0-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/vulkan-icd-loader-1.4.363.0-1-armv7h.pkg.tar.xz"
+    },
+    "wayland": {
+      "file": "wayland-1.26.0-1-armv7h.pkg.tar.xz",
+      "sha256": "2e5870c8ead7c1c00e5d4a7d3a610d529f11fe4681455cb1b7626314a8d7a3fd",
+      "bytes": 132996,
+      "version": "1.26.0-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/wayland-1.26.0-1-armv7h.pkg.tar.xz"
+    },
+    "wayland-protocols": {
+      "file": "wayland-protocols-1.49-1-any.pkg.tar.xz",
+      "sha256": "0ed7895e23b6a4f89fbe28485946f6dead95ebf08ca78d29c25cb976ae83c4f0",
+      "bytes": 139468,
+      "version": "1.49-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/wayland-protocols-1.49-1-any.pkg.tar.xz"
+    },
+    "which": {
+      "file": "which-2.25-1-armv7h.pkg.tar.xz",
+      "sha256": "e11f0766c7a648d19b012279c01dcae64113c65a8b8e4d0506e2957739b4e9c4",
+      "bytes": 15488,
+      "version": "2.25-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/which-2.25-1-armv7h.pkg.tar.xz"
+    },
+    "wireless-regdb": {
+      "file": "wireless-regdb-2026.09.03-1-any.pkg.tar.xz",
+      "sha256": "c6116b2f44eaf1e6fd12386ae236db2d623926695876d65ff5ce9d2b4b2ecdc9",
+      "bytes": 11244,
+      "version": "2026.09.03-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/wireless-regdb-2026.09.03-1-any.pkg.tar.xz"
+    },
+    "wlroots0.20": {
+      "file": "wlroots0.20-0.20.2-1-armv7h.pkg.tar.xz",
+      "sha256": "0e34cf88696dc596ad447c35119ca7d78a62001074196f4e6abd1d1f6922202a",
+      "bytes": 427260,
+      "version": "0.20.2-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/wlroots0.20-0.20.2-1-armv7h.pkg.tar.xz"
+    },
+    "xcb-proto": {
+      "file": "xcb-proto-1.17.0-4-any.pkg.tar.xz",
+      "sha256": "1214b3fc9b3445f3557b9c2d46c8486cb0a0219752c5c11c0ae7fc44d7a395ae",
+      "bytes": 127684,
+      "version": "1.17.0-4",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/xcb-proto-1.17.0-4-any.pkg.tar.xz"
+    },
+    "xcb-util-errors": {
+      "file": "xcb-util-errors-1.0.1-2-armv7h.pkg.tar.xz",
+      "sha256": "a9a08a81b50a153ef2849f9e849f9323cdae449e657b31b0a2bd67ae5b3d79c5",
+      "bytes": 12316,
+      "version": "1.0.1-2",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/xcb-util-errors-1.0.1-2-armv7h.pkg.tar.xz"
+    },
+    "xcb-util-renderutil": {
+      "file": "xcb-util-renderutil-0.3.10-2-armv7h.pkg.tar.xz",
+      "sha256": "5b2e475510345addae68444bfce9d561c694beb151754f4c34a7f6befd164ff2",
+      "bytes": 8656,
+      "version": "0.3.10-2",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/xcb-util-renderutil-0.3.10-2-armv7h.pkg.tar.xz"
+    },
+    "xcb-util-wm": {
+      "file": "xcb-util-wm-0.4.2-2-armv7h.pkg.tar.xz",
+      "sha256": "ac2db3c2c39d00e76faa0883e229b0d3042dfd199c60f0bb1c20892935cb025e",
+      "bytes": 29584,
+      "version": "0.4.2-2",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/xcb-util-wm-0.4.2-2-armv7h.pkg.tar.xz"
+    },
+    "xkeyboard-config": {
+      "file": "xkeyboard-config-2.48-1-any.pkg.tar.xz",
+      "sha256": "c63dde9247ba422731204a8aec356597e0b0d783536e8d5f700e077dfa5105d7",
+      "bytes": 842952,
+      "version": "2.48-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/xkeyboard-config-2.48-1-any.pkg.tar.xz"
+    },
+    "xorgproto": {
+      "file": "xorgproto-2026.1-1-any.pkg.tar.xz",
+      "sha256": "2924d700b242b602ba5e9bf2a88339857505a0cf861e1718e5c22e2613f74041",
+      "bytes": 239064,
+      "version": "2026.1-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/xorgproto-2026.1-1-any.pkg.tar.xz"
+    },
+    "xxhash": {
+      "file": "xxhash-0.8.4-1-armv7h.pkg.tar.xz",
+      "sha256": "69aff80b0f882c68d7e42a74ade91e57dafe3330c1f195b209d3992d881659dd",
+      "bytes": 92660,
+      "version": "0.8.4-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/xxhash-0.8.4-1-armv7h.pkg.tar.xz"
+    },
+    "xz": {
+      "file": "xz-5.8.4-1-armv7h.pkg.tar.xz",
+      "sha256": "4147100a4f8a6cc365d0536c592073a5167609544deefbfc8a6170bad76b0e12",
+      "bytes": 815100,
+      "version": "5.8.4-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/xz-5.8.4-1-armv7h.pkg.tar.xz"
+    },
+    "zlib": {
+      "file": "zlib-1:1.3.2-4-armv7h.pkg.tar.xz",
+      "sha256": "56ab08b5bfc6c64988ca3d872bc716d8ffdc16acdb22181e5f51addd070a3134",
+      "bytes": 71248,
+      "version": "1:1.3.2-4",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/zlib-1:1.3.2-4-armv7h.pkg.tar.xz"
+    },
+    "zlib-ng": {
+      "file": "zlib-ng-2.3.3-1-armv7h.pkg.tar.xz",
+      "sha256": "031f8750b4eacb01ce17afd0fa3d4f7152d0a4cc9d09d6d3454d192538d0962f",
+      "bytes": 87244,
+      "version": "2.3.3-1",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/extra/zlib-ng-2.3.3-1-armv7h.pkg.tar.xz"
+    },
+    "zstd": {
+      "file": "zstd-1.5.7-3-armv7h.pkg.tar.xz",
+      "sha256": "f2b39a761e27d091d1dbe1f3d1a751fd3cd705ec4ddcdbc3d605ac1a875451be",
+      "bytes": 424512,
+      "version": "1.5.7-3",
+      "url": "https://fl.us.mirror.archlinuxarm.org/armv7h/core/zstd-1.5.7-3-armv7h.pkg.tar.xz"
+    }
+  }
+}

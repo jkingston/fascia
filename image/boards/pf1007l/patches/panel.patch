@@ -1,5 +1,4 @@
-Base: Linux v7.2.10. Built as an out-of-tree module against
-linux-armv7-headers 7.2.10-1 (kernel/build.sh). Not tested on hardware.
+Base: Linux v7.3. Built against the installed linux-armv7 headers.
 Do not send upstream as is.
 
 drm/panel: jadard-jd9365da-h3: add the PF1007L photo-frame panel

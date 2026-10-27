@@ -1,11 +1,9 @@
 {
   "schema_version": 1,
   "architecture": "armv7h",
-  "file": "ArchLinuxARM-armv7-latest.tar.gz",
+  "file": "rootfs.tar.gz",
   "urls": [
-    "https://fl.us.mirror.archlinuxarm.org/os/ArchLinuxARM-armv7-latest.tar.gz",
-    "https://mirrors.dotsrc.org/archlinuxarm/os/ArchLinuxARM-armv7-latest.tar.gz",
-    "https://mirror.math.princeton.edu/pub/archlinuxarm/os/ArchLinuxARM-armv7-latest.tar.gz"
+    "https://github.com/jkingston/fascia/releases/download/install-inputs-2026-10-27/rootfs.tar.gz"
   ],
   "signing_fingerprint": "68B3537F39A313B3E574D06777193F152BDBE6A6",
   "keyring_file": "archlinuxarm.asc",
@@ -14,5 +12,9 @@
     "package": "archlinuxarm-keyring-20240419-2-any.pkg.tar.xz",
     "sha256": "ba5873af6ffe030bb338c90e49c98e89807ad510033222eda96064beee64cb66",
     "member": "usr/share/pacman/keyrings/archlinuxarm.gpg"
-  }
+  },
+  "rootfs_sha256": "ebe0fa119dea45e3af0aa61785676bdbf417bc5f754d529b87255dbf0ca4e3f0",
+  "rootfs_bytes": 770429322,
+  "signature_sha256": "0d4bb680d381c8053c378fad27cedb67446b39b7bff1c87257ebf6743db0fd94",
+  "signature_bytes": 566
 }

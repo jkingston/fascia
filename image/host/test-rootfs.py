@@ -1,4 +1,4 @@
-"""Rolling-base cache, download races and transport bounds; no network or devices."""
+"""Pinned base integrity; no network or devices."""
 
 import hashlib
 import io
@@ -24,6 +24,8 @@ class Rootfs(unittest.TestCase):
         self.source.mkdir()
         anchor = self.source / "public.asc"
         anchor.write_bytes(b"reviewed public trust anchor")
+        self.archive = b"official base archive fixture"
+        self.signature = b"detached signature fixture"
         self.spec = {
             "schema_version": 1,
             "architecture": "armv7h",
@@ -31,12 +33,14 @@ class Rootfs(unittest.TestCase):
             "keyring_file": anchor.name,
             "keyring_sha256": rootfs.digest(anchor),
             "signing_fingerprint": "A" * 40,
+            "rootfs_sha256": hashlib.sha256(self.archive).hexdigest(),
+            "rootfs_bytes": len(self.archive),
+            "signature_sha256": hashlib.sha256(self.signature).hexdigest(),
+            "signature_bytes": len(self.signature),
         }
         (self.source / "rootfs.json").write_text(json.dumps(self.spec))
         self.here = patch.object(rootfs, "HERE", self.source)
         self.here.start()
-        self.archive = b"official base archive fixture"
-        self.signature = b"detached signature fixture"
         self.cache = self.root / "cache"
 
     def tearDown(self):
@@ -50,29 +54,48 @@ class Rootfs(unittest.TestCase):
         with patch.object(rootfs.urllib.request, "urlopen", side_effect=self.response):
             return rootfs.prepare(self.cache)
 
-    def test_complete_pair_publishes_and_offline_reuses_without_network(self):
+    def test_cached_base_needs_no_network_even_online(self):
         result = self.prepare()
-        self.assertEqual(
-            result["rootfs_sha256"], hashlib.sha256(self.archive).hexdigest()
-        )
-        self.assertEqual(Path(result["rootfs"]).read_bytes(), self.archive)
         with patch.object(rootfs.urllib.request, "urlopen") as network:
+            self.assertEqual(rootfs.prepare(self.cache), result)
             self.assertEqual(rootfs.prepare(self.cache, offline=True), result)
             network.assert_not_called()
 
-    def test_online_checks_signature_without_redownloading_unchanged_base(self):
-        result = self.prepare()
-        with patch.object(
-            rootfs.urllib.request, "urlopen", side_effect=self.response
-        ) as network:
-            self.assertEqual(rootfs.prepare(self.cache), result)
-            self.assertEqual(network.call_count, 1)
-            self.assertTrue(network.call_args.args[0].endswith(".sig"))
+    def test_changed_base_or_signature_rejected_before_publication(self):
+        for suffix in ("base", ".sig"):
+            with (
+                self.subTest(suffix=suffix),
+                patch.object(
+                    rootfs.urllib.request,
+                    "urlopen",
+                    side_effect=lambda url, **kw: Response(b"changed")
+                    if url.endswith(suffix)
+                    else self.response(url),
+                ),
+            ):
+                with self.assertRaisesRegex(ValueError, "checksum"):
+                    rootfs.prepare(self.cache)
+            self.assertFalse(
+                (self.cache / "rootfs" / self.spec["signature_sha256"]).exists()
+            )
 
-    def test_changed_base_bytes_fail_cache_verification(self):
+    def test_changed_cached_bytes_fail(self):
         result = self.prepare()
-        Path(result["rootfs"]).write_bytes(b"tampered base")
+        Path(result["rootfs"]).write_bytes(b"tampered")
         with self.assertRaisesRegex(ValueError, "Corrupt cached"):
+            rootfs.prepare(self.cache, offline=True)
+
+    def test_modified_cache_metadata_cannot_override_lock(self):
+        result = self.prepare()
+        path = Path(result["rootfs"])
+        path.write_bytes(b"other")
+        metadata = path.parent / "snapshot.json"
+        record = json.loads(metadata.read_text())
+        record.update(
+            rootfs_sha256=rootfs.digest(path), rootfs_bytes=path.stat().st_size
+        )
+        metadata.write_text(json.dumps(record))
+        with self.assertRaisesRegex(ValueError, "installation lock"):
             rootfs.prepare(self.cache, offline=True)
 
     def test_missing_offline_base_fails_without_network(self):
@@ -82,39 +105,19 @@ class Rootfs(unittest.TestCase):
             network.assert_not_called()
 
     def test_bad_trust_anchor_fails_before_network(self):
-        (self.source / "public.asc").write_bytes(b"substituted key")
+        (self.source / "public.asc").write_bytes(b"substituted")
         with patch.object(rootfs.urllib.request, "urlopen") as network:
             with self.assertRaisesRegex(ValueError, "trust anchor"):
                 rootfs.prepare(self.cache)
             network.assert_not_called()
-
-    def test_upstream_signature_rotation_retries_a_complete_pair(self):
-        responses = [
-            b"old sig",
-            self.archive,
-            b"new sig",
-            b"new sig",
-            self.archive,
-            b"new sig",
-        ]
-        with patch.object(
-            rootfs.urllib.request,
-            "urlopen",
-            side_effect=lambda *a, **k: Response(responses.pop(0)),
-        ):
-            result = rootfs.prepare(self.cache)
-        self.assertFalse(responses)
-        self.assertEqual(Path(result["rootfs_signature"]).read_bytes(), b"new sig")
-        self.assertEqual(len(list((self.cache / "rootfs").glob("*/snapshot.json"))), 1)
 
     def test_oversized_download_never_publishes(self):
         with (
             patch.object(rootfs, "MAX_ROOTFS", 2),
             patch.object(rootfs.urllib.request, "urlopen", side_effect=self.response),
         ):
-            with self.assertRaisesRegex(OSError, "Oversized"):
+            with self.assertRaisesRegex(ValueError, "Oversized"):
                 rootfs.prepare(self.cache)
-        self.assertFalse((self.cache / "rootfs/latest.json").exists())
 
     def test_insecure_redirect_is_rejected(self):
         response = Response(b"bytes")
@@ -127,33 +130,14 @@ class Rootfs(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, "Non-HTTPS"):
                 rootfs.download("https://example.invalid/base", self.root / "file", 100)
 
-    def test_cache_pointer_cannot_escape_to_another_directory(self):
-        self.prepare()
-        (self.cache / "rootfs/latest.json").write_text(
-            json.dumps({"snapshot": "../../outside"})
-        )
-        with self.assertRaisesRegex(ValueError, "cache identity"):
-            rootfs.prepare(self.cache, offline=True)
-
-    def test_rejected_exact_pair_is_quarantined_and_next_run_redownloads(self):
+    def test_rejected_pair_is_quarantined(self):
         result = self.prepare()
         quarantine = rootfs.invalidate(
             self.cache, result["rootfs_sha256"], result["signature_sha256"]
         )
         self.assertEqual((quarantine / "rootfs.tar.gz").read_bytes(), self.archive)
         self.assertFalse(Path(result["rootfs"]).exists())
-        with patch.object(
-            rootfs.urllib.request, "urlopen", side_effect=self.response
-        ) as network:
-            replacement = rootfs.prepare(self.cache)
-        self.assertEqual(network.call_count, 3)
-        self.assertEqual(replacement, result)
-
-    def test_rejection_for_another_base_cannot_invalidate_the_cache(self):
-        result = self.prepare()
-        with self.assertRaisesRegex(ValueError, "does not match"):
-            rootfs.invalidate(self.cache, "b" * 64, result["signature_sha256"])
-        self.assertTrue(Path(result["rootfs"]).is_file())
+        self.assertEqual(self.prepare(), result)
 
 
 if __name__ == "__main__":

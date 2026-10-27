@@ -937,11 +937,11 @@ def kernel_reference_hashes(root):
     return result
 
 
-def rolling_upgrade(root, names, runner):
+def pinned_upgrade(root, names, runner, repository, expected):
     if not names or any(
         not re.fullmatch(r"[a-zA-Z0-9@_+][a-zA-Z0-9@._+:-]*", name) for name in names
     ):
-        raise ValueError("Invalid rolling package profile")
+        raise ValueError("Invalid pinned package profile")
     runner.run(["chroot", root, "/usr/bin/pacman-key", "--init"])
     runner.run(
         [
@@ -958,44 +958,43 @@ def rolling_upgrade(root, names, runner):
         for name in installed_packages(root)
         if name == "linux-firmware" or name.startswith("linux-firmware-")
     ]
-    if firmware:
-        run_package_transaction(
-            [
-                "chroot",
-                root,
-                "/usr/bin/pacman",
-                "--disable-sandbox",
-                "-Rdd",
-                "--noconfirm",
-                *sorted(firmware),
-            ],
-            runner,
+    target = root / "run/fascia-packages"
+    target.mkdir(exist_ok=True)
+    config = root / "run/fascia-packages.conf"
+    config.write_text(
+        "[options]\nArchitecture = armv7h\nSigLevel = Required DatabaseOptional\n"
+        "NoExtract = usr/lib/firmware/* !usr/lib/firmware/regulatory.db !usr/lib/firmware/regulatory.db.p7s\n"
+        + "".join(
+            f"[{name}]\nServer = file:///run/fascia-packages\n"
+            for name in ("core", "extra", "alarm")
         )
-    run_package_transaction(
-        [
+    )
+    runner.run(["mount", "--bind", repository, target])
+    try:
+        runner.run(["mount", "-o", "remount,bind,ro", target])
+        command = [
             "chroot",
             root,
             "/usr/bin/pacman",
             "--disable-sandbox",
-            "-Syu",
-            "--needed",
+            "--config",
+            "/run/fascia-packages.conf",
             "--noconfirm",
-            *sorted(set(names)),
-        ],
-        runner,
-    )
-    run_package_transaction(
-        [
-            "chroot",
-            root,
-            "/usr/bin/pacman",
-            "--disable-sandbox",
-            "-S",
-            "--noconfirm",
-            "wireless-regdb",
-        ],
-        runner,
-    )
+        ]
+        if firmware:
+            run_package_transaction(command + ["-Rdd", *sorted(firmware)], runner)
+        run_package_transaction(
+            command + ["-Syu", "--needed", *sorted(set(names))], runner
+        )
+        run_package_transaction(command + ["-S", "wireless-regdb"], runner)
+        if installed_packages(root) != expected:
+            raise ValueError(
+                "Installed packages differ from the pinned installation inventory"
+            )
+    finally:
+        unmount_checked(target, runner)
+        config.unlink()
+        target.rmdir()
 
 
 def prepare(input_dir, output, req, runner, work_base=Path("/work")):
@@ -1012,10 +1011,6 @@ def prepare(input_dir, output, req, runner, work_base=Path("/work")):
         return prepared
     project = input_dir / "project"
     inputs = load_module("fascia_host_inputs", project / "image/host/inputs.py")
-    if req.get("offline"):
-        raise ValueError(
-            "Offline preparation requires already completed prepared artifacts; fresh rolling pacman transactions need network"
-        )
     with runner.phase("verify-official-base"):
         resolved = inputs.prepare(
             input_dir / "cache", offline=True, derived_dir=work_base / "derived-inputs"
@@ -1045,7 +1040,13 @@ def prepare(input_dir, output, req, runner, work_base=Path("/work")):
                 record["file"] = chroot_path(input_dir, record["file"])
             atomic_json(bootstrap / "run/fascia-source-manifest.json", source_manifest)
             with build_mounts(bootstrap, input_dir, work, runner):
-                rolling_upgrade(bootstrap, resolved["build_names"], runner)
+                pinned_upgrade(
+                    bootstrap,
+                    resolved["build_names"],
+                    runner,
+                    resolved["package_repository"],
+                    resolved["package_lock"]["build_packages"],
+                )
                 build_packages = installed_packages(bootstrap)
                 board_key = board_build_key(
                     project,
@@ -1100,13 +1101,12 @@ def prepare(input_dir, output, req, runner, work_base=Path("/work")):
                     for name in ("linux-armv7", "linux-armv7-headers"):
                         if runtime_packages.get(name) != build_packages.get(name):
                             raise ValueError(
-                                "Rolling repositories changed kernel between build and runtime; rerun preparation: "
-                                + name
+                                "Pinned build and runtime kernels differ: " + name
                             )
                     provenance = runtime / "usr/share/fascia/build-inputs"
                     provenance.mkdir(parents=True, exist_ok=True)
                     atomic_json(
-                        provenance / "rolling-packages.json",
+                        provenance / "packages.json",
                         {
                             "rootfs_sha256": base_digest,
                             "build": build_packages,
@@ -1339,7 +1339,13 @@ def install_runtime(bootstrap, runtime, input_dir, resolved, work, runner):
     seeded = seed_package_cache(bootstrap, runtime)
     print("FASCIA_PACKAGE_CACHE_SEEDED " + json.dumps(seeded), flush=True)
     with api_mounts(runtime, runner):
-        rolling_upgrade(runtime, resolved["runtime_names"], runner)
+        pinned_upgrade(
+            runtime,
+            resolved["runtime_names"],
+            runner,
+            resolved["package_repository"],
+            resolved["package_lock"]["runtime_packages"],
+        )
         packages = list((work / "dkms-package").glob("*.pkg.tar.*"))
         if len(packages) != 1 or packages[0].name.endswith(".sig"):
             raise ValueError("Expected one locally built board source package")
@@ -1434,7 +1440,8 @@ def validate_runtime_elfs(root, runner):
         )
         plan = installer.validate_initial_apps(factory)
         optional += tuple(
-            "usr/share/fascia/factory-apps/apps/" + app + "/run" for app in plan["apps"]
+            "usr/share/fascia/factory-apps/apps/" + app + "/AppRun"
+            for app in plan["apps"]
         )
     for name in (*required, *optional):
         interpreter = elf_interpreter(root / name)

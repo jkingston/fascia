@@ -259,22 +259,78 @@ class Install(unittest.TestCase):
                 installer.main()
             prepare.assert_not_called()
 
-    def test_explicit_erase_flag_is_required(self):
-        args = [
-            "install.py",
-            "install",
-            "--disk",
-            "disk9",
-            "--capacity",
-            str(32 * 1024**3),
-        ]
+    def test_noninteractive_install_needs_explicit_erasure(self):
+        args = argparse.Namespace(disk="disk9", capacity=None, erase=False, plain=True)
+        with mock.patch.object(installer.sys.stdin, "isatty", return_value=False):
+            with self.assertRaisesRegex(ValueError, "terminal"):
+                installer.select_card(args)
+
+    def test_picker_records_capacity_and_checks_identity_after_confirmation(self):
+        identity = {"TotalSize": 32 * 1024**3, "MediaName": "SD card"}
+        args = argparse.Namespace(disk=None, capacity=None, erase=False, plain=True)
+        prompts = mock.MagicMock()
+        prompts.choose.return_value = 0
         with (
-            mock.patch.object(installer.sys, "argv", args),
-            contextlib.redirect_stderr(io.StringIO()),
-            self.assertRaises(SystemExit) as error,
+            mock.patch.object(installer.sys.stdin, "isatty", return_value=True),
+            mock.patch.object(installer, "load", return_value=prompts),
+            mock.patch.object(
+                installer.devices, "candidates", return_value=[("disk9", identity)]
+            ),
+            mock.patch.object(
+                installer.devices, "inspect", return_value=identity
+            ) as inspect,
+            mock.patch("builtins.input", return_value="disk9"),
         ):
-            installer.main()
-        self.assertNotEqual(0, error.exception.code)
+            self.assertEqual(identity, installer.select_card(args))
+            self.assertEqual("disk9", args.disk)
+            self.assertEqual(32 * 1024**3, args.capacity)
+            inspect.assert_called_once_with("disk9", 32 * 1024**3)
+
+    def test_picker_cancel_never_reinspects_or_prepares(self):
+        args = argparse.Namespace(disk=None, capacity=None, erase=False, plain=True)
+        prompts = mock.MagicMock()
+        prompts.choose.return_value = 1
+        with (
+            mock.patch.object(installer.sys.stdin, "isatty", return_value=True),
+            mock.patch.object(installer, "load", return_value=prompts),
+            mock.patch.object(
+                installer.devices,
+                "candidates",
+                return_value=[("disk9", {"TotalSize": 32 * 1024**3})],
+            ),
+            mock.patch.object(installer.devices, "inspect") as inspect,
+        ):
+            with self.assertRaisesRegex(ValueError, "cancelled"):
+                installer.select_card(args)
+            inspect.assert_not_called()
+
+    def test_unattended_install_infers_size_and_rejects_a_swapped_card(self):
+        original = {
+            "TotalSize": 32 * 1024**3,
+            "MediaName": "SD card",
+            "MediaUUID": "first",
+        }
+        swapped = {**original, "MediaUUID": "second"}
+        args = argparse.Namespace(disk="disk9", capacity=None, erase=True, plain=True)
+        with (
+            mock.patch.object(installer, "load", return_value=mock.MagicMock()),
+            mock.patch.object(
+                installer.devices, "inspect", side_effect=[original, swapped]
+            ) as inspect,
+            mock.patch("builtins.input") as prompt,
+        ):
+            with self.assertRaisesRegex(ValueError, "identity changed"):
+                installer.select_card(args)
+            self.assertEqual(
+                inspect.call_args_list,
+                [mock.call("disk9", None), mock.call("disk9", 32 * 1024**3)],
+            )
+            prompt.assert_not_called()
+
+    def test_erase_never_chooses_a_disk_implicitly(self):
+        args = argparse.Namespace(disk=None, capacity=None, erase=True, plain=True)
+        with self.assertRaisesRegex(ValueError, "explicit"):
+            installer.select_card(args)
 
 
 if __name__ == "__main__":

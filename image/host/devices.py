@@ -112,12 +112,21 @@ def active_swaps():
     ]
 
 
-def inspect(name, capacity):
+def inspect(name, capacity=None):
     if sys.platform == "darwin":
-        identity = validate_mac(mac_info(name), name, capacity)
+        info = mac_info(name)
+        identity = validate_mac(
+            info, name, info.get("TotalSize") if capacity is None else capacity
+        )
         path = "/dev/" + name
     elif sys.platform.startswith("linux"):
-        identity = validate_linux(linux_info(name), name, capacity, active_swaps())
+        info = linux_info(name)
+        identity = validate_linux(
+            info,
+            name,
+            info.get("size") if capacity is None else capacity,
+            active_swaps(),
+        )
         path = name
     else:
         raise ValueError("Card installation currently supports macOS and Linux")
@@ -211,3 +220,41 @@ def list_targets():
         raise ValueError("Only macOS and Linux are supported")
     if not count:
         print("No external disks found. Insert the spare card into its reader.")
+
+
+def candidates():
+    if sys.platform == "darwin":
+        listing = plistlib.loads(
+            command("diskutil", "list", "-plist", "external", "physical")
+        )
+        names = [
+            item["DeviceIdentifier"]
+            for item in listing.get("AllDisksAndPartitions", [])
+        ]
+    elif sys.platform.startswith("linux"):
+        listing = json.loads(command("lsblk", "--bytes", "--json", "--output-all"))
+        names = [
+            item["path"]
+            for item in listing["blockdevices"]
+            if item.get("type") == "disk"
+            and (item.get("tran") == "usb" or item.get("rm") in (True, 1))
+        ]
+    else:
+        raise ValueError("Only macOS and Linux are supported")
+    result = []
+    for name in names:
+        try:
+            identity = inspect(name)
+        except (ValueError, OSError, subprocess.CalledProcessError):
+            continue
+        result.append((name, identity))
+    return result
+
+
+def capacity(identity):
+    return identity.get("TotalSize", identity.get("size"))
+
+
+def description(name, identity):
+    model = identity.get("MediaName") or identity.get("model") or "External disk"
+    return f"{name} · {model} · {capacity(identity) / 1e9:.1f} GB"

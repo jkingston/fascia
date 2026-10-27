@@ -363,60 +363,52 @@ class GuestTests(unittest.TestCase):
         self.assertEqual(b"old verified board archive", archive.read_bytes())
         self.assertFalse((output / "board-checkpoint.json").exists())
 
-    def test_fresh_offline_prepare_refuses_live_transactions(self):
+    def test_fresh_offline_prepare_resolves_only_cached_inputs(self):
         runner = guest.Runner(self.root / "output")
         module = mock.Mock()
+        module.prepare.side_effect = FileNotFoundError("missing pinned input")
         with (
             mock.patch.object(guest, "preflight_filesystems"),
             mock.patch.object(guest, "load_module", return_value=module),
+            self.assertRaisesRegex(FileNotFoundError, "missing pinned input"),
         ):
-            with self.assertRaisesRegex(ValueError, "Offline preparation"):
-                guest.prepare(
-                    self.root,
-                    self.root / "prepared",
-                    {"source_key": "a" * 64, "offline": True},
-                    runner,
-                    self.root,
-                )
-        module.prepare.assert_not_called()
+            guest.prepare(
+                self.root,
+                self.root / "prepared",
+                {"source_key": "a" * 64, "offline": True},
+                runner,
+                self.root,
+            )
+        self.assertTrue(module.prepare.call_args.kwargs["offline"])
 
-    def test_rolling_upgrade_uses_full_upgrade_and_normal_firmware_removal(self):
+    def test_pinned_upgrade_uses_only_local_repository_and_checks_inventory(self):
         runner = mock.Mock()
+        (self.root / "run").mkdir()
+        expected = {"python": "1", "linux-armv7": "7.3"}
         with (
             mock.patch.object(
                 guest,
                 "installed_packages",
-                return_value={
-                    "linux-firmware": "1",
-                    "linux-firmware-realtek": "1",
-                    "wireless-regdb": "1",
-                },
+                side_effect=[{"linux-firmware": "1"}, expected],
             ),
             mock.patch.object(guest, "run_package_transaction") as transaction,
         ):
-            guest.rolling_upgrade(self.root, ["python", "linux-armv7"], runner)
+            guest.pinned_upgrade(
+                self.root, list(expected), runner, self.root / "repository", expected
+            )
         calls = [call.args[0] for call in transaction.call_args_list]
-        self.assertEqual(
-            [
-                "chroot",
-                self.root,
-                "/usr/bin/pacman",
-                "--disable-sandbox",
-                "-Rdd",
-                "--noconfirm",
-                "linux-firmware",
-                "linux-firmware-realtek",
-            ],
-            calls[0],
-        )
-        self.assertTrue(all("--disable-sandbox" in call for call in calls))
+        self.assertIn("-Rdd", calls[0])
         self.assertIn("-Syu", calls[1])
-        self.assertIn("--needed", calls[1])
-        self.assertNotIn("-U", calls[1])
-        self.assertEqual("wireless-regdb", calls[2][-1])
-        self.assertNotIn("--needed", calls[2])
+        self.assertTrue(all("/run/fascia-packages.conf" in call for call in calls))
+        self.assertFalse((self.root / "run/fascia-packages.conf").exists())
         with self.assertRaisesRegex(ValueError, "profile"):
-            guest.rolling_upgrade(self.root, ["--bad-option"], runner)
+            guest.pinned_upgrade(self.root, ["--bad-option"], runner, self.root, {})
+        with (
+            mock.patch.object(guest, "installed_packages", return_value={}),
+            mock.patch.object(guest, "run_package_transaction"),
+            self.assertRaisesRegex(ValueError, "inventory"),
+        ):
+            guest.pinned_upgrade(self.root, list(expected), runner, self.root, expected)
 
     def test_official_base_setup_keeps_firmware_out_and_uses_arm_https(self):
         destination = self.root / "runtime"
@@ -945,6 +937,24 @@ class GuestTests(unittest.TestCase):
         struct.pack_into("<I", header, 52, 1)  # No PT_INTERP: static helper.
         executable.write_bytes(header + interpreter)
         self.assertIsNone(guest.elf_interpreter(executable))
+
+    def test_factory_app_validation_uses_appdir_entrypoint(self):
+        factory = self.root / "usr/share/fascia/factory-apps"
+        factory.mkdir(parents=True)
+        installer = mock.Mock()
+        installer.validate_initial_apps.return_value = {"apps": ["clock", "counter"]}
+        with (
+            mock.patch.object(guest, "load_module", return_value=installer),
+            mock.patch.object(guest, "elf_interpreter", return_value=None) as inspect,
+        ):
+            guest.validate_runtime_elfs(self.root, mock.Mock())
+        self.assertEqual(
+            inspect.call_args_list[-2:],
+            [
+                mock.call(factory / "apps/clock/AppRun"),
+                mock.call(factory / "apps/counter/AppRun"),
+            ],
+        )
 
     def test_filesystem_preflight_owns_only_new_file_loops_and_cleans_failure(self):
         import contextlib

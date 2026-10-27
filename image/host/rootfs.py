@@ -1,4 +1,4 @@
-"""Cache the rolling official ARM rootfs; Linux verifies its signature before use."""
+"""Cache the pinned official ARM rootfs; Linux verifies its signature before use."""
 
 import hashlib
 import json
@@ -121,61 +121,57 @@ def prepare(cache, offline=False, progress=None):
     fingerprint = spec["signing_fingerprint"]
     if len(fingerprint) != 40 or any(c not in "0123456789ABCDEF" for c in fingerprint):
         raise ValueError("Invalid root filesystem signing fingerprint")
-    if offline:
-        pointer = cache / "latest.json"
-        if pointer.is_symlink():
-            raise ValueError("Root filesystem cache pointer cannot be a symlink")
-        if not pointer.is_file():
-            raise FileNotFoundError("No cached official ARM root filesystem")
-        record = read_snapshot(cache, json.loads(pointer.read_text())["snapshot"])
+    key = spec["signature_sha256"]
+    if (cache / key).exists():
+        record = read_snapshot(cache, key)
     else:
-        errors = []
-        record = None
-        for url in spec["urls"]:
-            for _ in range(2):
-                try:
-                    with tempfile.TemporaryDirectory(
-                        prefix=".rootfs-", dir=cache
-                    ) as tmp:
-                        staging = Path(tmp)
-                        signature = staging / "rootfs.tar.gz.sig"
-                        download(url + ".sig", signature, MAX_SIGNATURE)
-                        key = digest(signature)
-                        if (cache / key).exists():
-                            record = read_snapshot(cache, key)
-                            break
-                        archive = staging / "rootfs.tar.gz"
-                        download(url, archive, MAX_ROOTFS, progress)
-                        after = staging / "signature-after"
-                        download(url + ".sig", after, MAX_SIGNATURE)
-                        if signature.read_bytes() != after.read_bytes():
-                            raise ValueError(
-                                "Upstream root filesystem changed during download"
-                            )
-                        after.unlink()
-                        metadata = {
-                            "schema_version": 1,
-                            "url": url,
-                            "rootfs_sha256": digest(archive),
-                            "rootfs_bytes": archive.stat().st_size,
-                            "signature_sha256": key,
-                            "signature_bytes": signature.stat().st_size,
-                        }
-                        (staging / "snapshot.json").write_text(
-                            json.dumps(metadata) + "\n"
-                        )
-                        staging.rename(cache / key)
-                        record = read_snapshot(cache, key)
-                        break
-                except (OSError, ValueError) as error:
-                    errors.append(f"{url}: {error}")
-            if record is not None:
-                break
-        if record is None:
-            raise OSError(
-                "Unable to download official ARM root filesystem: " + "; ".join(errors)
-            )
-        publish_pointer(cache, record["signature_sha256"])
+        if offline:
+            raise FileNotFoundError("No cached pinned ARM root filesystem")
+        with tempfile.TemporaryDirectory(prefix=".rootfs-", dir=cache) as tmp:
+            staging = Path(tmp)
+            url = spec["urls"][0]
+            for name, field, maximum in (
+                ("rootfs.tar.gz", "rootfs", MAX_ROOTFS),
+                ("rootfs.tar.gz.sig", "signature", MAX_SIGNATURE),
+            ):
+                target = staging / name
+                download(
+                    url + (".sig" if field == "signature" else ""),
+                    target,
+                    maximum,
+                    progress,
+                )
+                if (
+                    target.stat().st_size != spec[field + "_bytes"]
+                    or digest(target) != spec[field + "_sha256"]
+                ):
+                    raise ValueError(
+                        "Pinned root filesystem checksum mismatch: " + name
+                    )
+            record = {
+                "schema_version": 1,
+                "url": url,
+                **{
+                    field: spec[field]
+                    for field in (
+                        "rootfs_sha256",
+                        "rootfs_bytes",
+                        "signature_sha256",
+                        "signature_bytes",
+                    )
+                },
+            }
+            (staging / "snapshot.json").write_text(json.dumps(record) + "\n")
+            staging.rename(cache / key)
+        record = read_snapshot(cache, key)
+    for field in (
+        "rootfs_sha256",
+        "rootfs_bytes",
+        "signature_sha256",
+        "signature_bytes",
+    ):
+        if record[field] != spec[field]:
+            raise ValueError("Cached base differs from installation lock: " + field)
     return {
         **record,
         "trust_keyring": str(keyring),

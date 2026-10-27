@@ -11,6 +11,7 @@ import shutil
 from pathlib import Path
 import subprocess
 import tempfile
+import tarfile
 import time
 import urllib.parse
 import urllib.request
@@ -18,7 +19,7 @@ import urllib.request
 import rootfs
 
 HERE = Path(__file__).resolve().parent
-MAX_INPUT_BYTES = 512 * 1024 * 1024
+MAX_INPUT_BYTES = 2 * 1024 * 1024 * 1024
 
 
 def digest(path):
@@ -194,14 +195,65 @@ def _write_json(path, value):
     temporary.replace(path)
 
 
+def prepare_packages(cache, offline=False, progress=None):
+    lock = json.loads((HERE / "packages.lock.json").read_text())
+    if lock.get("schema_version") != 1:
+        raise ValueError("Unsupported package snapshot")
+    bundle = fetch(
+        lock["bundle"],
+        Path(cache) / "packages" / lock["bundle"]["sha256"],
+        offline,
+        progress,
+    )
+    directory = bundle.parent / "repository"
+    if directory.is_symlink():
+        raise ValueError("Symlink package repository")
+    if not directory.exists():
+        with tempfile.TemporaryDirectory(prefix=".packages-", dir=bundle.parent) as tmp:
+            staging = Path(tmp)
+            with tarfile.open(bundle) as source:
+                seen = set()
+                for member in source:
+                    _safe_name(member.name)
+                    if (
+                        not member.isfile()
+                        or member.name in seen
+                        or member.name not in lock["files"]
+                    ):
+                        raise ValueError("Unexpected package snapshot member")
+                    record = lock["files"][member.name]
+                    if member.size != record["bytes"]:
+                        raise ValueError("Package snapshot member size mismatch")
+                    seen.add(member.name)
+                    with (
+                        source.extractfile(member) as src,
+                        (staging / member.name).open("xb") as dst,
+                    ):
+                        shutil.copyfileobj(src, dst)
+                if seen != set(lock["files"]):
+                    raise ValueError("Incomplete package snapshot")
+            verify_packages(staging, lock)
+            staging.rename(directory)
+    verify_packages(directory, lock)
+    return directory, lock
+
+
+def verify_packages(directory, lock):
+    for name, record in lock["files"].items():
+        _safe_name(name)
+        if not _valid(directory / name, record):
+            raise ValueError("Invalid retained package input: " + name)
+
+
 def prepare(
     cache, *, offline=False, progress=None, progresscallback=None, derived_dir=None
 ):
-    """Stage an official signed rolling base and reviewed hardware source inputs."""
+    """Stage a pinned signed base and reviewed hardware source inputs."""
     progress = progress or progresscallback
     cache = Path(cache).resolve()
     cache.mkdir(parents=True, exist_ok=True)
     base = rootfs.prepare(cache, offline, progress)
+    repository, package_lock = prepare_packages(cache, offline, progress)
     profiles = json.loads((HERE / "profiles.json").read_text())
     source_lock = json.loads((HERE / "sources.lock.json").read_text())
     if any(x["schema_version"] != 1 for x in (profiles, source_lock)):
@@ -238,7 +290,7 @@ def prepare(
             raise ValueError("Invalid selected kernel path")
         path = fetch(
             {**record, "file": relative.name},
-            source_dir / "kernel-files" / relative.parent,
+            source_dir / "kernel-files" / record["sha256"] / relative.parent,
             offline,
             progress,
         )
@@ -254,6 +306,8 @@ def prepare(
     )
     return {
         **base,
+        "package_repository": str(repository),
+        "package_lock": package_lock,
         "schema_version": 1,
         "runtime_names": profiles["runtime_packages"],
         "build_names": profiles["build_packages"],

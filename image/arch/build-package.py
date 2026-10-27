@@ -94,7 +94,7 @@ def main():
         src.mkdir()
         archives = {
             "aic8800": sources / "wifi-e9e43ed79c50483080e9bcdfb08caeeb869d7191.tar",
-            "selected": sources / "kernel-v7.2.10-selected.tar",
+            "selected": sources / "kernel-v7.3-selected.tar",
         }
         for key, archive in archives.items():
             dest = src / key
@@ -104,7 +104,7 @@ def main():
         panel = src / "selected/drivers/gpu/drm/panel/panel-jadard-jd9365da-h3.c"
         if (
             hashlib.sha256(panel.read_bytes()).hexdigest()
-            != "153da8a833089060a60ea688b2477fa05faa0fb03c1e89c942dc6ec9162dcf32"
+            != "223ee4b752b1b8156e87d6778141ea94236bac3a9bad23532a0ac1c52bd6be72"
         ):
             raise ValueError("pinned panel source mismatch")
         shutil.copy2(panel, src / "panel.c")

@@ -1,7 +1,7 @@
 # Maintained PF1007L board modules; firmware is extracted from the owner's unit.
 pkgname=fascia-board-support-dkms
 pkgver=1.0
-pkgrel=1
+pkgrel=2
 pkgdesc='PF1007L Jadard display and AIC8800 SDIO DKMS sources'
 arch=('armv7h')
 url='https://github.com/radxa-pkg/aic8800'
@@ -9,9 +9,9 @@ license=('GPL-2.0-only')
 depends=('dkms' 'linux-armv7-headers' 'python' 'dtc')
 makedepends=('git' 'patch')
 source=('aic8800::git+https://github.com/radxa-pkg/aic8800.git#commit=e9e43ed79c50483080e9bcdfb08caeeb869d7191'
-        'panel.c::https://raw.githubusercontent.com/gregkh/linux/v7.2.10/drivers/gpu/drm/panel/panel-jadard-jd9365da-h3.c'
+        'panel.c::https://raw.githubusercontent.com/gregkh/linux/v7.3/drivers/gpu/drm/panel/panel-jadard-jd9365da-h3.c'
         'panel.patch' 'panel.dkms.conf' 'wifi.dkms.conf')
-sha256sums=('SKIP' '153da8a833089060a60ea688b2477fa05faa0fb03c1e89c942dc6ec9162dcf32' '4b9965d007a5b102bcebf1e7ce8845f8ff42d7bcff051135c1436d98e2dbcb98' '83b5e5a7450cb887285cd8941d2dd34dcc1357222207f84a8499391511a6e3ca' '1b4a9bcffb1664f4dd0a93a20999977b396468f546324d7b02cc193b39551d98')
+sha256sums=('SKIP' '223ee4b752b1b8156e87d6778141ea94236bac3a9bad23532a0ac1c52bd6be72' 'fc3ee016d04ee96e485a7510d25d93bd6fc578a5296d6135ebf92547dbab509d' '83b5e5a7450cb887285cd8941d2dd34dcc1357222207f84a8499391511a6e3ca' '1b4a9bcffb1664f4dd0a93a20999977b396468f546324d7b02cc193b39551d98')
 prepare() {
   mkdir -p "$srcdir/panel/drivers/gpu/drm/panel"
   cp "$srcdir/panel.c" "$srcdir/panel/drivers/gpu/drm/panel/panel-jadard-jd9365da-h3.c"

@@ -87,7 +87,7 @@ def existing_keys(directory=None):
     return found
 
 
-def choose(ui, options, *, plain=False):
+def choose(ui, options, *, plain=False, default_label="SSH off"):
     """Arrow keys in a terminal; a numbered fallback needs only line input."""
     if (
         plain
@@ -100,7 +100,7 @@ def choose(ui, options, *, plain=False):
             if detail:
                 ui.note("    " + detail)
         while True:
-            answer = input(ui.prompt("Choose a number [SSH off]:")).strip()
+            answer = input(ui.prompt(f"Choose a number [{default_label}]:")).strip()
             if not answer:
                 return len(options) - 1
             if answer.isascii() and answer.isdigit() and len(answer) < 4:
@@ -108,7 +108,7 @@ def choose(ui, options, *, plain=False):
                 if 1 <= number <= len(options):
                     return number - 1
             ui.note(
-                "Choose one of the listed numbers, or press Enter to leave SSH off."
+                f"Choose one of the listed numbers, or press Enter for {default_label}."
             )
     fd = sys.stdin.fileno()
     saved = termios.tcgetattr(fd)

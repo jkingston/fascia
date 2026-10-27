@@ -15,11 +15,11 @@ Insert the card into your computer's reader. In the repository:
 
 ```sh
 mise install
-python3 image/install.py list
-python3 image/install.py install --disk DISK --capacity BYTES --erase
+python3 image/install.py install
 ```
 
-Use the disk identifier and exact capacity from `list`. **The selected card is erased.**
+Choose the card and confirm erasure. **The selected card is erased.**
+`--disk DISK` skips the picker; add `--erase` for unattended use.
 Run as your normal user; administrator access is requested when needed.
 
 Choose an existing public SSH key, paste one, set a password, or leave SSH off.
@@ -27,7 +27,9 @@ Use arrow keys and Enter; `--plain` uses numbered prompts. To skip the picker,
 pass `--ssh-key ~/.ssh/id_ed25519.pub`, `--ssh-password`, or `--no-ssh`.
 Password access needs OpenSSL 3 (`brew install openssl@3` on Mac).
 
-Rerun the command to resume an interrupted install.
+Rerun the command to resume an interrupted install. Installation uses a pinned
+Arch base and package snapshot retained on GitHub Releases. It does not upgrade
+from rolling mirrors; normal pacman repositories remain available after boot.
 
 ## First boot
 
