@@ -6,8 +6,11 @@ After=local-fs.target fascia-provision.service fascia-grow-storage.service syste
 Before=pf-kiosk.service fascia-device-state.service
 ConditionPathIsMountPoint=/data
 
+OnFailure=fascia-boot-failure.service
+
 [Service]
 Type=oneshot
+ExecStartPre=-/usr/local/libexec/fascia-boot-progress apps
 ExecStart=/usr/bin/python3 -I /usr/lib/fascia/fascia-state-init.py
 RemainAfterExit=yes
 UMask=0022

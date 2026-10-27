@@ -60,6 +60,7 @@ class FinalizationTests(unittest.TestCase):
         for name in (
             "fascia-host",
             "fascia-brightness",
+            "fascia-boot-progress",
             "fascia-home-button",
         ):
             self.release_file("bin/" + name, elf)

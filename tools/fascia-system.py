@@ -244,6 +244,7 @@ def main():
             "brightness-level",
             "restore",
             "sound-test",
+            "shutdown",
             "display-open",
             "display-close",
             "button-enable",
@@ -267,6 +268,10 @@ def main():
         if args.action == "brightness":
             result["brightness"] = value
         print(json.dumps(result))
+    elif args.action == "shutdown":
+        if args.value is not None:
+            parser.error("shutdown takes no value")
+        subprocess.run(["/usr/bin/systemctl", "poweroff"], check=True)
     elif args.action == "restore":
         if args.value is not None:
             parser.error("restore takes no value")

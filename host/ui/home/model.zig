@@ -12,9 +12,9 @@ pub const App = struct {
     builtin: bool = false,
 };
 
-pub const Action = union(enum) { launch: usize, startup: ?usize, remove: usize, display, setup, sound, brightness: u32 };
+pub const Action = union(enum) { launch: usize, startup: ?usize, remove: usize, display, setup, sound, shutdown, brightness: u32 };
 
-pub const Page = enum { apps, details, settings, connections, remove };
+pub const Page = enum { apps, details, settings, connections, remove, shutdown, shutting_down };
 
 pub const Model = struct {
     apps: []const App,
@@ -58,6 +58,7 @@ pub const Model = struct {
     }
 
     pub fn update(self: *Model, now: i64, input: t.Input, hits: []const ui.Hit) ?Action {
+        if (self.page == .shutting_down) return null;
         // A press at the deadline always cancels before a timer may launch.
         if (input.pressed or input.released or input.down) self.countdown.cancel();
         const event = self.interaction.update(hits, input);
@@ -91,6 +92,13 @@ pub const Model = struct {
                 10 => return .display,
                 11 => return .sound,
                 13 => return .setup,
+                19 => {
+                    self.page = .shutdown;
+                    self.message = "";
+                },
+                20 => if (self.page == .shutdown) {
+                    return .shutdown;
+                },
                 12 => {
                     self.page = .connections;
                 },
@@ -137,8 +145,14 @@ pub const Model = struct {
         var n: std.ArrayList(ui.Node) = .empty;
         try n.append(a, label("Fascia", 48, 32, 18, muted));
         try n.append(a, label(self.clock, 1030, 32, 20, ink));
+        if (self.page == .shutting_down) {
+            try n.append(a, label("Shutting down…", 76, 300, 48, ink));
+            try n.append(a, label("Wait for the screen to turn off before unplugging.", 80, 380, 24, muted));
+            return ui.stack(a, .{ .height = .grow, .background = 0xf3f1eaff }, try n.toOwnedSlice(a));
+        }
         if (self.page == .apps) {
             try n.append(a, label("Apps", 48, 78, 39, ink));
+            try n.append(a, try button(a, "Shut down", 19, 0, 820, 82, 190, 60, false));
             try n.append(a, try button(a, "Settings", 3, 0, 1040, 82, 190, 60, false));
             if (self.apps.len == 0) {
                 try n.append(a, label("No apps installed", 80, 280, 42, ink));
@@ -238,6 +252,12 @@ pub const Model = struct {
                     try n.append(a, try button(a, "Quiet sound test", 11, 0, 76, 548, 350, 80, false));
                     try n.append(a, try button(a, "Start in Home", 9, 0, 462, 548, 350, 80, false));
                     try n.append(a, label("Set a startup app from its details.", 76, 736, 18, muted));
+                },
+                .shutdown => {
+                    try n.append(a, label("Shut down Fascia?", 76, 240, 48, ink));
+                    try n.append(a, label("To turn it on again, reconnect power.", 80, 330, 24, muted));
+                    try n.append(a, try button(a, "Cancel", 2, 0, 76, 470, 300, 88, false));
+                    try n.append(a, try button(a, "Shut down", 20, 0, 400, 470, 300, 88, true));
                 },
                 .connections => {
                     try n.append(a, label("Connections", 72, 216, 42, ink));
@@ -560,4 +580,22 @@ test "brightness rail taps drag clamps and suppresses repeated level commands" {
     try std.testing.expect(model.update(0, .{ .x = r.x + 10, .y = r.y + 50, .down = true }, scene.hits) == null);
     try std.testing.expectEqual(@as(u32, 8), model.update(0, .{ .x = 1400, .y = r.y + 50, .down = true }, scene.hits).?.brightness);
     try std.testing.expect(model.update(0, .{ .x = 1400, .y = r.y + 50, .released = true }, scene.hits) == null);
+}
+
+test "shutdown requires confirmation and ignores input while powering off" {
+    var model = Model.init(&.{}, null, false);
+    var hits = [_]ui.Hit{.{ .id = 19, .action = 19, .bounds = .{ .x = 0, .y = 0, .width = 100, .height = 80 }, .drag = false }};
+    _ = model.update(0, .{ .x = 30, .y = 30, .pressed = true, .down = true }, &hits);
+    try std.testing.expect(model.update(1, .{ .x = 30, .y = 30, .released = true }, &hits) == null);
+    try std.testing.expectEqual(Page.shutdown, model.page);
+    hits[0].action = 2;
+    _ = model.update(2, .{ .x = 30, .y = 30, .pressed = true, .down = true }, &hits);
+    try std.testing.expect(model.update(3, .{ .x = 30, .y = 30, .released = true }, &hits) == null);
+    try std.testing.expectEqual(Page.apps, model.page);
+    model.page = .shutdown;
+    hits[0].action = 20;
+    _ = model.update(4, .{ .x = 30, .y = 30, .pressed = true, .down = true }, &hits);
+    try std.testing.expectEqual(Action.shutdown, model.update(5, .{ .x = 30, .y = 30, .released = true }, &hits).?);
+    model.page = .shutting_down;
+    try std.testing.expect(model.update(6, .{ .x = 30, .y = 30, .pressed = true }, &hits) == null);
 }

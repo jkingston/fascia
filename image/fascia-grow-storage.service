@@ -6,8 +6,11 @@ Before=fascia-state-init.service pf-kiosk.service
 ConditionPathIsMountPoint=/system
 ConditionPathIsMountPoint=/data
 
+OnFailure=fascia-boot-failure.service
+
 [Service]
 Type=oneshot
+ExecStartPre=-/usr/local/libexec/fascia-boot-progress storage
 ExecStart=/usr/bin/python3 -I /usr/lib/fascia/fascia-grow-storage.py
 RemainAfterExit=yes
 TimeoutStartSec=300

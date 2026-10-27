@@ -5,8 +5,11 @@ After=systemd-remount-fs.service
 Before=systemd-modules-load.service systemd-udev-trigger.service
 ConditionPathIsMountPoint=/data
 
+OnFailure=fascia-boot-failure.service
+
 [Service]
 Type=oneshot
+ExecStartPre=-/usr/local/libexec/fascia-boot-progress firmware
 ExecStart=/usr/bin/python3 -I /usr/lib/fascia/provision/fascia-provision.py
 RemainAfterExit=yes
 TimeoutStartSec=120

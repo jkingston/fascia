@@ -24,6 +24,13 @@ MODULES = [
     "usb_f_acm",
     "u_ether",
     "usb_f_ncm",
+    "pwm_sun4i",
+    "panel-jadard-jd9365da-h3",
+    "sun4i_tcon",
+    "sun4i_frontend",
+    "sun4i_backend",
+    "sun6i_mipi_dsi",
+    "sun4i_drm",
 ]
 APPLETS = "sh mount umount mkdir cat sleep setsid insmod ls head echo ln cut blockdev dd od tr sed wc grep cp chmod chown sync mktemp mv rm flock tail sha256sum cmp switch_root reboot poweroff dmesg ip".split()
 
@@ -196,6 +203,10 @@ def build(root, output, kernel, runtime=False):
 
     binary("/usr/bin/busybox", "/bin/busybox")
     binary("/usr/bin/btrfs", "/bin/btrfs")
+    binary(
+        "/usr/local/libexec/fascia-boot-progress",
+        "/usr/lib/fascia/fascia-boot-progress",
+    )
     for applet in APPLETS:
         add("/bin/" + applet, b"busybox", 0o120777)
     for directory in [

@@ -5,6 +5,8 @@ Wants=seatd.service fascia-brightness.service
 After=user@1000.service seatd.service fascia-state-init.service fascia-brightness.service
 Conflicts=getty@tty1.service
 
+OnFailure=fascia-boot-failure.service
+
 [Service]
 User=fascia
 TTYPath=/dev/tty1
@@ -26,6 +28,7 @@ Environment=FASCIA_APPS_ROOT=/var/lib/fascia/apps
 Environment=FASCIA_STATE_ROOT=/var/lib/fascia/state
 Environment=FASCIA_HOME_ROOT=/var/lib/fascia
 Environment=DBUS_SESSION_BUS_ADDRESS=unix:path=/run/user/1000/bus
+ExecStartPre=-+/usr/local/libexec/fascia-boot-progress ready
 ExecStartPre=/usr/bin/env XDG_RUNTIME_DIR=/run/user/1000 /usr/bin/systemctl --user start fascia-session.target
 ExecStart=/usr/lib/fascia/run-home
 ExecStopPost=/usr/bin/env XDG_RUNTIME_DIR=/run/user/1000 /usr/bin/systemctl --user stop fascia-session.target

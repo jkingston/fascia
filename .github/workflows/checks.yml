@@ -54,6 +54,8 @@ jobs:
       - name: Compositor and physical Home helper tests
         working-directory: host
         run: mise exec -- zig build test test-home --release=small --summary all
+      - name: Early boot rendering tests
+        run: mise exec -- zig build test-boot --summary all
       - name: Clock parser, cache, worker and time tests
         working-directory: examples/clock
         run: mise exec -- zig build test --release=fast --summary all

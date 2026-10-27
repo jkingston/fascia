@@ -155,15 +155,24 @@ class EarlyBoot(unittest.TestCase):
                     ),
                 ),
             ):
+                (root / "usr/local/libexec").mkdir(parents=True)
+                (root / "usr/local/libexec/fascia-boot-progress").write_bytes(
+                    (root / "usr/bin/busybox").read_bytes()
+                )
                 init.build(root, output, "7.2.10-1-armv7-ARCH")
             records = unpack_newc(gzip.decompress(output.read_bytes()))
             self.assertIn("bin/busybox", records)
             self.assertEqual(records["dev/console"][0][9:11], [5, 1])
             self.assertIn("usr/lib/fascia/fascia-boot-select", records)
+        self.assertIn("usr/lib/fascia/fascia-boot-progress", records)
 
     def test_storage_modules_asserted_and_touch_not_loaded_early(self):
         self.assertTrue({"btrfs", "mmc_block", "sunxi_mmc"} <= set(init.MODULES))
         self.assertNotIn("silead", init.MODULES)
+        self.assertTrue(
+            {"panel-jadard-jd9365da-h3", "sun4i_drm", "sun6i_mipi_dsi"}
+            <= set(init.MODULES)
+        )
 
     def test_sd_selection_rejects_ambiguous_or_mmc_cards(self):
         source = (TOOLS.parent / "initramfs/init").read_text()

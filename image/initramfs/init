@@ -8,6 +8,7 @@ mkdir -p /run /system /data /new_root /dev/pts
 mount -t tmpfs -o mode=755,nosuid,nodev tmpfs /run
 mount -t devpts devpts /dev/pts
 recovery() {
+    /usr/lib/fascia/fascia-boot-progress error || :
     echo "Fascia recovery: $*" > /dev/kmsg
     while :; do
         if [ -c /dev/ttyGS0 ]; then
@@ -19,6 +20,7 @@ recovery() {
 while read -r module; do
     [ -z "$module" ] || insmod "/lib/modules/$module" || echo "Module failed: $module" > /dev/kmsg
 done < /lib/modules/fascia-modules.list
+/usr/lib/fascia/fascia-boot-progress start || :
 /usr/lib/fascia/fascia-gadget || echo 'USB console unavailable' > /dev/kmsg
 /usr/lib/fascia/fascia-emmc-readonly || recovery 'Cannot protect internal storage'
 signature=
@@ -58,6 +60,7 @@ done
 [ -n "$disk" ] || recovery 'SD image not found'
 mount -t btrfs -o rw,noatime,compress=zstd:3,subvolid=5 "/dev/${disk}p2" /system || recovery 'System store could not mount'
 mount -t btrfs -o rw,noatime,subvol=data "/dev/${disk}p2" /data || recovery 'Persistent data could not mount'
+[ -e /data/fascia/.factory-seeded.json ] || : > /run/fascia-first-boot
 generation=$(/usr/lib/fascia/fascia-boot-select /data/fascia-system /system/generations) || recovery 'No safe system generation'
 mount -t btrfs -o rw,noatime,subvol="generations/$generation" "/dev/${disk}p2" /new_root || recovery 'Selected root could not mount'
 mount --move /run /new_root/run || recovery 'Runtime mount failed'

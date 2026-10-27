@@ -121,6 +121,7 @@ def validate_release(release):
     for name in (
         "fascia-host",
         "fascia-brightness",
+        "fascia-boot-progress",
         "fascia-home-button",
     ):
         arm_executable(release / "bin" / name)
@@ -242,7 +243,7 @@ def finalize(root, release, initial_apps=None):
     plan = validate_initial_apps(initial_apps) if initial_apps is not None else None
     accounts(root)
     root.copy(release / "bin/fascia-host", "usr/lib/fascia/bin/fascia-host", 0o755)
-    for name in ("fascia-brightness", "fascia-home-button"):
+    for name in ("fascia-brightness", "fascia-home-button", "fascia-boot-progress"):
         root.copy(release / "bin" / name, "usr/local/libexec/" + name, 0o755)
     for name in ("fascia", "fascia-serial-session"):
         root.copy(release / "tools" / (name + ".py"), "usr/local/bin/" + name, 0o755)
@@ -398,6 +399,7 @@ def finalize(root, release, initial_apps=None):
             "usr/lib/systemd/system/" + name + ".service",
         )
     for name in (
+        "fascia-boot-failure",
         "fascia-grow-storage",
         "fascia-pacman-init",
         "fascia-state-init",

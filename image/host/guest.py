@@ -1754,7 +1754,7 @@ def install(
                 assembly.copy_boot_dtbs(root, board, boot)
                 (boot / "extlinux").mkdir()
                 (boot / "extlinux/extlinux.conf").write_text(
-                    "DEFAULT fascia\nTIMEOUT 10\nLABEL fascia\n    LINUX /zImage\n    INITRD /initramfs.img\n    FDT /dtbs/pf1007l-provision.dtb\n    APPEND root=PARTUUID=46524d45-02 rootwait rw quiet systemd.gpt_auto=0 firmware_class.path=/run/fascia-firmware panic=20\n"
+                    "DEFAULT fascia\nTIMEOUT 10\nLABEL fascia\n    LINUX /zImage\n    INITRD /initramfs.img\n    FDT /dtbs/pf1007l-provision.dtb\n    APPEND root=PARTUUID=46524d45-02 rootwait rw quiet loglevel=0 logo.nologo vt.global_cursor_default=0 systemd.show_status=false rd.systemd.show_status=false systemd.gpt_auto=0 firmware_class.path=/run/fascia-firmware panic=20\n"
                 )
                 create_boot_script(boot / "boot.scr")
                 with target.open("r+b", buffering=0) as disk:

@@ -1,0 +1,7 @@
+[Unit]
+Description=Show a startup failure on the display
+DefaultDependencies=no
+
+[Service]
+Type=oneshot
+ExecStart=-/usr/local/libexec/fascia-boot-progress error

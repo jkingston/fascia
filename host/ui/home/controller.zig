@@ -39,6 +39,7 @@ pub const Controller = struct {
     show_display: bool,
     colour: display.Colour,
     pending: ?Pending = null,
+    shutdown_requested: bool = false,
     setup: Setup = .{},
     check_setup: bool = true,
     clock: [32]u8 = @splat(0),
@@ -120,6 +121,7 @@ pub const Controller = struct {
     }
     /// Physical Home while already in Home closes temporary routes/previews.
     pub fn home(self: *Controller) void {
+        if (self.model.page == .shutting_down) return;
         self.setup.close();
         self.model.countdown.cancel();
         self.model.banner = false;
@@ -142,6 +144,14 @@ pub const Controller = struct {
     }
 
     pub fn presented(self: *Controller, now: i64) void {
+        if (self.shutdown_requested) {
+            self.shutdown_requested = false;
+            self.pending = .{ .pid = system.spawn(self.allocator, .system, "shutdown", null) catch {
+                self.model.page = .shutdown;
+                self.model.message = "Could not shut down. Try again.";
+                return;
+            }, .action = .shutdown };
+        }
         if (!self.setup.active) self.model.countdown.presented(now);
     }
 
@@ -186,7 +196,10 @@ pub const Controller = struct {
                         .sound => self.model.message = "Quiet sound test requested.",
                         else => self.model.message = "",
                     }
-                } else self.model.message = "Could not confirm that change. Check the local Fascia tools.";
+                } else {
+                    if (request.action == .shutdown) self.model.page = .shutdown;
+                    self.model.message = if (request.action == .shutdown) "Could not shut down. Try again." else "Could not confirm that change. Check the local Fascia tools.";
+                }
                 self.pending = null;
             }
         }
@@ -267,6 +280,12 @@ pub const Controller = struct {
                     readBrightness(&self.model);
                 };
             } else if (self.pending == null) switch (action) {
+                .shutdown => {
+                    self.model.page = .shutting_down;
+                    self.model.message = "";
+                    self.shutdown_requested = true;
+                    invalidated = true;
+                },
                 .setup => {
                     self.model.countdown.cancel();
                     self.model.banner = false;

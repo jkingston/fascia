@@ -9,6 +9,7 @@ from pathlib import Path
 import tempfile
 import unittest
 import subprocess
+import sys
 from unittest import mock
 
 spec = importlib.util.spec_from_file_location(
@@ -36,6 +37,22 @@ class DeviceTests(unittest.TestCase):
         )
         self.patch.start()
         self.addCleanup(self.patch.stop)
+
+    def test_shutdown_uses_normal_systemd_poweroff(self):
+        with (
+            mock.patch.object(sys, "argv", ["fascia-system", "shutdown"]),
+            mock.patch.object(system.subprocess, "run") as run,
+        ):
+            system.main()
+        run.assert_called_once_with(["/usr/bin/systemctl", "poweroff"], check=True)
+        with (
+            mock.patch.object(sys, "argv", ["fascia-system", "shutdown", "--force"]),
+            mock.patch.object(system.subprocess, "run") as run,
+            contextlib.redirect_stderr(io.StringIO()),
+            self.assertRaises(SystemExit),
+        ):
+            system.main()
+        run.assert_not_called()
 
     def test_bounds_never_black_out_the_screen(self):
         for percent, expected in ((5, 13), (100, 255)):
