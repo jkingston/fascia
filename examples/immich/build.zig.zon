@@ -1,0 +1,14 @@
+.{
+    .fingerprint = 0x7c6842b2db0621e1,
+    .name = .immich,
+    .version = "0.1.0",
+    .minimum_zig_version = "0.16.0",
+    .dependencies = .{
+        .fascia = .{ .path = "../../sdk" },
+        .stb = .{
+            .url = "https://codeload.github.com/nothings/stb/tar.gz/a7d4c2175630e1ea5b6f8dd00ab96fed0b97b96d",
+            .hash = "N-V-__8AAFNETgDxQPwefsoBQhY7el1SUgPWt8Q8IYvZyOt9",
+        },
+    },
+    .paths = .{ "README.md", "build.zig", "build.zig.zon", "main.zig", "model.zig", "api.zig", "worker.zig", "codec.zig", "cache.zig", "io.zig", "tests.zig", "check.zig", "check-ui.zig", "immich.desktop", "immich.png", "fixtures" },
+}

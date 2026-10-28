@@ -41,7 +41,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends libx11-dev
-          for app in hello clock; do
+          for app in hello clock immich; do
             (cd "examples/$app" && mise exec -- zig build preview)
           done
           (cd examples/hello && FASCIA_PREVIEW_CAPTURE="$RUNNER_TEMP/counter.png" mise exec -- zig build run)
@@ -59,6 +59,9 @@ jobs:
       - name: Clock parser, cache, worker and time tests
         working-directory: examples/clock
         run: mise exec -- zig build test --release=fast --summary all
+      - name: Immich app build and offline selection tests
+        working-directory: examples/immich
+        run: mise exec -- zig build test install --release=fast --summary all
       - name: Offline Python tools and image tests
         shell: bash
         run: |

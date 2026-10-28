@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Immich Photos
+Exec=AppRun
+Icon=immich
+X-Fascia-Version=0.2.1
+Comment=People, places and years together
